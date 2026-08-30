@@ -1,0 +1,240 @@
+#make-again-founder-letter-wireframe .ma-home-v6-phone {
+  --cream:#f4e9da;
+  --muted:rgba(226,212,221,.6);
+  --line:rgba(226,199,222,.23);
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-in-out:cubic-bezier(.77,0,.175,1);
+  --ease-drawer:cubic-bezier(.32,.72,0,1);
+}
+#make-again-founder-letter-wireframe [hidden] { display:none!important; }
+#make-again-founder-letter-wireframe .ma-home-v6-screen {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  padding:17px 16px 14px;
+  overflow:hidden;
+  color:var(--cream);
+  background:radial-gradient(circle at 100% 12%,rgba(235,147,110,.2),transparent 35%),radial-gradient(circle at 0 68%,rgba(126,94,224,.22),transparent 42%),linear-gradient(158deg,#050817,#10132d 58%,#1b132f);
+}
+#make-again-founder-letter-wireframe .ma-home-v6-topbar { display:flex; min-height:38px; flex:none; align-items:center; justify-content:space-between; }
+#make-again-founder-letter-wireframe .ma-home-v6-menu {
+  display:grid;width:38px;height:38px;place-items:center;padding:0;border:0;border-radius:12px;color:var(--cream);background:transparent;cursor:pointer;transition:transform 140ms var(--ease-out),background-color 180ms ease;
+}
+#make-again-founder-letter-wireframe .ma-home-v6-menu svg { width:20px;height:20px; }
+#make-again-founder-letter-wireframe .ma-home-v6-menu:active { transform:scale(.94); }
+#make-again-founder-letter-wireframe .ma-home-v6-safe { width:92px;height:34px; }
+
+#make-again-founder-letter-wireframe .ma-home-pending {
+  display:grid;grid-template-columns:37px minmax(0,1fr) 24px;align-items:center;gap:9px;min-height:50px;padding:7px 10px;border:1px solid rgba(235,147,110,.22);border-radius:17px;color:var(--cream);background:linear-gradient(110deg,rgba(31,25,60,.82),rgba(58,35,60,.68));text-align:left;cursor:pointer;transition:transform 160ms var(--ease-out),opacity 200ms var(--ease-out);
+}
+#make-again-founder-letter-wireframe .ma-home-pending:active { transform:scale(.98); }
+#make-again-founder-letter-wireframe .ma-home-pending > span:nth-child(2) { display:grid;gap:2px;min-width:0; }
+#make-again-founder-letter-wireframe .ma-home-pending small { color:rgba(235,147,110,.78);font-size:7px;letter-spacing:.12em; }
+#make-again-founder-letter-wireframe .ma-home-pending strong { overflow:hidden;font:400 9px/1.4 "KangXiZiDianTi","STKaiti",serif;text-overflow:ellipsis;white-space:nowrap; }
+#make-again-founder-letter-wireframe .ma-home-pending > b { display:grid;width:22px;height:22px;place-items:center;border-radius:50%;background:rgba(235,147,110,.15);font-size:8px;font-weight:400; }
+#make-again-founder-letter-wireframe .ma-pending-stack { position:relative;width:30px;height:28px; }
+#make-again-founder-letter-wireframe .ma-pending-stack i { position:absolute;inset:4px 2px;border-radius:3px;background:#ead7b8;box-shadow:0 3px 7px rgba(0,0,0,.18);transform:rotate(-5deg); }
+#make-again-founder-letter-wireframe .ma-pending-stack i:nth-child(2){transform:translate(3px,-2px) rotate(3deg);background:#e7d4c5}.ma-pending-stack i:nth-child(3){transform:translate(6px,-4px) rotate(7deg);background:#f2e5ca}
+
+#make-again-founder-letter-wireframe .ma-home-mood {
+  flex:none;padding:10px 10px 9px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(112deg,rgba(18,24,59,.72),rgba(54,35,68,.5));box-shadow:inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(16px);
+}
+#make-again-founder-letter-wireframe .ma-home-mood header { display:flex;align-items:center;justify-content:space-between;margin-bottom:7px; }
+#make-again-founder-letter-wireframe .ma-home-mood header span { font:400 9px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.15em; }
+#make-again-founder-letter-wireframe .ma-home-mood header small { color:var(--muted);font:7px "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-home-mood-week { display:grid;grid-template-columns:repeat(7,1fr);gap:2px; }
+#make-again-founder-letter-wireframe .ma-mood-day { display:grid;place-items:center;gap:3px;padding:3px 0;border:1px solid transparent;border-radius:12px;color:var(--muted);background:transparent;cursor:pointer;transition:transform 140ms var(--ease-out),background-color 180ms ease; }
+#make-again-founder-letter-wireframe .ma-mood-day:active { transform:scale(.92); }
+#make-again-founder-letter-wireframe .ma-mood-day.is-today { border-color:rgba(235,147,110,.3);background:rgba(235,147,110,.07); }
+#make-again-founder-letter-wireframe .ma-mood-day.is-selected { background:rgba(154,109,255,.12); }
+#make-again-founder-letter-wireframe .ma-mood-day small { font-size:6px; }
+#make-again-founder-letter-wireframe .ma-mood-face { display:grid;width:25px;height:25px;place-items:center;border-radius:50%;color:var(--face,#9a6dff);background:color-mix(in srgb,var(--face,#9a6dff) 12%,transparent);font:15px/1 system-ui; }
+
+#make-again-founder-letter-wireframe .ma-home-widget-v6 { flex:none;outline:0;touch-action:pan-y; }
+#make-again-founder-letter-wireframe .ma-home-widget-track { border-radius:20px;will-change:transform,opacity; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 { min-height:142px;padding:13px 15px;border:1px solid var(--line);border-radius:20px;background:radial-gradient(circle at 100% 0,rgba(154,109,255,.18),transparent 44%),linear-gradient(112deg,rgba(18,24,59,.8),rgba(54,35,68,.6));box-shadow:inset 0 1px rgba(255,255,255,.08),0 14px 30px rgba(0,0,0,.18); }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 header,#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer { display:flex;align-items:center;justify-content:space-between; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 header span { color:rgba(235,147,110,.78);font-size:7px;letter-spacing:.14em; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 header small,#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer small { color:var(--muted);font-size:6px; }
+#make-again-founder-letter-wireframe .ma-home-widget-label { margin:13px 0 5px;color:rgba(218,198,255,.72);font-size:7px;letter-spacing:.18em; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 h2 { margin:0;font:400 15px/1.55 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.04em; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 > p:not(.ma-home-widget-label) { margin:3px 0 12px;color:var(--muted);font:8px/1.6 "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer button { min-height:28px;padding:5px 10px;border:1px solid rgba(235,147,110,.28);border-radius:999px;color:var(--cream);background:rgba(235,147,110,.1);font:7px "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-home-widget-dots { display:flex;justify-content:center;gap:5px;margin-top:5px; }
+#make-again-founder-letter-wireframe .ma-home-widget-dots i { width:4px;height:4px;border-radius:999px;background:rgba(226,212,221,.26);transition:width 220ms var(--ease-in-out),background-color 180ms ease; }
+#make-again-founder-letter-wireframe .ma-home-widget-dots i.is-active { width:13px;background:rgba(235,147,110,.7); }
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 { display:flex;min-height:0;flex:1;flex-direction:column;padding:10px 11px 9px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(17,21,54,.62),rgba(47,31,65,.46));outline:0; }
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > h2 { margin:0 0 8px;font:400 13px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em; }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion { display:grid;grid-template-columns:27px minmax(0,1fr) 12px;align-items:center;gap:8px;padding:8px 10px;border:1px solid rgba(226,199,222,.2);border-radius:999px;color:var(--cream);background:linear-gradient(108deg,rgba(20,26,63,.8),rgba(51,34,68,.66));text-align:left;cursor:pointer;transition:transform 140ms var(--ease-out),border-color 180ms ease; }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion:active { transform:scale(.98); }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion > span { display:grid;width:27px;height:27px;place-items:center;border-radius:50%;color:#f0b18f;background:rgba(235,147,110,.12); }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion p { display:grid;gap:2px;margin:0;min-width:0; }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion small { color:rgba(235,147,110,.66);font-size:6px;letter-spacing:.1em; }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion strong { overflow:hidden;font:400 8px "KangXiZiDianTi","STKaiti",serif;text-overflow:ellipsis;white-space:nowrap; }
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion > b { color:var(--muted);font-size:15px;font-weight:400; }
+#make-again-founder-letter-wireframe .ma-home-voice-zone { display:flex;min-height:0;flex:1;flex-direction:column;align-items:center;justify-content:flex-end;padding-top:5px; }
+#make-again-founder-letter-wireframe .ma-home-voice-zone > p { margin:auto 0 6px;color:rgba(244,233,218,.54);font:7px/1.8 "KangXiZiDianTi","STKaiti",serif;text-align:center;letter-spacing:.08em; }
+#make-again-founder-letter-wireframe .ma-home-voice-zone > p b { color:rgba(244,233,218,.72);font-weight:400; }
+#make-again-founder-letter-wireframe .ma-home-v6-orb { position:relative;display:grid;width:61px;height:61px;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;touch-action:none;cursor:pointer;transition:transform 160ms var(--ease-out); }
+#make-again-founder-letter-wireframe .ma-home-v6-orb:active { transform:scale(.96); }
+#make-again-founder-letter-wireframe .ma-home-v6-orb-core { position:relative;z-index:2;width:52px;height:52px;border:1px solid rgba(231,223,255,.3);border-radius:50%;overflow:hidden;background:conic-gradient(from 205deg,#65b8ff,#4058d8 24%,#ae70ff 48%,#eb936e 67%,#4b68e8 85%,#65b8ff);box-shadow:inset 5px -7px 13px rgba(12,20,82,.55),0 0 19px rgba(116,104,255,.42); }
+#make-again-founder-letter-wireframe .ma-home-v6-orb-core i { position:absolute;border-radius:50%;filter:blur(6px);mix-blend-mode:screen; }
+#make-again-founder-letter-wireframe .ma-home-v6-orb-core i:nth-child(1){inset:5px 22px 22px 5px;background:rgba(255,255,255,.55)}.ma-home-v6-orb-core i:nth-child(2){inset:24px 3px 2px 23px;background:rgba(255,175,125,.44)}.ma-home-v6-orb-core i:nth-child(3){inset:13px 8px 10px 18px;background:rgba(176,118,255,.42)}
+#make-again-founder-letter-wireframe .ma-home-v6-waves { position:absolute;inset:0;z-index:1; }
+#make-again-founder-letter-wireframe .ma-home-v6-waves i { position:absolute;inset:4px;border:1px solid rgba(151,135,255,.52);border-radius:50%;opacity:0;transform:scale(.85); }
+#make-again-founder-letter-wireframe [data-home-voice-state="recording"] .ma-home-v6-waves i { animation:ma-home-record-wave 1.5s linear infinite; }
+#make-again-founder-letter-wireframe [data-home-voice-state="recording"] .ma-home-v6-waves i:nth-child(2){animation-delay:500ms}.ma-home-v6-phone[data-home-voice-state="recording"] .ma-home-v6-waves i:nth-child(3){animation-delay:1s}
+@keyframes ma-home-record-wave { 0%{opacity:.6;transform:scale(.85)}72%,100%{opacity:0;transform:scale(1.72)} }
+#make-again-founder-letter-wireframe .ma-home-voice-zone > small { margin-top:4px;color:var(--muted);font:6px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em; }
+
+#make-again-founder-letter-wireframe .ma-home-v6-scrim { position:absolute;inset:0;z-index:20;background:rgba(3,5,18,.54);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity 240ms var(--ease-out),visibility 240ms; }
+#make-again-founder-letter-wireframe .ma-home-v6-scrim[aria-hidden="false"] { opacity:1;visibility:visible; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer { position:absolute;top:12px;bottom:12px;left:12px;z-index:21;display:flex;width:min(82%,272px);flex-direction:column;gap:12px;padding:17px 14px;border:1px solid var(--line);border-radius:25px;color:var(--cream);background:linear-gradient(122deg,rgba(15,20,55,.96),rgba(50,33,68,.94));box-shadow:0 24px 56px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(22px);opacity:0;visibility:hidden;transform:translate3d(-16px,-7px,0) scale(.96);transform-origin:top left;transition:opacity 260ms var(--ease-out),transform 320ms var(--ease-drawer),visibility 260ms; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer[aria-hidden="false"] { opacity:1;visibility:visible;transform:translate3d(0,0,0) scale(1); }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header { display:flex;align-items:center;gap:9px; }
+#make-again-founder-letter-wireframe .ma-home-v6-avatar { display:grid;width:42px;height:42px;place-items:center;border-radius:50%;background:conic-gradient(from 200deg,#65b8ff,#4058d8,#ae70ff,#eb936e,#65b8ff);font:17px "STXingkai","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header div { display:grid;gap:2px;min-width:0; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header small { color:var(--muted);font-size:7px; }.ma-home-v6-drawer > header strong{font:400 13px "KangXiZiDianTi","STKaiti",serif;}
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header button { margin-left:auto;width:32px;height:32px;border:0;color:var(--muted);background:transparent;font-size:17px; }
+#make-again-founder-letter-wireframe .ma-home-v6-member { display:grid;grid-template-columns:minmax(0,1fr) 12px;gap:2px 8px;padding:11px 12px;border:1px solid rgba(235,147,110,.24);border-radius:16px;color:var(--cream);background:rgba(235,147,110,.07);text-align:left; }
+#make-again-founder-letter-wireframe .ma-home-v6-member span{font:9px "KangXiZiDianTi","STKaiti",serif}.ma-home-v6-member small{color:var(--muted);font-size:6px}.ma-home-v6-member b{grid-row:1/3;grid-column:2;align-self:center;color:var(--muted);font-weight:400}
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav { display:grid;gap:3px; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav button { display:grid;grid-template-columns:22px minmax(0,1fr) auto;align-items:center;gap:8px;min-height:42px;padding:7px 8px;border:0;border-radius:13px;color:rgba(244,233,218,.8);background:transparent;text-align:left;transition:transform 140ms var(--ease-out),background-color 180ms ease; }
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav button:active{transform:scale(.98)}.ma-home-v6-drawer nav i{color:#c5a6ff;font-style:normal}.ma-home-v6-drawer nav span{font:10px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em}.ma-home-v6-drawer nav b,.ma-home-v6-drawer nav small{color:var(--muted);font-size:7px;font-weight:400}
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav .ma-home-v6-ending{margin-top:5px;color:#ef9a8e;background:rgba(198,95,90,.06)}
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav .ma-home-v6-ending i{color:#d86f68}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-v6,#make-again-founder-letter-wireframe .ma-home-event-layer { position:absolute;inset:0;z-index:40;display:grid;place-items:center;padding:25px 20px;background:rgba(3,5,18,.64);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity 240ms var(--ease-out),visibility 240ms; }
+#make-again-founder-letter-wireframe .ma-home-philosophy-v6[aria-hidden="false"],#make-again-founder-letter-wireframe .ma-home-event-layer[aria-hidden="false"]{opacity:1;visibility:visible}
+#make-again-founder-letter-wireframe .ma-philosophy-stack { position:relative;width:100%;height:310px; }
+#make-again-founder-letter-wireframe .ma-philosophy-stack article { position:absolute;inset:0;display:grid;align-content:center;gap:12px;padding:30px 24px;border-radius:5px 11px 7px;color:#4b3626;background:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,rgba(120,90,60,.07) 32px),linear-gradient(155deg,#fbf0d9,#ead7b5);box-shadow:0 24px 50px rgba(0,0,0,.42);opacity:0;transform:translateY(9px) scale(.96) rotate(2deg);transition:opacity 220ms var(--ease-out),transform 240ms var(--ease-out); }
+#make-again-founder-letter-wireframe .ma-philosophy-stack article:nth-child(2){transform:translateY(5px) scale(.97) rotate(-2deg)}.ma-philosophy-stack article:nth-child(3){transform:translateY(2px) scale(.98) rotate(1deg)}
+#make-again-founder-letter-wireframe .ma-philosophy-stack article.is-active{z-index:4;opacity:1;transform:translateY(0) scale(1) rotate(-.7deg)}
+#make-again-founder-letter-wireframe .ma-philosophy-stack small{color:rgba(99,65,44,.55);font-size:7px;letter-spacing:.16em}.ma-philosophy-stack h2{margin:0;font:400 22px "KangXiZiDianTi","STKaiti",serif}.ma-philosophy-stack p{margin:0;font:12px/2 "KangXiZiDianTi","STKaiti",serif}
+#make-again-founder-letter-wireframe .ma-home-philosophy-v6 footer { display:flex;gap:8px;margin-top:12px;justify-content:center; }.ma-home-philosophy-v6 footer button{min-height:36px;padding:7px 18px;border:1px solid var(--line);border-radius:999px;color:var(--cream);background:rgba(20,24,59,.8);font:8px "KangXiZiDianTi","STKaiti",serif}
+
+#make-again-founder-letter-wireframe .ma-home-event { width:100%;padding:27px 21px 20px;border-radius:7px 12px 9px;color:#4b3626;background:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(120,90,60,.07) 31px),linear-gradient(155deg,#faf0dd,#ead6b7);box-shadow:0 26px 55px rgba(0,0,0,.48);transform:translateY(12px) scale(.96) rotate(-.7deg);transition:transform 260ms var(--ease-out); }
+#make-again-founder-letter-wireframe .ma-home-event-layer[aria-hidden="false"] .ma-home-event{transform:translateY(0) scale(1) rotate(-.7deg)}
+#make-again-founder-letter-wireframe .ma-home-event > small{color:rgba(113,73,45,.58);font-size:7px;letter-spacing:.18em}.ma-home-event h2{margin:10px 0 9px;font:400 20px/1.5 "KangXiZiDianTi","STKaiti",serif}.ma-home-event p{margin:0;font:11px/1.9 "KangXiZiDianTi","STKaiti",serif}.ma-home-event > div{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;margin-top:20px}.ma-home-event button{min-height:36px;border:1px solid rgba(95,63,42,.18);border-radius:999px;color:#5b3d2a;background:rgba(255,255,255,.24);font:7px "KangXiZiDianTi","STKaiti",serif}.ma-home-event button:last-child{color:#f8efe0;background:#4d3527}
+#make-again-founder-letter-wireframe .ma-home-toast-v6 { position:absolute;right:18px;bottom:18px;left:18px;z-index:50;padding:10px 13px;border:1px solid var(--line);border-radius:15px;color:var(--cream);background:rgba(15,19,50,.92);backdrop-filter:blur(16px);font:8px "KangXiZiDianTi","STKaiti",serif;text-align:center; }
+
+@media (hover:hover) and (pointer:fine){
+  #make-again-founder-letter-wireframe .ma-home-v6-menu:hover,#make-again-founder-letter-wireframe .ma-home-v6-drawer nav button:hover{background-color:rgba(154,109,255,.1)}
+  #make-again-founder-letter-wireframe .ma-home-ai-suggestion:hover{border-color:rgba(154,109,255,.48)}
+}
+@media (prefers-reduced-motion:reduce){
+  #make-again-founder-letter-wireframe [data-home-voice-state="recording"] .ma-home-v6-waves i{animation:none;opacity:.3;transform:scale(1.35)}
+  #make-again-founder-letter-wireframe .ma-home-v6-drawer,#make-again-founder-letter-wireframe .ma-home-event,#make-again-founder-letter-wireframe .ma-philosophy-stack article{transform:none!important;transition:opacity 160ms ease!important}
+}
+@media (prefers-reduced-transparency:reduce){
+  #make-again-founder-letter-wireframe .ma-home-v6-drawer,#make-again-founder-letter-wireframe .ma-home-widget-card-v6,#make-again-founder-letter-wireframe .ma-home-talk-v6{backdrop-filter:none;background-color:#151936}
+}
+
+/* Second pass · dynamic safe area and a truly separate ending action. */
+#make-again-founder-letter-wireframe .ma-home-v6-screen {
+  padding: calc(17px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-safe {
+  width: calc(92px + env(safe-area-inset-right));
+  height: calc(34px + env(safe-area-inset-top));
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-menu {
+  width: 44px;
+  height: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer button,
+#make-again-founder-letter-wireframe .ma-home-v6-drawer nav button,
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header button {
+  min-height: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-week {
+  grid-template-columns: repeat(7, minmax(44px, 1fr));
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-week::-webkit-scrollbar {
+  display: none;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer button,
+#make-again-founder-letter-wireframe .ma-home-event button,
+#make-again-founder-letter-wireframe .ma-home-philosophy-v6 footer button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood header small,
+#make-again-founder-letter-wireframe .ma-mood-day small,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 header span,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 header small,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer small,
+#make-again-founder-letter-wireframe .ma-home-widget-label,
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 > p:not(.ma-home-widget-label),
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion small,
+#make-again-founder-letter-wireframe .ma-home-voice-zone > p,
+#make-again-founder-letter-wireframe .ma-home-voice-zone > small {
+  font-size: 9px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion strong {
+  font-size: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer > header button {
+  width: 44px;
+  height: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer {
+  top: calc(12px + env(safe-area-inset-top));
+  right: calc(12px + env(safe-area-inset-right));
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  left: calc(12px + env(safe-area-inset-left));
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer-ending-group {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(226, 199, 222, 0.14);
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer-ending-group .ma-home-v6-ending {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 13px;
+  color: #ef9a8e;
+  background: rgba(198, 95, 90, 0.08);
+  text-align: left;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer-ending-group .ma-home-v6-ending i {
+  color: #d86f68;
+  font-style: normal;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer-ending-group .ma-home-v6-ending span {
+  font: 10px "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .08em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-drawer-ending-group .ma-home-v6-ending small {
+  color: var(--muted);
+  font-size: 7px;
+}

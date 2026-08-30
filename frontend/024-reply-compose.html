@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 回信给相似的人</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css?v=6.1" />
+  <link rel="stylesheet" href="assets/015-letter-box-v2.css?v=2.0" />
+  <style>
+    .ma-reply-matches { display:flex; flex-direction:column; gap:12px; padding:20px 18px; }
+    .ma-reply-matches > small { color:var(--ma-muted, #8c8fa7); }
+    .ma-reply-match-card { display:flex; flex-direction:column; gap:6px; text-align:left; padding:16px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05); cursor:pointer; color:inherit; font:inherit; }
+    .ma-reply-match-card strong { font-weight:600; line-height:1.5; }
+    .ma-reply-match-card small { color:var(--ma-muted, #8c8fa7); }
+    .ma-reply-match-card:hover { background:rgba(255,255,255,.09); }
+    .ma-reply-match-summary { padding:10px 14px; border-radius:12px; background:rgba(255,255,255,.05); line-height:1.6; }
+  </style>
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">024 · 回信给相似的人</span>
+      <span class="ma-standalone-nav-actions"><a href="index.html">总入口</a><a href="005-home.html?from=reply-compose">返回主页</a></span>
+    </nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-utility-page="letter-box">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">024 · 读一封来信 → 写回信 → 匿名送达</span></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone">
+          <section class="ma-utility-screen">
+            <header class="ma-utility-header">
+              <button type="button" class="ma-utility-back" data-reply-compose-home aria-label="返回主页">←</button>
+              <h1>回信</h1>
+              <span class="ma-utility-capsule-safe" aria-hidden="true"></span>
+            </header>
+            <div class="ma-utility-content ma-letter-compose-content">
+              <div class="ma-reply-matches" data-reply-matches>
+                <small>选择一封来信</small>
+              </div>
+              <form class="ma-letter-compose" data-reply-compose-form hidden aria-labelledby="ma-reply-compose-title">
+                <small>回信给一个仍在路上的人</small>
+                <h2 id="ma-reply-compose-title">写下你的陪伴</h2>
+                <p class="ma-reply-match-summary" data-reply-match-summary></p>
+                <label for="ma-reply-compose-text">你的回信</label>
+                <textarea id="ma-reply-compose-text" data-reply-compose-text maxlength="600" placeholder="我想对你说……" required></textarea>
+                <div class="ma-letter-compose-meta">
+                  <span data-reply-compose-status aria-live="polite">选择一封来信后开始</span>
+                  <span data-reply-compose-count>0 / 600</span>
+                </div>
+                <div class="ma-letter-compose-actions">
+                  <button type="submit" class="ma-letter-compose-primary">匿名送出回信</button>
+                  <button type="button" class="ma-letter-compose-secondary" data-reply-compose-home>返回主页</button>
+                </div>
+              </form>
+              <section class="ma-letter-compose-success" data-reply-compose-success hidden aria-live="polite">
+                <span aria-hidden="true">✓</span>
+                <small>回信已经送出</small>
+                <h2>谢谢你的陪伴</h2>
+                <p>回信进入审核后，会匿名送达到那个人手上。</p>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">024 · 读来信 → 写回信 → 匿名送达（需审核）</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/024-reply-compose.js" defer></script>
+</body>
+</html>

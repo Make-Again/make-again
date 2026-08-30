@@ -1,0 +1,231 @@
+#make-again-founder-letter-wireframe .ma-utility-back,
+#make-again-founder-letter-wireframe .ma-chat-day-header > button {
+  display:grid;width:38px;height:38px;place-items:center;padding:0;border:0;border-radius:50%;color:rgba(244,233,218,.9);background:transparent;font:23px/1 system-ui;letter-spacing:0;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 180ms ease;
+}
+#make-again-founder-letter-wireframe .ma-utility-back:active,#make-again-founder-letter-wireframe .ma-chat-day-header > button:active{transform:scale(.94)}
+#make-again-founder-letter-wireframe .ma-daily-list .ma-history-item { display:grid;gap:5px; }
+#make-again-founder-letter-wireframe .ma-daily-list .ma-history-item > small { display:block;margin-top:3px;text-align:right; }
+
+#make-again-founder-letter-wireframe .ma-chat-day-screen { position:absolute;inset:0;display:grid;grid-template-rows:56px minmax(0,1fr);color:#f4e9da;background:radial-gradient(circle at 100% 8%,rgba(235,147,110,.18),transparent 36%),radial-gradient(circle at 0 72%,rgba(125,94,220,.2),transparent 42%),linear-gradient(158deg,#050817,#10132d 58%,#1b132f); }
+#make-again-founder-letter-wireframe .ma-chat-day-header { display:grid;grid-template-columns:50px minmax(0,1fr) 50px;align-items:center;padding:8px 12px;background:rgba(8,11,30,.68);backdrop-filter:blur(16px); }
+#make-again-founder-letter-wireframe .ma-chat-day-header div{text-align:center}.ma-chat-day-header h1{margin:0;font:400 14px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.12em}.ma-chat-day-header small{color:rgba(226,212,221,.54);font-size:6px}
+#make-again-founder-letter-wireframe .ma-chat-day-scroll { min-height:0;padding:13px 12px 22px;overflow-y:auto;scrollbar-width:none; }
+#make-again-founder-letter-wireframe .ma-chat-time { margin:10px 0;color:rgba(226,212,221,.46);font-size:7px;text-align:center; }
+#make-again-founder-letter-wireframe .ma-chat-row { display:flex;align-items:flex-start;gap:7px;margin:9px 0; }
+#make-again-founder-letter-wireframe .ma-chat-row.is-me { flex-direction:row-reverse; }
+#make-again-founder-letter-wireframe .ma-chat-row > span { display:grid;width:28px;height:28px;flex:none;place-items:center;border-radius:50%;background:linear-gradient(145deg,#5a9dff,#9a6dff);font:9px "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-chat-row > p { max-width:73%;margin:0;padding:9px 11px;border:1px solid rgba(226,199,222,.16);border-radius:5px 14px 14px 14px;color:rgba(244,233,218,.86);background:rgba(21,26,63,.72);font:9px/1.7 "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-chat-row.is-me > p { border-radius:14px 5px 14px 14px;background:rgba(99,72,167,.34); }
+#make-again-founder-letter-wireframe .ma-chat-day-end { margin:20px 0;color:rgba(226,212,221,.38);font-size:7px;text-align:center; }
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v6 { display:grid;gap:4px;margin-top:58px; }
+#make-again-founder-letter-wireframe .ma-settings-menu-v6 button,
+#make-again-founder-letter-wireframe .ma-setting-link { display:grid;width:100%;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:9px;min-height:58px;padding:10px 13px;border:0;border-bottom:1px solid rgba(226,199,222,.12);color:#f4e9da;background:transparent;text-align:left;cursor:pointer;transition:transform 140ms cubic-bezier(.23,1,.32,1),background-color 180ms ease; }
+#make-again-founder-letter-wireframe .ma-settings-menu-v6 button:active,#make-again-founder-letter-wireframe .ma-setting-link:active{transform:scale(.985)}
+#make-again-founder-letter-wireframe .ma-settings-menu-v6 i{color:#c4a5ff;font-style:normal}.ma-settings-menu-v6 span,.ma-setting-link strong,.ma-setting-link>span{font:400 11px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em}.ma-settings-menu-v6 b,.ma-setting-link b{color:rgba(244,233,218,.5);font-size:18px;font-weight:400}
+#make-again-founder-letter-wireframe .ma-setting-link { grid-template-columns:minmax(0,1fr) auto;min-height:60px;border:1px solid rgba(226,199,222,.16);border-radius:16px;background:rgba(20,24,59,.5); }
+#make-again-founder-letter-wireframe .ma-setting-link small{color:rgba(226,212,221,.52);font-size:7px}.ma-setting-link.is-danger strong{color:#f38b79}.ma-setting-value{color:rgba(226,212,221,.55);font-size:8px}
+
+#make-again-founder-letter-wireframe .ma-feedback-form { display:grid;gap:9px;margin-top:14px;padding:14px;border:1px solid rgba(226,199,222,.16);border-radius:18px;background:rgba(20,24,59,.5); }
+#make-again-founder-letter-wireframe .ma-feedback-form label{font:10px "KangXiZiDianTi","STKaiti",serif}.ma-feedback-form textarea{min-height:92px;padding:10px;border:1px solid rgba(226,199,222,.16);border-radius:13px;outline:0;color:#f4e9da;background:rgba(6,9,28,.4);font:9px/1.7 "KangXiZiDianTi","STKaiti",serif;resize:none}.ma-feedback-form button{min-height:37px;border:1px solid rgba(235,147,110,.3);border-radius:999px;color:#f4e9da;background:rgba(235,147,110,.12);font:8px "KangXiZiDianTi","STKaiti",serif}.ma-feedback-form small{min-height:12px;color:rgba(226,212,221,.55);font-size:7px;text-align:center}
+
+#make-again-founder-letter-wireframe .ma-about-mark { display:grid;width:76px;height:76px;place-items:center;margin:32px auto 18px;border:1px solid rgba(226,199,222,.22);border-radius:50%;background:conic-gradient(from 205deg,#65b8ff,#4058d8,#ae70ff,#eb936e,#65b8ff);box-shadow:0 0 28px rgba(130,102,235,.28);font:28px "STXingkai","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-about-copy { margin-bottom:18px;text-align:center; }.ma-about-copy h2{margin:0 0 10px;font:400 20px/1.55 "KangXiZiDianTi","STKaiti",serif}.ma-about-copy p{margin:0 auto 10px;max-width:260px;color:rgba(226,212,221,.62);font:9px/1.8 "KangXiZiDianTi","STKaiti",serif}.ma-about-copy small{color:rgba(226,212,221,.42);font-size:6px;letter-spacing:.12em}
+
+#make-again-founder-letter-wireframe .ma-letter-box-note { display:grid;gap:12px;margin-top:22px;padding:25px 20px;border-radius:6px 11px 7px;color:#4b3626;background:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(120,90,60,.07) 31px),linear-gradient(155deg,#faf0dd,#ead6b7);box-shadow:0 24px 48px rgba(0,0,0,.34);transform:rotate(-.6deg); }
+#make-again-founder-letter-wireframe .ma-letter-box-note>small{color:rgba(101,65,43,.58);font-size:7px;letter-spacing:.14em}.ma-letter-box-note h2{margin:0;font:400 20px/1.55 "KangXiZiDianTi","STKaiti",serif}.ma-letter-box-note p{margin:0;font:10px/1.85 "KangXiZiDianTi","STKaiti",serif}.ma-letter-box-note textarea{min-height:125px;padding:10px;border:1px solid rgba(101,65,43,.16);border-radius:10px;outline:0;color:#4b3626;background:rgba(255,255,255,.22);font:10px/1.8 "KangXiZiDianTi","STKaiti",serif;resize:none}.ma-letter-box-note label{font:7px/1.5 system-ui}.ma-letter-box-note>button{min-height:40px;border:0;border-radius:999px;color:#f8efe0;background:#4d3527;font:9px "KangXiZiDianTi","STKaiti",serif}.ma-letter-box-note em{min-height:14px;color:rgba(101,65,43,.65);font-size:7px;font-style:normal;text-align:center}
+
+@media (hover:hover) and (pointer:fine){#make-again-founder-letter-wireframe .ma-settings-menu-v6 button:hover,#make-again-founder-letter-wireframe .ma-setting-link:hover{background-color:rgba(154,109,255,.09)}}
+@media (prefers-reduced-motion:reduce){#make-again-founder-letter-wireframe .ma-utility-back,#make-again-founder-letter-wireframe .ma-settings-menu-v6 button,#make-again-founder-letter-wireframe .ma-setting-link{transform:none!important;transition:background-color 160ms ease!important}}
+
+/* Shared compact return control for utility pages. */
+#make-again-founder-letter-wireframe .ma-utility-back,
+#make-again-founder-letter-wireframe .ma-chat-day-header > button {
+  width:34px;
+  height:34px;
+  min-width:34px;
+  min-height:34px;
+  border:0;
+  background:transparent;
+  font-size:0;
+}
+#make-again-founder-letter-wireframe .ma-utility-back::before,
+#make-again-founder-letter-wireframe .ma-chat-day-header > button::before {
+  width:8px;
+  height:8px;
+  border-bottom:1.7px solid currentColor;
+  border-left:1.7px solid currentColor;
+  content:"";
+  transform:translateX(2px) rotate(45deg);
+}
+
+/* Second pass · the letter invitation is a staged, one-time reading flow. */
+#make-again-founder-letter-wireframe [hidden] { display: none !important; }
+
+#make-again-founder-letter-wireframe .ma-utility-screen {
+  padding: calc(18px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+}
+
+#make-again-founder-letter-wireframe .ma-utility-back {
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+}
+
+#make-again-founder-letter-wireframe .ma-utility-capsule-safe {
+  width: calc(92px + env(safe-area-inset-right));
+  height: calc(36px + env(safe-area-inset-top));
+}
+
+#make-again-founder-letter-wireframe .ma-utility-content {
+  padding-bottom: calc(2px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow {
+  min-height: 100%;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-panel {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  min-height: 100%;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-panel > small {
+  color: rgba(101, 65, 43, .58);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-panel h2 {
+  margin: 0;
+  font: 400 21px/1.55 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-panel p {
+  margin: 0;
+  font: 10px/1.85 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope {
+  position: relative;
+  display: grid;
+  width: min(100%, 230px);
+  height: 146px;
+  place-items: center;
+  margin: 8px auto 0;
+  border: 1px solid rgba(101, 65, 43, .18);
+  border-radius: 4px 11px 7px;
+  color: #ecd9c0;
+  background:
+    radial-gradient(circle at 18% 23%, rgba(255, 255, 255, .28) 0 1px, transparent 1.5px),
+    repeating-linear-gradient(103deg, rgba(117, 78, 52, .05) 0 2px, transparent 2px 9px),
+    linear-gradient(150deg, #f4e5cb, #d8bd98);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, .2), inset 0 1px rgba(255, 255, 255, .4);
+  cursor: pointer;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope::before,
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope::before {
+  background: linear-gradient(33deg, transparent 49%, rgba(117, 78, 52, .16) 50%, transparent 51%), linear-gradient(-33deg, transparent 49%, rgba(117, 78, 52, .16) 50%, transparent 51%);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope::after {
+  inset: 0 0 auto;
+  height: 58%;
+  border-bottom: 1px solid rgba(117, 78, 52, .13);
+  background: linear-gradient(151deg, transparent 49%, rgba(117, 78, 52, .14) 50%, transparent 51%);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-envelope span {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border-radius: 50%;
+  background: #713f38;
+  font: 16px "STXingkai", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-primary,
+#make-again-founder-letter-wireframe .ma-letter-flow-secondary {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font: 10px "KangXiZiDianTi", "STKaiti", serif;
+  cursor: pointer;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-primary {
+  border: 0;
+  color: #f8efe0;
+  background: #4d3527;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-secondary {
+  border: 1px solid rgba(101, 65, 43, .2);
+  color: #664936;
+  background: rgba(255, 255, 255, .2);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-copy {
+  display: grid;
+  gap: 11px;
+  padding: 14px 12px;
+  border-left: 2px solid rgba(113, 63, 56, .22);
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, rgba(120, 90, 60, .08) 28px), rgba(255, 255, 255, .18);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-form textarea {
+  width: 100%;
+  min-height: 132px;
+  padding: 11px;
+  border: 1px solid rgba(101, 65, 43, .16);
+  border-radius: 10px;
+  outline: 0;
+  color: #4b3626;
+  background: rgba(255, 255, 255, .22);
+  font: 10px/1.8 "KangXiZiDianTi", "STKaiti", serif;
+  resize: none;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-form em {
+  min-height: 15px;
+  color: rgba(101, 65, 43, .68);
+  font-size: 9px;
+  font-style: normal;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-flow-complete {
+  text-align: center;
+}
+
+@media (max-width: 360px) {
+  #make-again-founder-letter-wireframe .ma-letter-flow-envelope {
+    width: min(100%, 230px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-letter-flow-panel {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,205 @@
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-utility-screen {
+  grid-template-rows: 52px minmax(0, 1fr);
+}
+
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-utility-header {
+  position: relative;
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+}
+
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-utility-header h1 {
+  position: absolute;
+  left: 50%;
+  width: min(190px, 62%);
+  transform: translateX(-50%);
+}
+
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-utility-header .ma-utility-back {
+  position: relative;
+  z-index: 2;
+}
+
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-utility-capsule-safe {
+  width: 52px;
+  height: 36px;
+  margin-left: auto;
+}
+
+#make-again-founder-letter-wireframe.ma-settings-family-v8 .ma-settings-content-v8 {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  padding: 18px 2px calc(8px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid rgba(226,199,222,.16);
+  border-radius: 19px;
+  background: linear-gradient(128deg, rgba(18,24,59,.66), rgba(50,33,66,.44));
+  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 12px 28px rgba(0,0,0,.13);
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 > button {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr) auto 12px;
+  align-items: center;
+  gap: 10px;
+  min-height: 62px;
+  padding: 9px 13px;
+  border: 0;
+  border-bottom: 1px solid rgba(226,199,222,.1);
+  color: #f4e9da;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 130ms cubic-bezier(.23,1,.32,1), background-color 170ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 > button:last-child { border-bottom: 0; }
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 > button:active { transform: scale(.985); }
+
+#make-again-founder-letter-wireframe .ma-settings-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(162,133,235,.18);
+  border-radius: 12px;
+  color: #c9adff;
+  background: rgba(154,109,255,.09);
+}
+
+#make-again-founder-letter-wireframe .ma-settings-icon svg { width: 21px; height: 21px; }
+
+#make-again-founder-letter-wireframe .ma-settings-icon-brand {
+  color: #edac87;
+  background: rgba(235,147,110,.09);
+  font: 15px "STXingkai", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 strong,
+#make-again-founder-letter-wireframe .ma-account-row-v8 > strong {
+  font: 400 11px/1.4 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .07em;
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 small,
+#make-again-founder-letter-wireframe .ma-account-row-v8 > small {
+  color: rgba(226,212,221,.48);
+  font: 8px/1 ui-sans-serif, system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-settings-menu-v8 b {
+  color: rgba(244,233,218,.34);
+  font: 18px/1 system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-account-content-v8 { gap: 18px; }
+
+#make-again-founder-letter-wireframe .ma-account-row-v8 {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 62px;
+  padding: 9px 13px;
+  border: 1px solid rgba(226,199,222,.16);
+  border-radius: 19px;
+  background: linear-gradient(128deg, rgba(18,24,59,.66), rgba(50,33,66,.44));
+  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 12px 28px rgba(0,0,0,.13);
+}
+
+#make-again-founder-letter-wireframe .ma-wechat-mark {
+  color: #77d49a;
+  background: rgba(82,190,121,.08);
+  border-color: rgba(82,190,121,.18);
+}
+
+#make-again-founder-letter-wireframe .ma-logout-button-v8 {
+  min-height: 48px;
+  margin-top: auto;
+  border: 1px solid rgba(216,100,94,.22);
+  border-radius: 16px;
+  color: rgba(244,145,135,.84);
+  background: rgba(184,70,66,.06);
+  font: 10px "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: transform 130ms cubic-bezier(.23,1,.32,1), background-color 170ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-logout-button-v8:active { transform: scale(.98); }
+
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 {
+  position: absolute;
+  inset: 0;
+  z-index: 45;
+  display: grid;
+  place-items: center;
+  padding: 24px 20px;
+  background: rgba(3,5,18,.65);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms cubic-bezier(.23,1,.32,1), visibility 200ms;
+}
+
+#make-again-founder-letter-wireframe .ma-logout-layer-v8[aria-hidden="false"] { opacity: 1; visibility: visible; }
+
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 article {
+  width: 100%;
+  padding: 25px 20px 18px;
+  border: 1px solid rgba(226,199,222,.18);
+  border-radius: 22px;
+  color: #f4e9da;
+  background: linear-gradient(148deg, rgba(19,24,59,.98), rgba(49,32,63,.97));
+  box-shadow: 0 28px 60px rgba(0,0,0,.48), inset 0 1px rgba(255,255,255,.06);
+  transform: translateY(8px) scale(.97);
+  transition: transform 220ms cubic-bezier(.23,1,.32,1);
+}
+
+#make-again-founder-letter-wireframe .ma-logout-layer-v8[aria-hidden="false"] article { transform: translateY(0) scale(1); }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 article > small { color: rgba(235,147,110,.62); font-size: 7px; letter-spacing: .15em; }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 h2 { margin: 10px 0 8px; font: 400 19px/1.45 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 p { margin: 0; color: rgba(226,212,221,.62); font: 9px/1.75 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 article > div { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 button { min-height: 42px; border: 1px solid rgba(226,199,222,.16); border-radius: 14px; color: #f4e9da; background: transparent; font: 9px "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-logout-layer-v8 [data-logout-confirm] { border-color: rgba(216,100,94,.24); color: #ffd8cf; background: rgba(184,70,66,.14); }
+
+#make-again-founder-letter-wireframe .ma-about-content-v8 { padding-top: 18px; }
+#make-again-founder-letter-wireframe .ma-about-content-v8 .ma-about-mark { margin: 16px auto 14px; }
+#make-again-founder-letter-wireframe .ma-about-content-v8 .ma-about-copy { margin-bottom: 16px; }
+
+#make-again-founder-letter-wireframe .ma-about-links-v8 {
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(226,199,222,.16);
+  border-radius: 19px;
+  background: rgba(20,24,59,.48);
+}
+
+#make-again-founder-letter-wireframe .ma-about-links-v8 .ma-setting-link {
+  min-height: 62px;
+  border: 0;
+  border-bottom: 1px solid rgba(226,199,222,.1);
+  border-radius: 0;
+  background: transparent;
+}
+
+#make-again-founder-letter-wireframe .ma-about-links-v8 .ma-setting-link:last-child { border-bottom: 0; }
+
+@media (hover: hover) and (pointer: fine) {
+  #make-again-founder-letter-wireframe .ma-settings-menu-v8 > button:hover { background-color: rgba(154,109,255,.08); }
+  #make-again-founder-letter-wireframe .ma-logout-button-v8:hover { background-color: rgba(184,70,66,.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-settings-menu-v8 > button,
+  #make-again-founder-letter-wireframe .ma-logout-button-v8,
+  #make-again-founder-letter-wireframe .ma-logout-layer-v8,
+  #make-again-founder-letter-wireframe .ma-logout-layer-v8 article { transition: none; transform: none; }
+}

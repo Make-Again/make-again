@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 账号与安全</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css" />
+  <link rel="stylesheet" href="assets/settings-v8.css?v=1.0" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" class="ma-settings-family-v8" role="region" aria-label="Make Again 账号与安全界面">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">011 · 账号与安全</span><div class="ma-letter-review-actions"><button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button></div></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone">
+          <section class="ma-utility-screen">
+            <header class="ma-utility-header">
+              <button type="button" class="ma-utility-back" data-settings-back aria-label="返回设置">←</button>
+              <h1>账号与安全</h1>
+              <span class="ma-utility-capsule-safe" aria-hidden="true"></span>
+            </header>
+            <div class="ma-utility-content ma-settings-content-v8 ma-account-content-v8">
+              <div class="ma-account-row-v8">
+                <span class="ma-settings-icon ma-wechat-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"><path d="M4.2 10.1c0-3 3-5.4 6.7-5.4s6.7 2.4 6.7 5.4-3 5.4-6.7 5.4c-.8 0-1.6-.1-2.3-.3l-2.8 1.4.7-2.3c-1.4-1-2.3-2.5-2.3-4.2Z"/><path d="M12.7 14.3c.7 2.4 3.3 4.1 6.2 3.5l2.2 1.1-.5-1.8c1-.8 1.6-1.9 1.6-3.2 0-2.1-1.8-3.8-4.4-4.3"/><circle cx="8.6" cy="9.4" r=".55" fill="currentColor" stroke="none"/><circle cx="13" cy="9.4" r=".55" fill="currentColor" stroke="none"/></svg></span>
+                <strong data-account-name>账号</strong>
+                <small data-account-status>已登录</small>
+              </div>
+              <button type="button" class="ma-logout-button-v8" data-logout-open>退出登录</button>
+            </div>
+          </section>
+
+          <div class="ma-logout-layer-v8" data-logout-layer aria-hidden="true">
+            <article role="dialog" aria-modal="true" aria-labelledby="ma-logout-title">
+              <small>账号操作</small>
+              <h2 id="ma-logout-title">确认退出登录？</h2>
+              <p>聊天、报告和时间看板都会保留，下次使用同一账号登录即可继续。</p>
+              <div><button type="button" data-logout-cancel>取消</button><button type="button" data-logout-confirm>退出登录</button></div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">011 · 账号信息与退出登录</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/utility-v6.js?v=6.2" defer></script>
+  <script src="assets/account-security-v8.js?v=1.0" defer></script>
+</body>
+</html>

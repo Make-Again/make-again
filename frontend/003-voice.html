@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 003 Voice</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/003-voice-v6.css?v=6.9" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">003 · Wakey Voice</span>
+      <span class="ma-standalone-nav-actions">
+        <a href="index.html" target="_top">总入口</a>
+        <a href="002-founder-letter.html">回到 002</a>
+        <a href="004-report-board.html">跳到 004</a>
+      </span>
+    </nav>
+
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" role="region" aria-label="Make Again 003 Wakey 灵动 Voice 对话界面">
+      <div class="ma-letter-review-tools">
+        <span class="ma-letter-review-title">003 · Voice ↔ 文字输入</span>
+        <div class="ma-letter-review-actions">
+          <button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button>
+        </div>
+      </div>
+
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone" data-transition-state="voice" aria-label="Wakey Voice 与文字输入手机界面">
+          <section class="ma-voice-screen" data-input-mode="voice" data-orb-state="idle" aria-label="003 Wakey 灵动语音陪伴界面" aria-describedby="ma-voice-screen-description">
+            <button type="button" class="ma-voice-home-return" aria-label="返回首页" hidden aria-hidden="true">←</button>
+            <div class="ma-voice-heading">
+              <p class="ma-voice-kicker">Wakey</p>
+            </div>
+            <button type="button" class="ma-voice-tts-toggle" aria-label="关闭 Wakey 朗读" aria-pressed="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10v4h3l4 3V7l-4 3H4"></path>
+                <path data-tts-wave d="M15 9.2a4 4 0 0 1 0 5.6M17.8 6.7a7.4 7.4 0 0 1 0 10.6"></path>
+                <path data-tts-slash d="m15.5 9.5 5 5m0-5-5 5"></path>
+              </svg>
+            </button>
+            <div class="ma-voice-tts-tip" data-tts-tip hidden>Wakey 会朗读回复，点这里可静音</div>
+            <div class="ma-voice-stage" aria-live="polite">
+              <div class="ma-voice-mirror" data-voice-mirror data-mirror-state="ready">
+                <span data-mirror-label>Wakey · 此刻想问你</span>
+                <p data-current-reply>最近，是什么让你有些放不下</p>
+                <small data-mirror-status>屏幕上只留下此刻这一句话</small>
+              </div>
+              <article class="ma-mirror-artifact" data-artifact-stage data-artifact-type="letter" hidden aria-live="polite">
+                <div class="ma-artifact-symbol" data-artifact-symbol aria-hidden="true"></div>
+                <span data-artifact-kicker>Wakey 递来一封信</span>
+                <h2 data-artifact-title>有些话，想写下来给你</h2>
+                <p data-artifact-copy>这是 Wakey 根据刚才的对话整理的一封信。</p>
+                <div class="ma-artifact-actions">
+                  <button type="button" data-artifact-action>现在打开</button>
+                  <button type="button" data-artifact-decline hidden>这次不要</button>
+                </div>
+                <input type="file" accept="image/*" capture="environment" data-artifact-file hidden />
+              </article>
+              <div class="ma-artifact-float" data-artifact-float data-state="preview" hidden>
+                <div class="ma-artifact-float-object" data-artifact-float-object></div>
+                <div class="ma-artifact-float-loading" data-artifact-float-loading hidden>
+                  <i class="ma-float-spinner" aria-hidden="true"></i>
+                  <span>Wakey 正在抠图，稍等一下…</span>
+                </div>
+                <p data-artifact-float-hint>向上滑，收进时间看板</p>
+              </div>
+              <div class="ma-collect-portal" data-collect-portal aria-hidden="true"><i></i></div>
+              <div class="ma-collect-toast" data-collect-toast aria-live="polite" hidden>
+                <span>已收进时间看板</span><button type="button" data-collect-undo>撤回</button>
+              </div>
+            </div>
+            <div class="ma-voice-composer" role="group" aria-label="Wakey 输入方式">
+              <button type="button" class="ma-voice-orb" data-orb-state="idle" aria-label="Voice 球，当前待机，点按开始录音，再点一次发送" aria-pressed="false">
+                <span class="ma-voice-orb-halo" aria-hidden="true"></span>
+                <span class="ma-voice-orb-rings" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="ma-voice-orb-core" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+                <span class="ma-voice-orb-sheen" aria-hidden="true"></span>
+                <span class="sr-only">Voice 球，当前待机，点按开始录音，再点一次发送</span>
+              </button>
+              <button type="button" class="ma-voice-close" aria-label="切换到文字输入模式">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                  <path d="M7 9h.01M10.5 9h.01M14 9h.01M17.5 9h.01M7 12.5h.01M10.5 12.5h.01M14 12.5h.01M17.5 12.5h.01M8 16h8"></path>
+                </svg>
+              </button>
+              <div class="ma-voice-text-composer" aria-hidden="true">
+                <label class="sr-only" for="ma-voice-text-input">输入你想问的</label>
+                <input id="ma-voice-text-input" type="text" placeholder="输入你想说的…" autocomplete="off" enterkeyhint="send" />
+                <button type="button" class="ma-voice-text-send" aria-label="发送文字" disabled>
+                  <span aria-hidden="true">↑</span>
+                </button>
+              </div>
+            </div>
+            <p class="ma-voice-mode-hint" id="ma-voice-screen-description" aria-live="polite">Voice · 点按球体录音</p>
+            <div class="ma-relationship-picker" data-relationship-picker hidden role="dialog" aria-modal="true" aria-labelledby="ma-relationship-picker-title">
+              <div class="ma-relationship-picker-card">
+                <h2 id="ma-relationship-picker-title">这段陪伴，是关于谁的？</h2>
+                <p>让我更懂你一点，选一个最贴近的：</p>
+                <button type="button" data-relationship-option="breakup">分手的恋人</button>
+                <button type="button" data-relationship-option="pet">陪伴过的宠物</button>
+                <button type="button" data-relationship-option="relative">离世的亲人</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <p class="ma-letter-review-status" aria-live="polite">003 Voice · 点按球体录音 · 再点一次发送</p>
+    </div>
+    <div class="ma-page-handoff">
+      <a class="ma-standalone-next" href="004-report-board.html?from=voice">下一界面：004 初次报告</a>
+    </div>
+    <p class="ma-standalone-flow-note">默认 Voice 球点按录音，再点一次发送；点击键盘图标进入文字输入，再点同一个小球回到 Voice。</p>
+  </main>
+
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/003-voice-v6.js?v=6.11" defer></script>
+</body>
+</html>

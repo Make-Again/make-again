@@ -1,0 +1,213 @@
+#make-again-founder-letter-wireframe .ma-history-screen {
+  grid-template-rows: 48px minmax(0, 1fr);
+}
+
+#make-again-founder-letter-wireframe .ma-history-content {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  padding: 6px 2px calc(14px + env(safe-area-inset-bottom));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  margin: 4px 0 16px;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month > div {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month strong {
+  font: 400 16px/1.3 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .08em;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month small {
+  color: rgba(226,212,221,.48);
+  font: 7px/1.3 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .05em;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month > button {
+  display: grid;
+  width: 58px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  color: rgba(244,233,218,.72);
+  background: transparent;
+  font: 8px/1 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: transform 130ms cubic-bezier(.23,1,.32,1), opacity 160ms ease, background-color 160ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-history-month > button:active { transform: scale(.92); }
+#make-again-founder-letter-wireframe .ma-history-month > button:disabled { opacity: .16; cursor: default; }
+
+#make-again-founder-letter-wireframe .ma-history-list {
+  gap: 9px;
+}
+
+#make-again-founder-letter-wireframe .ma-history-card {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) 15px;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 102px;
+  padding: 11px 13px 11px 10px;
+  border: 1px solid rgba(226,199,222,.15);
+  border-radius: 20px;
+  color: var(--ma-utility-cream);
+  background:
+    radial-gradient(circle at 100% 0, color-mix(in srgb, var(--history-accent) 12%, transparent), transparent 45%),
+    linear-gradient(118deg, rgba(18,24,59,.72), rgba(50,33,66,.52));
+  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 10px 24px rgba(0,0,0,.14);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 130ms cubic-bezier(.23,1,.32,1), border-color 180ms ease, background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-history-card:active { transform: scale(.98); }
+
+#make-again-founder-letter-wireframe .ma-history-date {
+  display: grid;
+  align-self: stretch;
+  align-content: center;
+  justify-items: center;
+  border-right: 1px solid rgba(226,199,222,.12);
+}
+
+#make-again-founder-letter-wireframe .ma-history-date strong {
+  color: color-mix(in srgb, var(--history-accent) 76%, white 16%);
+  font: 300 22px/1 ui-sans-serif, system-ui;
+  letter-spacing: -.03em;
+}
+
+#make-again-founder-letter-wireframe .ma-history-date small {
+  margin-top: 4px;
+  color: rgba(226,212,221,.46);
+  font: 7px/1 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-history-copy {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+#make-again-founder-letter-wireframe .ma-history-copy strong {
+  overflow: hidden;
+  font: 400 12px/1.45 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .035em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#make-again-founder-letter-wireframe .ma-history-copy p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: rgba(244,233,218,.62);
+  font: 8px/1.55 "KangXiZiDianTi", "STKaiti", serif;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+#make-again-founder-letter-wireframe .ma-history-copy small {
+  color: rgba(226,212,221,.38);
+  font: 7px/1.35 ui-sans-serif, system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-history-arrow {
+  color: rgba(226,212,221,.32);
+  font: 20px/1 system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty {
+  display: grid;
+  min-height: 430px;
+  flex: 1;
+  align-content: center;
+  justify-items: center;
+  padding: 20px 18px 44px;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty-mark {
+  position: relative;
+  display: grid;
+  width: 74px;
+  height: 74px;
+  place-items: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(154,109,255,.2);
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, rgba(113,172,255,.3), rgba(115,77,196,.16) 52%, transparent 70%);
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty-mark i {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(226,212,255,.58);
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty-mark i:nth-child(1) { transform: translateX(-13px); }
+#make-again-founder-letter-wireframe .ma-history-empty-mark i:nth-child(3) { transform: translateX(13px); }
+
+#make-again-founder-letter-wireframe .ma-history-empty h2 {
+  margin: 0;
+  font: 400 18px/1.45 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .07em;
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty p {
+  max-width: 230px;
+  margin: 9px 0 20px;
+  color: rgba(226,212,221,.54);
+  font: 9px/1.75 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty button {
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 1px solid rgba(235,147,110,.3);
+  border-radius: 999px;
+  color: var(--ma-utility-cream);
+  background: rgba(235,147,110,.11);
+  font: 9px "KangXiZiDianTi", "STKaiti", serif;
+  cursor: pointer;
+  transition: transform 130ms cubic-bezier(.23,1,.32,1), background-color 160ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-history-empty button:active { transform: scale(.97); }
+
+@media (hover: hover) and (pointer: fine) {
+  #make-again-founder-letter-wireframe .ma-history-month > button:not(:disabled):hover,
+  #make-again-founder-letter-wireframe .ma-history-empty button:hover { background-color: rgba(154,109,255,.1); }
+  #make-again-founder-letter-wireframe .ma-history-card:hover { border-color: rgba(154,109,255,.34); }
+}
+
+@media (max-height: 680px) {
+  #make-again-founder-letter-wireframe .ma-history-month { margin-bottom: 10px; }
+  #make-again-founder-letter-wireframe .ma-history-card { min-height: 92px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-history-month > button,
+  #make-again-founder-letter-wireframe .ma-history-card,
+  #make-again-founder-letter-wireframe .ma-history-empty button { transition: none; }
+}

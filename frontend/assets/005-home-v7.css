@@ -1,0 +1,532 @@
+#make-again-founder-letter-wireframe .ma-home-v6-screen {
+  gap: 12px;
+  padding: calc(15px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  overscroll-behavior-y: contain;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-screen::-webkit-scrollbar { display: none; }
+
+#make-again-founder-letter-wireframe .ma-home-v6-topbar {
+  min-height: 42px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#make-again-founder-letter-wireframe .ma-home-pending {
+  position: relative;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--cream);
+  background: transparent;
+  text-align: center;
+  transition: transform 140ms var(--ease-out), opacity 160ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-pending:active { transform: scale(.94); }
+
+#make-again-founder-letter-wireframe .ma-home-pending .ma-pending-stack {
+  position: relative;
+  width: 25px;
+  height: 22px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-pending .ma-pending-stack i {
+  inset: 4px 2px;
+  border: 1px solid rgba(108, 73, 58, .22);
+  border-radius: 3px;
+  background: #ead7b8;
+}
+
+#make-again-founder-letter-wireframe .ma-home-pending > b {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  display: grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  border: 1px solid rgba(255, 233, 218, .2);
+  border-radius: 50%;
+  color: #fff7ed;
+  background: #b96056;
+  box-shadow: 0 3px 10px rgba(92, 37, 35, .32);
+  font: 7px/1 system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-home-greeting {
+  display: grid;
+  gap: 3px;
+  padding: 0 3px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-greeting small {
+  color: rgba(235, 147, 110, .72);
+  font: 8px/1.4 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .16em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-greeting h1 {
+  margin: 0;
+  font: 400 21px/1.35 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .06em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 11px 10px 13px;
+  border-left: 2px solid rgba(235, 147, 110, .54);
+  border-radius: 4px 14px 14px 4px;
+  background: linear-gradient(90deg, rgba(235, 147, 110, .1), rgba(38, 29, 66, .32));
+}
+
+#make-again-founder-letter-wireframe .ma-home-intro p { display: grid; gap: 2px; margin: 0; }
+#make-again-founder-letter-wireframe .ma-home-intro strong { font: 400 10px/1.4 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-intro span { color: var(--muted); font: 8px/1.5 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-intro button { min-width: 52px; min-height: 34px; padding: 6px 9px; border: 0; border-radius: 999px; color: rgba(244,233,218,.72); background: rgba(244,233,218,.06); font: 8px "KangXiZiDianTi", "STKaiti", serif; }
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 {
+  display: flex;
+  min-height: 276px;
+  flex: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 18px 16px;
+  border: 1px solid rgba(226, 199, 222, .14);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 72%, rgba(112, 104, 255, .18), transparent 32%),
+    radial-gradient(circle at 92% 8%, rgba(235, 147, 110, .1), transparent 34%),
+    linear-gradient(150deg, rgba(15, 20, 53, .58), rgba(43, 29, 63, .32));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .05);
+}
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > header {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > header small {
+  color: rgba(218, 198, 255, .56);
+  font: 7px/1 system-ui;
+  letter-spacing: .2em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > header h2 {
+  margin: 0;
+  font: 400 14px/1.5 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--cream);
+  background: transparent;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion small {
+  color: rgba(235, 147, 110, .68);
+  font-size: 8px;
+  letter-spacing: .13em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion strong {
+  overflow: visible;
+  text-overflow: clip;
+  font: 400 17px/1.62 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .035em;
+  white-space: normal;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion:active { transform: scale(.985); }
+
+#make-again-founder-letter-wireframe .ma-home-voice-zone {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 13px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-orb {
+  width: 76px;
+  height: 76px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-orb-core {
+  width: 64px;
+  height: 64px;
+  box-shadow: inset 6px -8px 16px rgba(12,20,82,.56), 0 0 24px rgba(116,104,255,.38);
+}
+
+#make-again-founder-letter-wireframe .ma-home-voice-zone > small {
+  margin-top: 7px;
+  font-size: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-open-chat {
+  min-height: 34px;
+  margin-top: 3px;
+  padding: 5px 12px;
+  border: 0;
+  color: rgba(218, 198, 255, .72);
+  background: transparent;
+  font: 8px "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .1em;
+  text-decoration: underline;
+  text-decoration-color: rgba(218,198,255,.22);
+  text-underline-offset: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-phone[data-home-voice-intent="cancel"] .ma-home-v6-orb-core {
+  filter: saturate(.55);
+  box-shadow: inset 6px -8px 16px rgba(53,19,36,.55), 0 0 24px rgba(235,112,110,.28);
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood {
+  position: relative;
+  flex: none;
+  padding: 13px 4px 9px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood header {
+  margin: 0 3px 12px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood header span { font-size: 10px; }
+#make-again-founder-letter-wireframe .ma-home-mood header small { font-size: 8px; }
+
+#make-again-founder-letter-wireframe .ma-home-mood-week {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0;
+  overflow: visible;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-week::before {
+  position: absolute;
+  top: 29px;
+  right: 7%;
+  left: 7%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(108,169,255,.2), rgba(168,122,255,.24), rgba(235,147,110,.22));
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 0;
+  min-height: 54px;
+  place-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day small { order: 2; font-size: 7px; }
+
+#make-again-founder-letter-wireframe .ma-mood-node {
+  position: relative;
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 1px solid rgba(226,212,221,.28);
+  border-radius: 50%;
+  background: #11142e;
+  box-shadow: 0 0 0 4px rgba(17,20,46,.72);
+  transition: transform 160ms var(--ease-out), border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day[data-recorded="true"] .ma-mood-node {
+  border-color: color-mix(in srgb, var(--mood-color) 72%, white 8%);
+  background: radial-gradient(circle at 34% 28%, rgba(255,255,255,.72), var(--mood-color) 34%, color-mix(in srgb,var(--mood-color) 64%,#1b1634));
+  box-shadow: 0 0 12px color-mix(in srgb,var(--mood-color) 38%,transparent), 0 0 0 4px rgba(17,20,46,.72);
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day.is-today .ma-mood-node {
+  box-shadow: 0 0 0 4px rgba(17,20,46,.72), 0 0 0 6px rgba(235,147,110,.2);
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day.is-selected .ma-mood-node { transform: scale(1.12); }
+#make-again-founder-letter-wireframe .ma-mood-day[data-dismissed="true"] .ma-mood-node { opacity: .38; filter: grayscale(1); }
+
+#make-again-founder-letter-wireframe .ma-home-mood-note {
+  margin: 8px 3px 0;
+  color: rgba(226,212,221,.45);
+  font: 7px/1.5 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .06em;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 {
+  min-height: 130px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-event > div {
+  grid-template-columns: 1fr 1fr;
+}
+
+#make-again-founder-letter-wireframe .ma-home-event [data-event-confirm] {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  min-height: 42px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-event [data-event-later],
+#make-again-founder-letter-wireframe .ma-home-event [data-event-reject] {
+  grid-row: 2;
+  border-color: transparent;
+  background: transparent;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-detail-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 42;
+  display: grid;
+  place-items: center;
+  padding: 24px 20px;
+  background: rgba(3,5,18,.64);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 220ms var(--ease-out), visibility 220ms;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-detail-layer[aria-hidden="false"] { opacity: 1; visibility: visible; }
+
+#make-again-founder-letter-wireframe .ma-home-mood-detail {
+  position: relative;
+  width: 100%;
+  padding: 28px 22px 21px;
+  border-radius: 8px 14px 10px;
+  color: #4b3626;
+  background: repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(120,90,60,.07) 31px), linear-gradient(155deg,#faf0dd,#ead6b7);
+  box-shadow: 0 26px 55px rgba(0,0,0,.48);
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-detail > button:first-child { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border: 0; color: rgba(75,54,38,.6); background: transparent; font-size: 18px; }
+#make-again-founder-letter-wireframe .ma-home-mood-detail > small { color: rgba(113,73,45,.58); font-size: 7px; letter-spacing: .18em; }
+#make-again-founder-letter-wireframe .ma-home-mood-detail h2 { margin: 10px 0 8px; font: 400 23px/1.4 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-mood-detail p { margin: 0; font: 11px/1.9 "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-mood-detail [data-mood-disagree] { min-height: 38px; margin-top: 18px; padding: 7px 14px; border: 1px solid rgba(95,63,42,.2); border-radius: 999px; color: #5b3d2a; background: transparent; font: 8px "KangXiZiDianTi", "STKaiti", serif; }
+
+#make-again-founder-letter-wireframe .ma-home-toast-v6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-toast-v6 button {
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 0;
+  color: #ebb08e;
+  background: transparent;
+  font: inherit;
+}
+
+@media (max-height: 720px) {
+  #make-again-founder-letter-wireframe .ma-home-talk-v6 { min-height: 250px; }
+  #make-again-founder-letter-wireframe .ma-home-greeting h1 { font-size: 19px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-mood-node,
+  #make-again-founder-letter-wireframe .ma-home-mood-detail-layer { transition: opacity 160ms ease !important; }
+}
+
+/* 7.2 · one-screen hierarchy and original Wakey emotion faces. */
+#make-again-founder-letter-wireframe .ma-home-v6-screen {
+  gap: 8px;
+  padding: calc(12px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(13px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  overflow: hidden;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-topbar { min-height: 38px; }
+
+#make-again-founder-letter-wireframe .ma-home-mood {
+  padding: 2px 2px 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood header {
+  margin: 0 3px 7px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-week::before { display: none; }
+
+#make-again-founder-letter-wireframe .ma-mood-day {
+  min-height: 48px;
+  gap: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-face {
+  position: relative;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--mood-color) 48%, rgba(255,255,255,.18));
+  border-radius: 46% 54% 49% 51% / 52% 47% 53% 48%;
+  color: color-mix(in srgb, var(--mood-color) 70%, white 20%);
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255,255,255,.2), transparent 22%),
+    color-mix(in srgb, var(--mood-color) 18%, rgba(19,21,48,.92));
+  box-shadow: inset -3px -4px 8px rgba(0,0,0,.12), 0 4px 12px color-mix(in srgb, var(--mood-color) 12%, transparent);
+  transform: rotate(var(--face-tilt, 0deg));
+  transition: transform 150ms var(--ease-out), opacity 160ms ease, border-color 160ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-face svg {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-face svg [data-fill] { fill: currentColor; stroke: none; }
+
+#make-again-founder-letter-wireframe .ma-mood-face.is-empty {
+  --mood-color: #777b94;
+  color: rgba(218,212,231,.32);
+  background: rgba(25,28,57,.46);
+  border-style: dashed;
+  box-shadow: none;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day[data-face="sad"] .ma-mood-face { --face-tilt: -2deg; }
+#make-again-founder-letter-wireframe .ma-mood-day[data-face="longing"] .ma-mood-face { --face-tilt: 2deg; }
+#make-again-founder-letter-wireframe .ma-mood-day[data-face="guilt"] .ma-mood-face { --face-tilt: -3deg; }
+#make-again-founder-letter-wireframe .ma-mood-day[data-face="relief"] .ma-mood-face { --face-tilt: 1deg; }
+
+#make-again-founder-letter-wireframe .ma-mood-day.is-today .ma-mood-face {
+  border-style: dashed;
+  border-color: rgba(235,147,110,.66);
+  box-shadow: inset -3px -4px 8px rgba(0,0,0,.12);
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day.is-today,
+#make-again-founder-letter-wireframe .ma-mood-day.is-selected {
+  border-color: transparent;
+  background: transparent;
+}
+
+#make-again-founder-letter-wireframe .ma-mood-day.is-selected .ma-mood-face { transform: rotate(var(--face-tilt, 0deg)) scale(1.08); }
+#make-again-founder-letter-wireframe .ma-mood-day[data-dismissed="true"] .ma-mood-face { opacity: .36; filter: grayscale(1); }
+
+#make-again-founder-letter-wireframe .ma-home-mood-note {
+  margin: 3px 3px 0;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 {
+  min-height: 118px;
+  padding: 11px 14px 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-label { margin: 7px 0 3px; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 h2 { font-size: 14px; line-height: 1.45; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 > p:not(.ma-home-widget-label) { margin: 2px 0 7px; line-height: 1.45; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer { justify-content: flex-end; margin-top: 9px; }
+#make-again-founder-letter-wireframe .ma-home-widget-card-v6 footer button { min-height: 36px; }
+#make-again-founder-letter-wireframe .ma-home-widget-dots { margin-top: 3px; }
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 {
+  min-height: 0;
+  flex: 1;
+  padding: 13px 16px 10px;
+  border-radius: 24px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > header { gap: 0; }
+#make-again-founder-letter-wireframe .ma-home-talk-v6 > header h2 { font-size: 13px; }
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion {
+  gap: 4px;
+  margin-top: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-ai-suggestion strong {
+  font-size: 16px;
+  line-height: 1.48;
+}
+
+#make-again-founder-letter-wireframe .ma-home-voice-zone {
+  padding-top: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-v6-orb { width: 70px; height: 70px; }
+#make-again-founder-letter-wireframe .ma-home-v6-orb-core { width: 59px; height: 59px; }
+#make-again-founder-letter-wireframe .ma-home-voice-zone > small { margin-top: 3px; }
+#make-again-founder-letter-wireframe .ma-home-voice-zone > small:empty { display: none; }
+#make-again-founder-letter-wireframe .ma-home-open-chat { min-height: 30px; margin-top: 0; }
+
+@media (max-height: 680px) {
+  #make-again-founder-letter-wireframe .ma-home-v6-screen {
+    gap: 5px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+  #make-again-founder-letter-wireframe .ma-home-v6-topbar { min-height: 34px; }
+  #make-again-founder-letter-wireframe .ma-home-mood header { margin-bottom: 4px; }
+  #make-again-founder-letter-wireframe .ma-mood-day { min-height: 43px; }
+  #make-again-founder-letter-wireframe .ma-mood-face { width: 28px; height: 28px; }
+  #make-again-founder-letter-wireframe .ma-mood-face svg { width: 21px; height: 21px; }
+  #make-again-founder-letter-wireframe .ma-home-mood-note { display: none; }
+  #make-again-founder-letter-wireframe .ma-home-widget-card-v6 { min-height: 104px; padding-block: 8px; }
+  #make-again-founder-letter-wireframe .ma-home-widget-label { margin-top: 4px; }
+  #make-again-founder-letter-wireframe .ma-home-widget-card-v6 > p:not(.ma-home-widget-label) { margin-bottom: 4px; }
+  #make-again-founder-letter-wireframe .ma-home-talk-v6 { min-height: 0; padding-block: 9px 7px; }
+  #make-again-founder-letter-wireframe .ma-home-ai-suggestion { margin-top: 4px; }
+  #make-again-founder-letter-wireframe .ma-home-ai-suggestion strong { font-size: 14px; }
+  #make-again-founder-letter-wireframe .ma-home-v6-orb { width: 62px; height: 62px; }
+  #make-again-founder-letter-wireframe .ma-home-v6-orb-core { width: 52px; height: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-mood-face { transition: opacity 160ms ease, border-color 160ms ease; }
+}

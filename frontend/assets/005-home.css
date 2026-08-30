@@ -1,0 +1,1485 @@
+#make-again-founder-letter-wireframe {
+  --ma-home-night: #050719;
+  --ma-home-cream: #f4e9da;
+  --ma-home-muted: rgba(232, 219, 224, 0.58);
+  --ma-home-line: rgba(226, 199, 222, 0.25);
+  --ma-home-violet: #9a6dff;
+  --ma-home-blue: #5a9dff;
+  --ma-home-ember: #eb936e;
+  --ma-home-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ma-home-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone {
+  background: var(--ma-home-night);
+}
+
+#make-again-founder-letter-wireframe .ma-home-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px 18px 28px;
+  color: var(--ma-home-cream);
+  background:
+    radial-gradient(circle at 105% 5%, rgba(235, 147, 110, 0.27), transparent 34%),
+    radial-gradient(circle at -5% 66%, rgba(154, 109, 255, 0.23), transparent 39%),
+    linear-gradient(165deg, #050719 0%, #0a0d28 52%, #17112b 100%);
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  transition:
+    opacity 280ms var(--ma-home-ease-out),
+    filter 280ms var(--ma-home-ease-out),
+    transform 280ms var(--ma-home-ease-in-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-screen::-webkit-scrollbar { display: none; }
+
+#make-again-founder-letter-wireframe .ma-home-screen::before,
+#make-again-founder-letter-wireframe .ma-home-screen::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-screen::before {
+  inset: 0;
+  background:
+    linear-gradient(118deg, transparent 18%, rgba(151, 139, 210, 0.075) 42%, transparent 69%),
+    radial-gradient(circle at 55% 38%, rgba(90, 157, 255, 0.055), transparent 32%);
+}
+
+#make-again-founder-letter-wireframe .ma-home-screen::after {
+  top: 20%;
+  right: -30%;
+  width: 76%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(235, 147, 110, 0.08);
+  filter: blur(40px);
+}
+
+#make-again-founder-letter-wireframe .ma-home-topbar {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 11px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-menu-button,
+#make-again-founder-letter-wireframe .ma-home-drawer-close {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--ma-home-line);
+  color: var(--ma-home-cream);
+  background: rgba(18, 21, 53, 0.58);
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out), background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-menu-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  backdrop-filter: blur(14px);
+}
+
+#make-again-founder-letter-wireframe .ma-home-menu-button svg { width: 18px; height: 18px; }
+
+#make-again-founder-letter-wireframe .ma-home-menu-button:active,
+#make-again-founder-letter-wireframe .ma-home-drawer-close:active { transform: scale(0.97); }
+
+#make-again-founder-letter-wireframe .ma-home-menu-button:focus-visible,
+#make-again-founder-letter-wireframe .ma-home-drawer button:focus-visible,
+#make-again-founder-letter-wireframe .ma-home-topic:focus-visible,
+#make-again-founder-letter-wireframe .ma-home-orb:focus-visible,
+#make-again-founder-letter-wireframe .ma-home-week button:focus-visible {
+  outline: 2px solid var(--ma-home-blue);
+  outline-offset: 2px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-brand { min-width: 0; }
+
+#make-again-founder-letter-wireframe .ma-home-brand span,
+#make-again-founder-letter-wireframe .ma-home-brand small { display: block; }
+
+#make-again-founder-letter-wireframe .ma-home-brand span {
+  font-family: "STXingkai", "FZXingKai-S04S", "Kaiti SC", serif;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-brand small {
+  margin-top: 2px;
+  color: var(--ma-home-muted);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-date {
+  color: rgba(244, 233, 218, 0.68);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-welcome {
+  margin: 27px 0 20px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-welcome p { margin: 0; }
+
+#make-again-founder-letter-wireframe .ma-home-eyebrow {
+  color: color-mix(in srgb, var(--ma-home-ember) 70%, var(--ma-home-cream) 30%);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-welcome h1 {
+  margin: 9px 0 8px;
+  font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: 0.075em;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.46);
+}
+
+#make-again-founder-letter-wireframe .ma-home-welcome > p:last-child {
+  color: var(--ma-home-muted);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-surface,
+#make-again-founder-letter-wireframe .ma-home-insight-card,
+#make-again-founder-letter-wireframe .ma-home-topic {
+  border: 1px solid var(--ma-home-line);
+  background:
+    linear-gradient(112deg, rgba(17, 23, 61, 0.76), rgba(54, 34, 67, 0.52)),
+    rgba(10, 13, 39, 0.64);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 241, 237, 0.1),
+    0 18px 38px rgba(0, 0, 0, 0.23);
+  backdrop-filter: blur(18px);
+}
+
+#make-again-founder-letter-wireframe .ma-home-calendar {
+  padding: 15px 13px 13px;
+  border-radius: 24px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head span {
+  color: rgba(235, 147, 110, 0.62);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 6px;
+  letter-spacing: 0.18em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head h2 {
+  margin: 3px 0 0;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-label {
+  max-width: 105px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--ma-home-muted);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#make-again-founder-letter-wireframe .ma-home-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  gap: 7px;
+  padding: 7px 0 6px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  color: var(--ma-home-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out), background-color 180ms ease, border-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day span {
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day i {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--mood-color, var(--ma-home-muted)) 42%, transparent);
+  border-radius: 50%;
+  color: var(--mood-color, var(--ma-home-muted));
+  background: color-mix(in srgb, var(--mood-color, var(--ma-home-muted)) 9%, transparent);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day.is-today,
+#make-again-founder-letter-wireframe .ma-home-day.is-selected {
+  border-color: color-mix(in srgb, var(--mood-color, var(--ma-home-ember)) 42%, transparent);
+  background: color-mix(in srgb, var(--mood-color, var(--ma-home-ember)) 8%, transparent);
+}
+
+#make-again-founder-letter-wireframe .ma-home-day:active { transform: scale(0.96); }
+
+#make-again-founder-letter-wireframe .ma-home-insights { margin-top: 14px; }
+
+#make-again-founder-letter-wireframe .ma-home-insight-track {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 24px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-track::-webkit-scrollbar { display: none; }
+
+#make-again-founder-letter-wireframe .ma-home-insight-card {
+  position: relative;
+  min-width: 100%;
+  min-height: 135px;
+  padding: 19px 20px 17px;
+  overflow: hidden;
+  border-radius: 24px;
+  scroll-snap-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-card::after {
+  position: absolute;
+  top: -56px;
+  right: -42px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card-tint, var(--ma-home-violet)) 18%, transparent);
+  content: "";
+  filter: blur(26px);
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-card[data-kind="tip"] { --card-tint: var(--ma-home-ember); }
+
+#make-again-founder-letter-wireframe .ma-home-insight-card span,
+#make-again-founder-letter-wireframe .ma-home-insight-card p,
+#make-again-founder-letter-wireframe .ma-home-insight-card small { position: relative; z-index: 1; }
+
+#make-again-founder-letter-wireframe .ma-home-insight-card span {
+  color: color-mix(in srgb, var(--card-tint, var(--ma-home-violet)) 58%, var(--ma-home-cream) 42%);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-card p {
+  margin: 11px 0 9px;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 16px;
+  line-height: 1.65;
+  letter-spacing: 0.055em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-card small {
+  color: rgba(232, 219, 224, 0.42);
+  font-size: 6px;
+  letter-spacing: 0.14em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-dots i {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(232, 219, 224, 0.26);
+  transition: width 180ms var(--ma-home-ease-out), background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-insight-dots i.is-active {
+  width: 16px;
+  background: var(--ma-home-ember);
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation { margin-top: 23px; }
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ma-home-line));
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title span:nth-of-type(2) {
+  background: linear-gradient(90deg, var(--ma-home-line), transparent);
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title i {
+  color: var(--ma-home-ember);
+  font-size: 10px;
+  font-style: normal;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title h2 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 1px 0 0;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topics {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 8px 14px 8px 9px;
+  border-radius: 999px;
+  color: var(--ma-home-cream);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out), border-color 180ms ease, background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic i {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  color: color-mix(in srgb, var(--ma-home-ember) 70%, var(--ma-home-cream) 30%);
+  background: rgba(235, 147, 110, 0.1);
+  font-size: 9px;
+  font-style: normal;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic b {
+  color: var(--ma-home-muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic:active { transform: scale(0.98); }
+
+#make-again-founder-letter-wireframe .ma-home-footer {
+  display: grid;
+  justify-items: center;
+  padding: 28px 0 5px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-footer p {
+  margin: 0 0 16px;
+  color: var(--ma-home-muted);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 10px;
+  line-height: 1.9;
+  letter-spacing: 0.13em;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-footer strong { color: var(--ma-home-cream); font-weight: 400; }
+
+#make-again-founder-letter-wireframe .ma-home-orb {
+  position: relative;
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  isolation: isolate;
+  transition: transform 260ms var(--ma-home-ease-in-out), opacity 220ms var(--ma-home-ease-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb > span { position: absolute; display: block; border-radius: 50%; pointer-events: none; }
+
+#make-again-founder-letter-wireframe .ma-home-orb-halo {
+  inset: 0;
+  background: radial-gradient(circle, rgba(154, 109, 255, 0.3), transparent 68%);
+  filter: blur(10px);
+  animation: ma-home-orb-breathe 8.8s ease-in-out infinite;
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb-ring {
+  inset: 8%;
+  border: 1px solid rgba(196, 208, 255, 0.3);
+  transform: rotate(-18deg) scaleY(0.84);
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb-core {
+  inset: 12%;
+  overflow: hidden;
+  border: 1px solid rgba(232, 234, 255, 0.3);
+  background:
+    radial-gradient(circle at 28% 20%, rgba(255, 241, 244, 0.9) 0 4%, transparent 16%),
+    conic-gradient(from 198deg, #6cb9ff, #3856d6 23%, #ae70ff 49%, var(--ma-home-ember) 67%, #4a68e8 85%, #66b7ff);
+  box-shadow:
+    inset 8px -9px 16px rgba(12, 20, 82, 0.62),
+    inset -7px 7px 14px rgba(255, 172, 137, 0.5),
+    0 0 20px rgba(113, 115, 255, 0.58),
+    0 0 42px rgba(193, 101, 235, 0.26);
+  animation: ma-home-orb-morph 12s ease-in-out infinite;
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb-core i {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(7px);
+  mix-blend-mode: screen;
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb-core i:nth-child(1) { inset: 35% -15% -20% 20%; background: #55b9ff; opacity: 0.75; }
+#make-again-founder-letter-wireframe .ma-home-orb-core i:nth-child(2) { inset: -18% 18% 32% -8%; background: #a967ff; opacity: 0.7; }
+#make-again-founder-letter-wireframe .ma-home-orb-core i:nth-child(3) { inset: 18% -15% 15% 54%; background: #ffad82; opacity: 0.72; }
+
+#make-again-founder-letter-wireframe .ma-home-orb-sheen {
+  inset: 13%;
+  border: 1px solid rgba(255, 247, 243, 0.28);
+  transform: rotate(-22deg) scale(0.91, 0.79);
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb:active { transform: scale(0.96); }
+
+#make-again-founder-letter-wireframe .ma-home-footer small {
+  margin-top: 9px;
+  color: rgba(232, 219, 224, 0.48);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 19;
+  visibility: hidden;
+  background: rgba(3, 5, 18, 0.55);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms var(--ma-home-ease-out), visibility 180ms;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer {
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  left: 13px;
+  z-index: 20;
+  display: flex;
+  visibility: hidden;
+  width: min(82%, 272px);
+  flex-direction: column;
+  gap: 14px;
+  padding: 17px 14px 14px;
+  overflow-y: auto;
+  border: 1px solid rgba(226, 199, 222, 0.34);
+  border-radius: 27px;
+  color: var(--ma-home-cream);
+  background:
+    linear-gradient(122deg, rgba(14, 19, 53, 0.96), rgba(49, 31, 66, 0.94)),
+    #090b20;
+  box-shadow: inset 0 1px rgba(255, 239, 237, 0.12), 0 28px 64px rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(24px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-18px, -8px, 0) scale(0.96);
+  transform-origin: top left;
+  transition:
+    opacity 220ms var(--ma-home-ease-out),
+    transform 240ms var(--ma-home-ease-out),
+    visibility 240ms;
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-drawer-open="true"] .ma-home-drawer-scrim,
+#make-again-founder-letter-wireframe .ma-home-phone[data-drawer-open="true"] .ma-home-drawer {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-drawer-open="true"] .ma-home-drawer {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-head {
+  display: grid;
+  grid-template-columns: 46px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-avatar {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(227, 227, 255, 0.3);
+  border-radius: 50%;
+  background: conic-gradient(from 198deg, #6cb9ff, #3856d6 28%, #ae70ff 52%, #eb936e 72%, #66b7ff);
+  box-shadow: inset 4px -6px 12px rgba(12, 20, 82, 0.55), 0 0 16px rgba(154, 109, 255, 0.3);
+  font-family: "STXingkai", "Kaiti SC", serif;
+  font-size: 18px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-head small,
+#make-again-founder-letter-wireframe .ma-home-drawer-head strong { display: block; font-family: "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-drawer-head small { color: var(--ma-home-muted); font-size: 8px; letter-spacing: 0.14em; }
+#make-again-founder-letter-wireframe .ma-home-drawer-head strong { margin-top: 4px; font-size: 14px; font-weight: 400; letter-spacing: 0.1em; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-member {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--ma-home-ember) 32%, var(--ma-home-line) 68%);
+  border-radius: 18px;
+  background: rgba(235, 147, 110, 0.07);
+}
+
+#make-again-founder-letter-wireframe .ma-home-member span,
+#make-again-founder-letter-wireframe .ma-home-member small { display: block; font-family: "KangXiZiDianTi", "STKaiti", serif; }
+#make-again-founder-letter-wireframe .ma-home-member span { font-size: 10px; letter-spacing: 0.08em; }
+#make-again-founder-letter-wireframe .ma-home-member small { margin-top: 4px; color: var(--ma-home-muted); font-size: 7px; }
+
+#make-again-founder-letter-wireframe .ma-home-member button {
+  min-height: 32px;
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 999px;
+  color: #2b1408;
+  background: linear-gradient(105deg, #ffd9ae, var(--ma-home-ember));
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-member button:active { transform: scale(0.97); }
+#make-again-founder-letter-wireframe .ma-home-member[data-state="member"] { grid-template-columns: 1fr; border-color: rgba(154, 109, 255, 0.4); }
+#make-again-founder-letter-wireframe .ma-home-member[data-state="member"] button { display: none; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav { display: grid; gap: 4px; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 7px 9px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  color: rgba(244, 233, 218, 0.76);
+  background: transparent;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out), background-color 180ms ease, border-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button i {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 10px;
+  color: rgba(150, 194, 255, 0.9);
+  background: rgba(90, 157, 255, 0.1);
+  font-style: normal;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button b,
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button small { color: var(--ma-home-muted); font-size: 7px; font-weight: 400; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button.is-current {
+  border-color: rgba(154, 109, 255, 0.3);
+  color: var(--ma-home-cream);
+  background: rgba(154, 109, 255, 0.1);
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button:active:not(:disabled) { transform: scale(0.98); }
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button:disabled { cursor: default; opacity: 0.45; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer blockquote {
+  margin: auto 0 0;
+  padding: 13px;
+  border: 1px solid var(--ma-home-line);
+  border-radius: 18px;
+  color: rgba(244, 233, 218, 0.72);
+  background: rgba(16, 21, 52, 0.42);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 0.07em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer blockquote span { display: block; margin-bottom: 7px; color: var(--ma-home-ember); font-size: 7px; letter-spacing: 0.17em; }
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="board"] .ma-home-screen {
+  animation: ma-home-page-enter 420ms var(--ma-home-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-voice"] .ma-home-screen,
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-board"] .ma-home-screen,
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-report"] .ma-home-screen {
+  opacity: 0;
+  filter: blur(7px);
+  pointer-events: none;
+  transform: scale(1.025);
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-voice"] .ma-home-orb {
+  opacity: 0.9;
+  transform: translateY(-24%) scale(1.2);
+}
+
+@keyframes ma-home-page-enter {
+  from { opacity: 0; filter: blur(7px); transform: scale(0.98); }
+  to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+
+@keyframes ma-home-orb-breathe {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 0.42; transform: scale(1.15); }
+}
+
+@keyframes ma-home-orb-morph {
+  0%, 100% { border-radius: 47% 53% 55% 45% / 48% 44% 56% 52%; }
+  38% { border-radius: 53% 47% 45% 55% / 44% 56% 44% 56%; }
+  72% { border-radius: 45% 55% 52% 48% / 56% 46% 54% 44%; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #make-again-founder-letter-wireframe .ma-home-menu-button:hover,
+  #make-again-founder-letter-wireframe .ma-home-topic:hover,
+  #make-again-founder-letter-wireframe .ma-home-drawer-nav button:hover:not(:disabled) {
+    border-color: rgba(154, 109, 255, 0.42);
+    background-color: rgba(154, 109, 255, 0.09);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-home-screen,
+  #make-again-founder-letter-wireframe .ma-home-drawer,
+  #make-again-founder-letter-wireframe .ma-home-drawer-scrim,
+  #make-again-founder-letter-wireframe .ma-home-orb,
+  #make-again-founder-letter-wireframe .ma-home-orb-halo,
+  #make-again-founder-letter-wireframe .ma-home-orb-core {
+    animation: none !important;
+    transform: none !important;
+    transition-duration: 160ms !important;
+  }
+
+  #make-again-founder-letter-wireframe[data-ma-page-exit] .ma-home-screen { filter: none; }
+}
+
+/* 005 compact home: the daily surface stays fully visible without page scrolling. */
+#make-again-founder-letter-wireframe .ma-home-screen {
+  overflow: hidden;
+  padding: 18px 16px 16px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-calendar {
+  margin-top: 14px;
+  padding: 9px 10px 8px;
+  border-radius: 17px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head {
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head h2 {
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-mood-label {
+  max-width: 118px;
+  font-size: 6px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-week { gap: 2px; }
+
+#make-again-founder-letter-wireframe .ma-home-day {
+  gap: 3px;
+  padding: 2px 0;
+  border-radius: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day span { font-size: 6px; }
+
+#make-again-founder-letter-wireframe .ma-home-day i {
+  width: 16px;
+  height: 16px;
+  font-size: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget {
+  position: relative;
+  min-height: 122px;
+  margin-top: 10px;
+  padding: 16px 17px 14px;
+  overflow: hidden;
+  border: 1px solid var(--ma-home-line);
+  border-radius: 22px;
+  background:
+    linear-gradient(112deg, rgba(17, 23, 61, 0.8), rgba(54, 34, 67, 0.58)),
+    rgba(10, 13, 39, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 241, 237, 0.1), 0 16px 34px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget::after {
+  position: absolute;
+  top: -54px;
+  right: -38px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(154, 109, 255, 0.18);
+  content: "";
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget[data-kind="mood"]::after { background: rgba(90, 185, 177, 0.2); }
+#make-again-founder-letter-wireframe .ma-home-smart-widget[data-kind="return"]::after { background: rgba(235, 147, 110, 0.19); }
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget header,
+#make-again-founder-letter-wireframe .ma-home-smart-widget p,
+#make-again-founder-letter-wireframe .ma-home-smart-widget footer { position: relative; z-index: 1; }
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget header span {
+  color: color-mix(in srgb, var(--ma-home-violet) 58%, var(--ma-home-cream) 42%);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget header small,
+#make-again-founder-letter-wireframe .ma-home-smart-widget footer {
+  color: rgba(232, 219, 224, 0.4);
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget p {
+  margin: 11px 0 9px;
+  white-space: pre-line;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 15px;
+  line-height: 1.65;
+  letter-spacing: 0.05em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation { margin-top: 15px; }
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title h2 {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title small {
+  color: var(--ma-home-muted);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 6px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic {
+  display: grid;
+  min-height: 50px;
+  place-items: center;
+  padding: 7px 6px;
+  border-radius: 15px;
+  font-size: 8px;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-footer { padding: 18px 0 0; }
+
+#make-again-founder-letter-wireframe .ma-home-orb {
+  width: 80px;
+  height: 80px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-footer small { margin-top: 6px; }
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button {
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 42px;
+  padding: 8px 11px;
+  font-size: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-drawer-nav button span { min-width: 0; }
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-trigger {
+  margin-top: auto;
+  border-color: rgba(235, 147, 110, 0.26) !important;
+  color: rgba(244, 233, 218, 0.82) !important;
+  background: rgba(235, 147, 110, 0.06) !important;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  visibility: hidden;
+  place-items: center;
+  padding: 24px;
+  background: rgba(4, 5, 16, 0.68);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms var(--ma-home-ease-out), visibility 220ms;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note {
+  position: relative;
+  width: min(100%, 252px);
+  padding: 19px 20px 22px;
+  color: #422d1f;
+  background:
+    linear-gradient(102deg, transparent 0 72%, rgba(93, 60, 31, 0.06) 72.5%, transparent 73.3%),
+    linear-gradient(160deg, #f4e7bc 0%, #dfc48e 100%);
+  box-shadow: 11px 18px 34px rgba(0, 0, 0, 0.36), inset 0 0 28px rgba(93, 60, 31, 0.08);
+  opacity: 0;
+  transform: scale(0.96) rotate(-1.2deg);
+  transform-origin: center;
+  transition: opacity 220ms var(--ma-home-ease-out), transform 220ms var(--ma-home-ease-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note::before {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 76px;
+  height: 22px;
+  background: rgba(226, 201, 151, 0.72);
+  box-shadow: 0 2px 5px rgba(64, 41, 24, 0.14);
+  content: "";
+  transform: translateX(-50%) rotate(1deg);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-philosophy-open="true"] .ma-home-philosophy-layer {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-philosophy-open="true"] .ma-home-philosophy-note {
+  opacity: 1;
+  transform: scale(1) rotate(-1.2deg);
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note header span {
+  color: rgba(66, 45, 31, 0.58);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note button {
+  min-height: 30px;
+  padding: 5px 9px;
+  border: 1px solid rgba(66, 45, 31, 0.28);
+  border-radius: 999px;
+  color: #422d1f;
+  background: rgba(255, 250, 229, 0.28);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note button:active { transform: scale(0.97); }
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note h2 {
+  margin: 24px 0 18px;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note p {
+  margin: 0 0 13px;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.07em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-philosophy-note footer {
+  margin-top: 20px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(66, 45, 31, 0.16);
+  color: rgba(66, 45, 31, 0.62);
+  font-size: 8px;
+  letter-spacing: 0.13em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-home-philosophy-layer,
+  #make-again-founder-letter-wireframe .ma-home-philosophy-note {
+    transition-duration: 160ms !important;
+  }
+
+  #make-again-founder-letter-wireframe .ma-home-philosophy-note { transform: none !important; }
+}
+
+/* 005 full-screen composition: mood strip, smart stack, and an expanding chat module. */
+#make-again-founder-letter-wireframe .ma-home-screen {
+  display: grid;
+  grid-template-rows: 40px auto 158px minmax(0, 1fr);
+  gap: 10px;
+  padding: 18px 16px 16px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topbar {
+  grid-template-columns: 40px minmax(0, 1fr) 98px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-capsule-safe {
+  display: block;
+  width: 98px;
+  height: 40px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-calendar,
+#make-again-founder-letter-wireframe .ma-home-smart-widget,
+#make-again-founder-letter-wireframe .ma-home-conversation { margin: 0; }
+
+#make-again-founder-letter-wireframe .ma-home-calendar {
+  padding: 8px 9px 7px;
+  border-radius: 16px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-section-head { margin-bottom: 5px; }
+
+#make-again-founder-letter-wireframe .ma-home-week { gap: 3px; }
+
+#make-again-founder-letter-wireframe .ma-home-day {
+  min-height: 32px;
+  gap: 2px;
+  padding: 3px 1px;
+  border-radius: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day span,
+#make-again-founder-letter-wireframe .ma-home-day strong {
+  display: block;
+  overflow: hidden;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day span {
+  color: rgba(232, 219, 224, 0.48);
+  font-size: 5.5px;
+  font-weight: 400;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day strong {
+  color: var(--mood-color, var(--ma-home-muted));
+  font-size: 6.5px;
+  font-weight: 400;
+}
+
+#make-again-founder-letter-wireframe .ma-home-day.is-today strong,
+#make-again-founder-letter-wireframe .ma-home-day.is-selected strong { color: var(--ma-home-cream); }
+
+#make-again-founder-letter-wireframe .ma-home-smart-widget {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  padding: 12px 14px 10px;
+  touch-action: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-head {
+  display: block;
+  min-height: 12px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-head span {
+  color: color-mix(in srgb, var(--ma-home-ember) 70%, var(--ma-home-cream) 30%);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 0;
+  align-content: center;
+  will-change: opacity, transform;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card > span {
+  color: rgba(218, 198, 255, 0.78);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card p {
+  margin: 5px 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card footer small {
+  color: rgba(232, 219, 224, 0.38);
+  font-size: 5.5px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card footer button {
+  min-height: 27px;
+  padding: 4px 9px;
+  border: 1px solid rgba(235, 147, 110, 0.3);
+  border-radius: 999px;
+  color: rgba(244, 233, 218, 0.86);
+  background: rgba(235, 147, 110, 0.08);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 7px;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-home-ease-out), background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-card footer button:active { transform: scale(0.97); }
+
+#make-again-founder-letter-wireframe .ma-home-widget-card footer button[hidden] { display: none; }
+
+#make-again-founder-letter-wireframe .ma-home-widget-pagination {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(232, 219, 224, 0.34);
+  font-size: 5.5px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-widget-pagination small { font-size: inherit; }
+
+#make-again-founder-letter-wireframe .ma-home-conversation {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  padding: 13px 13px 11px;
+  overflow: hidden;
+  border: 1px solid var(--ma-home-line);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 54% 74%, rgba(115, 93, 231, 0.16), transparent 29%),
+    linear-gradient(148deg, rgba(16, 21, 56, 0.72), rgba(45, 31, 64, 0.52));
+  box-shadow: inset 0 1px 0 rgba(255, 241, 237, 0.09), 0 15px 32px rgba(0, 0, 0, 0.2);
+  transform-origin: bottom center;
+  transition: opacity 220ms var(--ma-home-ease-out), filter 220ms var(--ma-home-ease-out), transform 280ms var(--ma-home-ease-in-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-open {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-open:focus-visible {
+  outline: 2px solid var(--ma-home-blue);
+  outline-offset: -3px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title,
+#make-again-founder-letter-wireframe .ma-home-topics,
+#make-again-founder-letter-wireframe .ma-home-chat-preview { position: relative; z-index: 2; }
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title { pointer-events: none; }
+
+#make-again-founder-letter-wireframe .ma-home-conversation-title h2 { font-size: 11px; }
+
+#make-again-founder-letter-wireframe .ma-home-topics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+  margin-top: 7px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-topic {
+  min-height: 38px;
+  padding: 5px;
+  border-radius: 999px;
+  font-size: 7px;
+  line-height: 1.35;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-preview {
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  justify-items: center;
+  pointer-events: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-preview > p {
+  align-self: center;
+  margin: 0;
+  color: rgba(232, 219, 224, 0.58);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-controls {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 76px;
+  place-items: center;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-controls .ma-home-orb {
+  z-index: 3;
+  width: 74px;
+  height: 74px;
+  pointer-events: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-mode-mark {
+  position: absolute;
+  right: 3px;
+  bottom: 7px;
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border: 1px solid rgba(244, 233, 218, 0.36);
+  border-radius: 50%;
+  color: rgba(244, 233, 218, 0.7);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 20px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-preview > small {
+  margin-top: 3px;
+  color: rgba(232, 219, 224, 0.36);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 5.5px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-voice"] .ma-home-conversation {
+  opacity: 0;
+  filter: blur(6px);
+  transform: scale(1.08);
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="voice"] .ma-home-screen {
+  animation: ma-home-page-enter 280ms var(--ma-home-ease-out) both;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #make-again-founder-letter-wireframe .ma-home-widget-card footer button:hover {
+    background-color: rgba(235, 147, 110, 0.14);
+  }
+
+  #make-again-founder-letter-wireframe .ma-home-conversation:hover {
+    border-color: rgba(154, 109, 255, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-home-conversation { filter: none !important; transform: none !important; }
+}
+
+/* 005 v4: conversational preview + hold-to-talk handoff. */
+#make-again-founder-letter-wireframe .ma-home-conversation {
+  cursor: pointer;
+  outline: none;
+}
+
+#make-again-founder-letter-wireframe .ma-home-conversation:focus-visible {
+  border-color: rgba(154, 109, 255, 0.66);
+  box-shadow: inset 0 1px 0 rgba(255, 241, 237, 0.09), 0 0 0 2px rgba(90, 157, 255, 0.52), 0 15px 32px rgba(0, 0, 0, 0.2);
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-bubbles {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-bubble {
+  box-sizing: border-box;
+  max-width: 91%;
+  padding: 7px 10px;
+  border: 1px solid rgba(222, 205, 228, 0.13);
+  border-radius: 6px 15px 15px 15px;
+  color: rgba(244, 233, 218, 0.9);
+  background: rgba(90, 76, 148, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.055);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(6px) scale(0.97);
+  animation: ma-home-bubble-arrive 220ms var(--ma-home-ease-out) forwards;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-bubble > span {
+  display: block;
+  margin-bottom: 3px;
+  color: rgba(218, 198, 255, 0.64);
+  font-size: 5.5px;
+  letter-spacing: 0.12em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-bubble p {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.48;
+  letter-spacing: 0.04em;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-tip {
+  justify-self: start;
+  padding: 7px 10px;
+  border-color: rgba(235, 147, 110, 0.18);
+  color: rgba(232, 219, 224, 0.76);
+  background: rgba(235, 147, 110, 0.065);
+  cursor: pointer;
+  animation-delay: 70ms;
+  transition: transform 140ms var(--ma-home-ease-out), background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-tip:active { transform: scale(0.97); }
+
+#make-again-founder-letter-wireframe .ma-home-chat-preview > p {
+  font-size: 7px;
+  line-height: 1.6;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-controls {
+  isolation: isolate;
+}
+
+#make-again-founder-letter-wireframe .ma-home-chat-controls::after {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  min-width: 118px;
+  min-height: 40px;
+  place-items: center;
+  padding: 0 16px;
+  border: 1px solid rgba(218, 198, 255, 0.3);
+  border-radius: 999px;
+  color: rgba(244, 233, 218, 0.88);
+  background: rgba(78, 65, 130, 0.34);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.08);
+  content: "正在展开对话";
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px) scale(0.96);
+  transition: opacity 200ms var(--ma-home-ease-out), transform 240ms var(--ma-home-ease-in-out);
+}
+
+#make-again-founder-letter-wireframe .ma-home-orb {
+  touch-action: none;
+  transition: opacity 180ms var(--ma-home-ease-out), transform 240ms var(--ma-home-ease-in-out), filter 200ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-home-voice-state="recording"] .ma-home-orb {
+  filter: saturate(1.18) brightness(1.08);
+  transform: scale(1.06);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-home-voice-state="recording"] .ma-home-orb-halo {
+  opacity: 0.84;
+  transform: scale(1.14);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-home-voice-state="sending"] .ma-home-orb {
+  opacity: 0.72;
+  transform: translateY(-5px) scale(0.86);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-home-voice-state="thinking"] .ma-home-orb {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+#make-again-founder-letter-wireframe .ma-home-phone[data-home-voice-state="thinking"] .ma-home-chat-controls::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="home-menu"] .ma-home-screen {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(0.985);
+  transition: opacity 240ms var(--ma-home-ease-out), filter 240ms var(--ma-home-ease-out), transform 240ms var(--ma-home-ease-out);
+}
+
+@keyframes ma-home-bubble-arrive {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #make-again-founder-letter-wireframe .ma-home-chat-tip:hover { background-color: rgba(235, 147, 110, 0.11); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-home-chat-bubble {
+    animation: ma-home-bubble-fade 160ms ease forwards;
+    transform: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-home-chat-controls::after,
+  #make-again-founder-letter-wireframe .ma-home-orb {
+    transform: none !important;
+    transition-duration: 160ms !important;
+  }
+}
+
+@keyframes ma-home-bubble-fade { to { opacity: 1; } }

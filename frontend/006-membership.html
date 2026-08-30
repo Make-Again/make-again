@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 006 会员选购</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">006 · 会员选购</span>
+      <span class="ma-standalone-nav-actions"><a href="index.html" target="_top">总入口</a><a href="005-home.html">返回首页</a></span>
+    </nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-utility-page="membership" role="region" aria-label="Make Again 会员选购界面">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">006 · 按月 / 按季 / 兑换码</span><div class="ma-letter-review-actions"><button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button></div></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone" data-transition-state="utility" aria-label="会员选购手机界面">
+          <section class="ma-utility-screen">
+            <header class="ma-utility-header">
+              <button type="button" class="ma-utility-back" data-utility-back aria-label="返回首页">←</button>
+              <h1>会员选购</h1>
+              <span class="ma-utility-capsule-safe" aria-hidden="true"></span>
+            </header>
+            <div class="ma-utility-content">
+              <div class="ma-utility-intro"><span>MAKE AGAIN · MEMBERSHIP</span><h2>陪你一程，<br />然后好好告别</h2><p>不设置年费，也不把长久绑定当作目标。</p></div>
+              <div class="ma-member-periods ma-utility-surface" role="group" aria-label="会员周期">
+                <button type="button" data-member-period="month" aria-pressed="true">按月</button>
+                <button type="button" data-member-period="quarter" aria-pressed="false">按季</button>
+              </div>
+              <section class="ma-member-offer ma-utility-surface" aria-live="polite">
+                <div class="ma-member-price"><strong data-member-price>—</strong><span data-member-unit>价格待定</span></div>
+                <ul class="ma-member-benefits"><li>会员权益即将公布</li></ul>
+                <button type="button" class="ma-member-buy" data-member-buy>会员方案即将上线</button>
+              </section>
+              <blockquote class="ma-member-purpose">我们不想让你在这里待得很久。<br />我们的目的，是把你送走。</blockquote>
+              <section class="ma-member-redeem ma-utility-surface">
+                <label for="ma-redeem-code">兑换码兑换</label>
+                <div class="ma-member-redeem-row"><input id="ma-redeem-code" data-redeem-code type="text" placeholder="输入兑换码" autocomplete="off" /><button type="button" data-redeem>兑换</button></div>
+                <small data-redeem-feedback aria-live="polite">兑换成功后会自动更新会员状态</small>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">006 · 只提供月度和季度选购</p>
+    </div>
+    <p class="ma-standalone-flow-note">从主页菜单进入；完成或返回后，仍回到展开的主页菜单。</p>
+  </main>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/utility-pages.js" defer></script>
+</body>
+</html>

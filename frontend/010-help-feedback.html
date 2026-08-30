@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 帮助与反馈</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css" />
+  <link rel="stylesheet" href="assets/010-help-feedback.css?v=2.0" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-utility-page="help" role="region" aria-label="Make Again 帮助与反馈界面">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">010 · 帮助与反馈</span><div class="ma-letter-review-actions"><button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button></div></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone">
+          <section class="ma-utility-screen ma-help-screen">
+            <header class="ma-utility-header ma-help-header">
+              <button type="button" class="ma-utility-back" data-home-back aria-label="返回首页">←</button>
+              <h1>帮助与反馈</h1>
+              <span class="ma-utility-capsule-safe" aria-hidden="true"></span>
+            </header>
+
+            <div class="ma-utility-content ma-help-content">
+              <h2 class="ma-help-heading">有什么可以帮你？</h2>
+
+              <section class="ma-help-section" aria-labelledby="ma-help-faq-title">
+                <h3 id="ma-help-faq-title">常见问题</h3>
+                <div class="ma-help-faq">
+                  <article>
+                    <button type="button" aria-expanded="false" aria-controls="ma-help-answer-voice"><strong>如何使用 Voice 球？</strong><span aria-hidden="true">＋</span></button>
+                    <div class="ma-help-answer" id="ma-help-answer-voice"><p>长按开始录音，上滑取消，松开发送。短按时会提示正确操作，不会直接进入下一步。</p></div>
+                  </article>
+                  <article>
+                    <button type="button" aria-expanded="false" aria-controls="ma-help-answer-delete"><strong>怎样修改或删除记录？</strong><span aria-hidden="true">＋</span></button>
+                    <div class="ma-help-answer" id="ma-help-answer-delete"><p>聊天记录可进入管理模式后单条或多条删除；看板内容会在删除前再次确认。</p></div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="ma-help-urgent" aria-labelledby="ma-help-urgent-title">
+                <small>需要立即帮助</small>
+                <h3 id="ma-help-urgent-title">此刻不用独自撑着</h3>
+                <p>如果你正经历强烈的心理困扰，可以拨打全国统一心理援助热线。若存在现实危险，请立即联系当地紧急服务或身边可信任的人。</p>
+                <a href="tel:12356" aria-label="拨打全国统一心理援助热线 12356"><span>全国心理援助热线</span><strong>12356</strong></a>
+              </section>
+
+              <section class="ma-help-section ma-feedback-section" aria-labelledby="ma-feedback-title">
+                <h3 id="ma-feedback-title">意见反馈</h3>
+                <form class="ma-feedback-form-v2" data-feedback-form>
+                  <label for="ma-feedback">告诉我们哪里不顺</label>
+                  <textarea id="ma-feedback" data-feedback-text placeholder="写下问题或建议，请勿填写身份证、住址等敏感信息…" maxlength="500"></textarea>
+                  <div class="ma-feedback-attachment">
+                    <input id="ma-feedback-image" data-feedback-file type="file" accept="image/*" hidden />
+                    <label for="ma-feedback-image">＋ 添加截图</label>
+                    <span data-feedback-file-name hidden></span>
+                    <button type="button" data-feedback-file-remove hidden>移除</button>
+                  </div>
+                  <button type="submit" data-feedback-send disabled>发送反馈</button>
+                </form>
+              </section>
+            </div>
+          </section>
+          <div class="ma-help-toast" data-help-toast hidden aria-live="polite"></div>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">010 · FAQ、紧急帮助与意见反馈均可交互</p>
+    </div>
+  </main>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/010-help-feedback.js?v=2.0" defer></script>
+</body>
+</html>

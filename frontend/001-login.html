@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 001 登录与注册</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/001-login.css?v=1.1" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">001 · 登录 / 注册</span>
+      <span class="ma-standalone-nav-actions">
+        <a href="index.html" target="_top">总入口</a>
+        <a href="002-founder-letter.html">跳到 002</a>
+      </span>
+    </nav>
+
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" role="region" aria-label="Make Again 001 登录与注册界面">
+      <div class="ma-letter-review-tools">
+        <span class="ma-letter-review-title">001 · 登录 / 注册</span>
+        <div class="ma-letter-review-actions">
+          <button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button>
+        </div>
+      </div>
+
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone" data-transition-state="login" aria-label="Make Again 登录与注册手机界面">
+          <div class="ma-letter-aurora ma-letter-aurora-one" aria-hidden="true"></div>
+          <div class="ma-letter-aurora ma-letter-aurora-two" aria-hidden="true"></div>
+          <div class="ma-letter-login-frame">
+            <img class="ma-letter-splash-background" src="assets/splash-background.jpg" alt="" />
+            <div class="ma-letter-login-content">
+              <div class="ma-letter-brand-lockup">
+                <div class="ma-letter-brand-name" aria-label="Make Again">Make Again</div>
+                <p class="ma-letter-brand-tagline">陪你慢慢和遗憾和解</p>
+              </div>
+              <form class="ma-letter-login-form" novalidate>
+                <div class="ma-letter-form-tabs" role="tablist" aria-label="登录或注册">
+                  <button type="button" class="ma-letter-form-tab is-active" data-form-mode="login" role="tab" aria-selected="true">登录</button>
+                  <button type="button" class="ma-letter-form-tab" data-form-mode="register" role="tab" aria-selected="false">注册</button>
+                </div>
+                <label class="ma-letter-form-field">
+                  <span class="ma-letter-form-label">用户名</span>
+                  <input type="text" name="username" autocomplete="username" placeholder="2–32 个字符" />
+                </label>
+                <label class="ma-letter-form-field">
+                  <span class="ma-letter-form-label">密码</span>
+                  <input type="password" name="password" autocomplete="current-password" placeholder="至少 6 位" />
+                </label>
+                <p class="ma-letter-form-error" role="alert" hidden></p>
+                <button type="submit" class="ma-letter-form-submit">进入 Make Again</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- The bridge envelope keeps the approved 001 dissolve → 002 arrival continuous. -->
+          <div class="ma-letter-envelope-stage ma-letter-transition-envelope" aria-hidden="true">
+            <div class="ma-letter-envelope">
+              <span class="ma-letter-envelope-shadow" aria-hidden="true"></span>
+              <span class="ma-letter-envelope-letter" aria-hidden="true">Wakey<br />给你的一封信</span>
+              <span class="ma-letter-envelope-pocket" aria-hidden="true"></span>
+              <span class="ma-letter-envelope-flap" aria-hidden="true"></span>
+              <span class="ma-letter-envelope-seal" aria-hidden="true">M</span>
+              <span class="ma-letter-envelope-label">打开来信</span>
+            </div>
+            <p class="ma-letter-envelope-hint">轻触信封，打开这封信</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="ma-letter-review-status" aria-live="polite">登录页 · 输入用户名与密码进入</p>
+    </div>
+    <p class="ma-standalone-flow-note">登录或注册后会沿用累计流程，进入 002 的信封与主创来信。</p>
+  </main>
+
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/001-login.js?v=1.1" defer></script>
+</body>
+</html>

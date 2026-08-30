@@ -1,0 +1,3734 @@
+  #make-again-founder-letter-wireframe {
+    color-scheme: light dark;
+    width: 100%;
+    max-width: 736px;
+    margin: 0 auto;
+    padding: 8px 10px 16px;
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    line-height: 1.45;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-title,
+  #make-again-founder-letter-wireframe .ma-letter-review-status {
+    color: var(--muted-foreground);
+    font-size: max(11px, calc(var(--font-size-base) - 2px));
+    letter-spacing: 0.04em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-actions button {
+    min-height: 44px;
+    padding: 8px 13px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--background) 92%, var(--purple) 8%);
+    font: inherit;
+    font-size: max(11px, calc(var(--font-size-base) - 2px));
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-actions button:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-preview-stage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone {
+    position: relative;
+    width: min(100%, 338px);
+    aspect-ratio: 9 / 19.5;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid color-mix(in srgb, var(--purple) 48%, var(--border) 52%);
+    border-radius: clamp(26px, 7vw, 42px);
+    background: light-dark(
+      color-mix(in srgb, var(--foreground) 97%, var(--purple) 3%),
+      color-mix(in srgb, var(--background) 97%, var(--purple) 3%)
+    );
+    box-shadow:
+      0 22px 64px color-mix(in srgb, var(--purple) 16%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--orange) 10%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-frame {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    isolation: isolate;
+    background: light-dark(var(--foreground), var(--background));
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-frame::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        to bottom,
+        light-dark(color-mix(in srgb, var(--foreground) 38%, transparent), color-mix(in srgb, var(--background) 38%, transparent)),
+        light-dark(color-mix(in srgb, var(--foreground) 82%, transparent), color-mix(in srgb, var(--background) 82%, transparent))
+      ),
+      linear-gradient(
+        to right,
+        light-dark(color-mix(in srgb, var(--foreground) 54%, transparent), color-mix(in srgb, var(--background) 54%, transparent)),
+        transparent 78%
+      );
+    content: "";
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-background {
+    position: absolute;
+    inset: -5%;
+    z-index: 0;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center 42%;
+    filter: blur(8px) saturate(0.64) sepia(0.16) contrast(1.16) brightness(0.66);
+    transform: scale(1.04);
+    animation: ma-letter-splash-background-drift 12s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(30px, 8vw, 54px);
+    padding: 15% 12% 17%;
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-logo {
+    display: grid;
+    width: clamp(86px, 29vw, 122px);
+    aspect-ratio: 1;
+    place-items: center;
+    border: 1px solid light-dark(
+      color-mix(in srgb, var(--background) 72%, transparent),
+      color-mix(in srgb, var(--foreground) 72%, transparent)
+    );
+    border-radius: clamp(18px, 5vw, 28px);
+    color: light-dark(
+      color-mix(in srgb, var(--background) 90%, var(--purple) 10%),
+      color-mix(in srgb, var(--foreground) 90%, var(--purple) 10%)
+    );
+    background: light-dark(
+      color-mix(in srgb, var(--foreground) 54%, transparent),
+      color-mix(in srgb, var(--background) 54%, transparent)
+    );
+    backdrop-filter: blur(18px);
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--purple) 12%, transparent),
+      inset 0 0 18px color-mix(in srgb, var(--background) 12%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-logo-mark {
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: clamp(34px, 10vw, 50px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.08em;
+    transform: translateX(-0.05em);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-splash-statement {
+    max-width: 15em;
+    margin: 0;
+    color: light-dark(
+      color-mix(in srgb, var(--background) 91%, var(--purple) 9%),
+      color-mix(in srgb, var(--foreground) 91%, var(--purple) 9%)
+    );
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: clamp(18px, 5.2vw, 21px);
+    font-weight: 400;
+    line-height: 2.05;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    text-shadow: 0 2px 22px color-mix(in srgb, var(--background) 46%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-char {
+    display: inline-block;
+    will-change: transform, filter, opacity;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-char:nth-of-type(5n + 1) {
+    transform-origin: 40% 70%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-char:nth-of-type(5n + 2) {
+    transform-origin: 65% 35%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-aurora {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    filter: blur(30px);
+    pointer-events: none;
+    animation: ma-letter-aurora-breathe 12s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-aurora-one {
+    top: -8%;
+    right: -18%;
+    width: 58%;
+    aspect-ratio: 1;
+    opacity: 0.2;
+    background: color-mix(in srgb, var(--orange) 50%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-aurora-two {
+    left: -28%;
+    bottom: 10%;
+    width: 78%;
+    aspect-ratio: 1;
+    opacity: 0.28;
+    background: color-mix(in srgb, var(--purple) 54%, transparent);
+    animation-duration: 15s;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-scroll {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 26px 18px 42px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-paper {
+    position: relative;
+    width: 100%;
+    min-height: calc(100% + 1200px);
+    overflow: hidden;
+    border: 1px solid light-dark(
+      color-mix(in srgb, var(--foreground) 12%, var(--orange) 10%),
+      color-mix(in srgb, var(--background) 12%, var(--orange) 10%)
+    );
+    border-radius: 4px 9px 6px 3px;
+    clip-path: polygon(0.4% 0.2%, 99.4% 0%, 100% 99.5%, 0% 100%);
+    color: light-dark(
+      color-mix(in srgb, var(--foreground) 91%, var(--purple) 9%),
+      color-mix(in srgb, var(--background) 91%, var(--purple) 9%)
+    );
+    background:
+      radial-gradient(circle at 14% 8%, color-mix(in srgb, var(--orange) 7%, transparent), transparent 24%),
+      radial-gradient(circle at 84% 42%, color-mix(in srgb, var(--purple) 5%, transparent), transparent 32%),
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 33px,
+        light-dark(
+          color-mix(in srgb, var(--foreground) 6%, transparent),
+          color-mix(in srgb, var(--background) 6%, transparent)
+        ) 34px
+      ),
+      light-dark(
+        color-mix(in srgb, color-mix(in srgb, var(--background) 92%, var(--foreground) 8%) 96%, var(--orange) 4%),
+        color-mix(in srgb, color-mix(in srgb, var(--foreground) 92%, var(--background) 8%) 96%, var(--orange) 4%)
+      );
+    box-shadow:
+      0 24px 50px color-mix(in srgb, var(--background) 30%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--orange) 12%, transparent),
+      0 0 30px color-mix(in srgb, var(--purple) 10%, transparent);
+    transform-origin: 50% 4%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-fold {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    aspect-ratio: 1;
+    background: linear-gradient(
+      225deg,
+      light-dark(
+        color-mix(in srgb, var(--foreground) 10%, transparent),
+        color-mix(in srgb, var(--background) 10%, transparent)
+      ) 0 48%,
+      transparent 50%
+    );
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-paper-top-ornament {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: calc(100% - 56px);
+    height: 68px;
+    color: color-mix(in srgb, currentColor 72%, var(--orange) 28%);
+    opacity: 0.78;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-paper-top-ornament svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-paper-top-mark {
+    position: absolute;
+    inset: 6px 0 auto;
+    display: grid;
+    place-items: center;
+    color: currentColor;
+    font-family: "STXingkai", "FZXingKai-S04S", "Xingkai SC", "Kaiti SC", "STKaiti", cursive;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.08em;
+    transform: translateX(-0.04em);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-copy {
+    padding: 96px 28px 58px;
+    font-family: ui-serif, "Songti SC", "STSong", serif;
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 2.08;
+    letter-spacing: 0.055em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-copy p {
+    margin: 0 0 1.25em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-opening {
+    margin-bottom: 2em;
+    font-weight: 400;
+    line-height: 1.9;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-signature {
+    display: grid;
+    justify-items: end;
+    gap: 4px;
+    margin-top: 52px;
+    padding-top: 18px;
+    border-top: 1px solid currentColor;
+    color: color-mix(in srgb, currentColor 78%, transparent);
+    font-size: max(11px, calc(var(--font-size-base) - 2px));
+    line-height: 1.65;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-next {
+    display: flex;
+    width: min(100%, 188px);
+    min-height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 38px auto 10px;
+    padding: 10px 20px 10px 24px;
+    border: 1px solid color-mix(in srgb, currentColor 56%, var(--orange) 18%);
+    border-radius: 8px;
+    color: color-mix(in srgb, currentColor 78%, var(--orange) 22%);
+    background:
+      radial-gradient(circle at 78% 38%, color-mix(in srgb, var(--orange) 10%, transparent), transparent 34%),
+      color-mix(in srgb, currentColor 4%, transparent);
+    box-shadow:
+      inset 0 0 0 3px light-dark(color-mix(in srgb, var(--background) 76%, transparent), color-mix(in srgb, var(--foreground) 76%, transparent)),
+      inset 0 0 0 4px color-mix(in srgb, currentColor 18%, transparent),
+      0 8px 22px color-mix(in srgb, var(--background) 14%, transparent);
+    backdrop-filter: blur(8px);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-next:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-review-status {
+    margin: 12px auto 0;
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-phone {
+    border-color: var(--border);
+    background: var(--background);
+    box-shadow: none;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-aurora {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-paper {
+    border-style: dashed;
+    clip-path: none;
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--background) 94%, var(--foreground) 6%);
+    box-shadow: none;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-splash-logo {
+    border-style: dashed;
+    color: var(--foreground);
+    background: color-mix(in srgb, var(--background) 94%, var(--foreground) 6%);
+    box-shadow: none;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-splash-statement {
+    color: var(--foreground);
+    text-shadow: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="awaiting"] .ma-letter-splash-frame {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    touch-action: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="awaiting"] .ma-letter-scroll {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-splash-frame {
+    visibility: visible;
+    animation: ma-letter-splash-frame-demo 2800ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-splash-logo {
+    animation: ma-letter-splash-logo-demo 2800ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char {
+    animation: ma-letter-char-dissolve-a 980ms cubic-bezier(0.2, 0.72, 0.26, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char:nth-of-type(5n + 1) {
+    animation-name: ma-letter-char-dissolve-b;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char:nth-of-type(5n + 2) {
+    animation-name: ma-letter-char-dissolve-c;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char:nth-of-type(5n + 3) {
+    animation-name: ma-letter-char-dissolve-d;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char:nth-of-type(5n + 4) {
+    animation-name: ma-letter-char-dissolve-e;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-char:nth-of-type(5n) {
+    animation-name: ma-letter-char-dissolve-f;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-scroll {
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-paper {
+    animation: ma-letter-paper-demo 2800ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="demo"] .ma-letter-paper-top-ornament {
+    animation: ma-letter-paper-ornament-demo 2800ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  @keyframes ma-letter-splash-frame-demo {
+    0%, 58% {
+      visibility: visible;
+      opacity: 1;
+    }
+    84%, 100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @keyframes ma-letter-splash-logo-demo {
+    0%, 25% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    43% {
+      opacity: 0.62;
+      transform: scale(0.92);
+    }
+    62%, 100% {
+      opacity: 0;
+      transform: scale(0.78);
+    }
+  }
+
+  @keyframes ma-letter-char-dissolve-a {
+    0%, 18% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translate3d(0, 0, 0) rotate(0) scale(1);
+    }
+    68% {
+      opacity: 0.46;
+      filter: blur(3px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(9px);
+      transform: translate3d(-4px, -12px, 0) rotate(-1deg) scale(0.88);
+    }
+  }
+
+  @keyframes ma-letter-char-dissolve-b {
+    0%, 18% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    68% { opacity: 0.46; filter: blur(3px); }
+    100% { opacity: 0; filter: blur(9px); transform: translate3d(-13px, -9px, 0) rotate(-4deg) scale(0.88); }
+  }
+
+  @keyframes ma-letter-char-dissolve-c {
+    0%, 18% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    68% { opacity: 0.46; filter: blur(3px); }
+    100% { opacity: 0; filter: blur(9px); transform: translate3d(10px, -13px, 0) rotate(3deg) scale(0.88); }
+  }
+
+  @keyframes ma-letter-char-dissolve-d {
+    0%, 18% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    68% { opacity: 0.46; filter: blur(3px); }
+    100% { opacity: 0; filter: blur(9px); transform: translate3d(-7px, 10px, 0) rotate(-2deg) scale(0.88); }
+  }
+
+  @keyframes ma-letter-char-dissolve-e {
+    0%, 18% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    68% { opacity: 0.46; filter: blur(3px); }
+    100% { opacity: 0; filter: blur(9px); transform: translate3d(14px, 7px, 0) rotate(4deg) scale(0.88); }
+  }
+
+  @keyframes ma-letter-char-dissolve-f {
+    0%, 18% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    68% { opacity: 0.46; filter: blur(3px); }
+    100% { opacity: 0; filter: blur(9px); transform: translate3d(2px, -16px, 0) rotate(1deg) scale(0.88); }
+  }
+
+  @keyframes ma-letter-paper-demo {
+    0%, 22% {
+      opacity: 0;
+      transform: translateY(58%) scaleY(0.9);
+      filter: blur(4px);
+    }
+    42% {
+      opacity: 0.34;
+      transform: translateY(32%) scaleY(0.94);
+      filter: blur(2px);
+    }
+    69% {
+      opacity: 0.94;
+      transform: translateY(5%) scaleY(0.985);
+      filter: blur(0.5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes ma-letter-paper-ornament-demo {
+    0%, 52% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(8px) scale(0.92);
+    }
+    70% {
+      opacity: 0.42;
+      transform: translateX(-50%) translateY(2px) scale(0.98);
+    }
+    100% {
+      opacity: 0.78;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  }
+
+  @keyframes ma-letter-splash-background-drift {
+    from { transform: translate3d(-1.5%, -1%, 0) scale(1.04); }
+    to { transform: translate3d(1.5%, 1%, 0) scale(1.1); }
+  }
+
+  @keyframes ma-letter-aurora-breathe {
+    from { transform: translate3d(-3%, 2%, 0) scale(0.96); }
+    to { transform: translate3d(4%, -4%, 0) scale(1.08); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #make-again-founder-letter-wireframe .ma-letter-paper.is-entering,
+    #make-again-founder-letter-wireframe .ma-letter-aurora,
+    #make-again-founder-letter-wireframe .ma-letter-splash-background {
+      animation: none;
+    }
+  }
+
+  @media (max-width: 360px) {
+    #make-again-founder-letter-wireframe {
+      padding-inline: 4px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-letter-review-tools {
+      align-items: flex-start;
+    }
+
+    #make-again-founder-letter-wireframe .ma-letter-review-actions button {
+      padding-inline: 10px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-letter-scroll {
+      padding-inline: 14px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-letter-copy {
+      padding-inline: 24px;
+    }
+  }
+  #make-again-founder-letter-wireframe {
+    --ma-night: #050914;
+    --ma-night-soft: #0b1224;
+    --ma-ink: #f7eee4;
+    --ma-muted: rgba(247, 238, 228, 0.72);
+    --ma-violet: #9c82ce;
+    --ma-ember: #e88e61;
+    --ma-paper: #d8c4ae;
+    --ma-paper-deep: #aa8d76;
+    --ma-paper-ink: #30252a;
+    color-scheme: dark;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone {
+    background: var(--ma-night);
+    border-color: color-mix(in srgb, var(--ma-violet) 52%, var(--ma-ember) 20%);
+    box-shadow:
+      0 22px 64px rgba(5, 9, 20, 0.56),
+      0 0 0 1px rgba(232, 142, 97, 0.14);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-aurora-one {
+    opacity: 0.16;
+    background: color-mix(in srgb, var(--ma-ember) 58%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-aurora-two {
+    opacity: 0.2;
+    background: color-mix(in srgb, var(--ma-violet) 58%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-frame {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--ma-night);
+    transition:
+      opacity 1100ms cubic-bezier(0.22, 0.7, 0.24, 1),
+      filter 1100ms cubic-bezier(0.22, 0.7, 0.24, 1),
+      transform 1300ms cubic-bezier(0.22, 0.7, 0.24, 1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-frame::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(to bottom, rgba(3, 7, 17, 0.44), rgba(3, 7, 17, 0.78)),
+      linear-gradient(100deg, rgba(3, 7, 17, 0.58), transparent 62%, rgba(8, 4, 16, 0.36));
+    content: "";
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-frame .ma-letter-splash-background {
+    position: absolute;
+    inset: -6%;
+    z-index: 0;
+    width: 112%;
+    height: 112%;
+    object-fit: cover;
+    object-position: center 42%;
+    filter: blur(12px) saturate(0.74) sepia(0.18) contrast(1.2) brightness(0.5);
+    opacity: 0.9;
+    transform: scale(1.05);
+    animation: ma-letter-login-background-drift 16s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28% 12% 18%;
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-brand-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-brand-name {
+    color: var(--ma-ink);
+    font-family: "Snell Roundhand", "Bradley Hand", "STKaiti", "Kaiti SC", cursive;
+    font-size: clamp(34px, 10vw, 46px);
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: 1.1;
+    text-shadow:
+      0 2px 18px rgba(4, 5, 16, 0.65),
+      0 0 22px rgba(232, 142, 97, 0.16);
+    white-space: nowrap;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-brand-char {
+    display: inline-block;
+    will-change: opacity, filter, transform;
+    animation: ma-letter-brand-write 1200ms cubic-bezier(0.22, 0.74, 0.24, 1) both;
+    animation-delay: var(--ma-brand-delay, 0ms);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-brand-tagline {
+    margin: 0;
+    color: var(--ma-muted);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: clamp(12px, 3.6vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: 1.7;
+    white-space: nowrap;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-button {
+    display: inline-flex;
+    width: min(100%, 246px);
+    min-height: 52px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 20px;
+    border: 1px solid rgba(247, 238, 228, 0.58);
+    border-radius: 999px;
+    color: var(--ma-ink);
+    background:
+      linear-gradient(100deg, rgba(14, 18, 39, 0.8), rgba(104, 72, 105, 0.36) 56%, rgba(181, 92, 65, 0.34)),
+      rgba(8, 12, 26, 0.54);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 220, 194, 0.12),
+      0 10px 28px rgba(2, 4, 12, 0.28),
+      0 0 24px rgba(232, 142, 97, 0.12);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: clamp(15px, 4.2vw, 17px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-button:hover,
+  #make-again-founder-letter-wireframe .ma-letter-login-button:focus-visible {
+    border-color: rgba(255, 221, 196, 0.9);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 220, 194, 0.18),
+      0 10px 28px rgba(2, 4, 12, 0.34),
+      0 0 30px rgba(232, 142, 97, 0.2);
+    transform: translateY(-1px);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-login-button:focus-visible,
+  #make-again-founder-letter-wireframe .ma-letter-auth-actions button:focus-visible,
+  #make-again-founder-letter-wireframe .ma-letter-envelope:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-wechat-mark {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-wechat-mark span {
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 15px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-wechat-mark span:first-child {
+    top: 1px;
+    left: 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-wechat-mark span:last-child {
+    right: 0;
+    bottom: 1px;
+    width: 17px;
+    height: 13px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-wechat-mark span::after {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 6px 0 currentColor;
+    content: "";
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-modal {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    display: grid;
+    place-items: center;
+    padding: 14%;
+    background: rgba(2, 5, 13, 0.36);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-modal[hidden] {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-card {
+    width: min(100%, 256px);
+    box-sizing: border-box;
+    padding: 24px 20px 18px;
+    border: 1px solid rgba(246, 221, 198, 0.38);
+    border-radius: 22px;
+    color: var(--ma-ink);
+    background: rgba(17, 18, 31, 0.95);
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(156, 130, 206, 0.14);
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-symbol {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-card h2 {
+    margin: 0;
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-card p {
+    margin: 12px 0 20px;
+    color: rgba(247, 238, 228, 0.72);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-actions button {
+    flex: 1;
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 1px solid rgba(247, 238, 228, 0.32);
+    border-radius: 999px;
+    color: var(--ma-ink);
+    background: rgba(247, 238, 228, 0.05);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-auth-actions .ma-letter-auth-confirm {
+    border-color: rgba(236, 168, 123, 0.72);
+    color: #2b2026;
+    background: linear-gradient(110deg, #d7b29a, #eda278);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-stage {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 22px;
+    padding: 18%;
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 700ms cubic-bezier(0.22, 0.7, 0.24, 1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope {
+    position: relative;
+    display: block;
+    width: min(100%, 254px);
+    aspect-ratio: 1.46;
+    padding: 0;
+    border: 0;
+    color: var(--ma-paper-ink);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-shadow {
+    position: absolute;
+    right: -7%;
+    bottom: -14%;
+    left: -7%;
+    height: 30%;
+    border-radius: 50%;
+    background: rgba(3, 4, 11, 0.52);
+    filter: blur(14px);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-letter {
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    left: 10%;
+    z-index: 1;
+    display: grid;
+    height: 76%;
+    place-items: center;
+    border: 1px solid rgba(92, 64, 58, 0.28);
+    color: rgba(48, 37, 42, 0.78);
+    background: linear-gradient(150deg, #e7d5bd, #c5a78c);
+    font-family: "STXingkai", "FZXingKai-S04S", "Xingkai SC", "Kaiti SC", cursive;
+    font-size: clamp(15px, 4.5vw, 19px);
+    line-height: 1.55;
+    text-align: center;
+    transform: translateY(8%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-pocket {
+    position: absolute;
+    inset: 17% 0 0;
+    z-index: 2;
+    border: 1px solid rgba(245, 220, 190, 0.55);
+    border-radius: 5px 7px 9px 5px;
+    background:
+      linear-gradient(145deg, rgba(243, 221, 194, 0.92), rgba(167, 126, 103, 0.94)),
+      var(--ma-paper);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 242, 222, 0.22),
+      0 14px 30px rgba(0, 0, 0, 0.28),
+      0 0 24px rgba(232, 142, 97, 0.12);
+    clip-path: polygon(0 0, 50% 54%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-flap {
+    position: absolute;
+    inset: 17% 0 auto;
+    z-index: 3;
+    height: 54%;
+    border: 1px solid rgba(245, 220, 190, 0.58);
+    border-radius: 5px 7px 0 0;
+    background: linear-gradient(145deg, #ead8c0, #b89077);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: 50% 0;
+    backface-visibility: hidden;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-seal {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    z-index: 4;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(93, 47, 48, 0.46);
+    border-radius: 50%;
+    color: #f3dfca;
+    background: radial-gradient(circle at 32% 28%, #cf806d, #702e43 76%);
+    box-shadow: 0 4px 12px rgba(39, 16, 23, 0.3);
+    font-family: "STXingkai", "FZXingKai-S04S", "Xingkai SC", "Kaiti SC", cursive;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-label {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-envelope-hint {
+    margin: 0;
+    color: rgba(247, 238, 228, 0.58);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-scroll {
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 900ms cubic-bezier(0.22, 0.7, 0.24, 1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-paper {
+    color: var(--ma-paper-ink);
+    background:
+      radial-gradient(circle at 12% 7%, rgba(232, 142, 97, 0.18), transparent 25%),
+      radial-gradient(circle at 86% 42%, rgba(126, 93, 148, 0.14), transparent 32%),
+      repeating-linear-gradient(to bottom, transparent 0, transparent 33px, rgba(65, 47, 50, 0.08) 34px),
+      linear-gradient(145deg, #e0cdb5, #c9af98 72%, #b7927b);
+    border-color: rgba(247, 224, 198, 0.64);
+    box-shadow:
+      0 24px 50px rgba(2, 4, 12, 0.44),
+      0 0 0 1px rgba(232, 142, 97, 0.2),
+      0 0 30px rgba(156, 130, 206, 0.12);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-copy {
+    color: var(--ma-paper-ink);
+    font-family: "STXingkai", "FZXingKai-S04S", "Xingkai SC", "Kaiti SC", cursive;
+    font-weight: 400;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-opening {
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-signature {
+    color: rgba(48, 37, 42, 0.78);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-next {
+    position: relative;
+    min-height: 56px;
+    width: min(100%, 214px);
+    border-color: rgba(75, 48, 50, 0.72);
+    color: #3a2730;
+    background:
+      linear-gradient(110deg, rgba(255, 236, 210, 0.7), rgba(225, 157, 119, 0.74)),
+      #d3b59a;
+    box-shadow:
+      inset 0 0 0 3px rgba(250, 231, 207, 0.48),
+      inset 0 0 0 4px rgba(93, 60, 57, 0.3),
+      0 10px 22px rgba(73, 38, 35, 0.24),
+      0 0 24px rgba(232, 142, 97, 0.22);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="login"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="auth"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="returning"] .ma-letter-login-frame {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="transitioning"] .ma-letter-login-frame {
+    pointer-events: none;
+    animation: ma-letter-login-exit 2500ms cubic-bezier(0.22, 0.7, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="envelope"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="reading"] .ma-letter-login-frame {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="transitioning"] .ma-letter-brand-char {
+    animation: ma-letter-brand-dissolve 1150ms cubic-bezier(0.2, 0.72, 0.26, 1) both;
+    animation-delay: calc(180ms + var(--ma-brand-delay, 0ms));
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="transitioning"] .ma-letter-envelope-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="envelope"] .ma-letter-envelope-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-stage {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="transitioning"] .ma-letter-envelope {
+    animation: ma-letter-envelope-enter 1900ms 620ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-flap {
+    animation: ma-letter-envelope-flap-open 1200ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-letter {
+    animation: ma-letter-envelope-letter-rise 1300ms 110ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-seal,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-label,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="opening"] .ma-letter-envelope-hint {
+    animation: ma-letter-envelope-detail-fade 500ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="reading"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="reading"] .ma-letter-envelope-stage {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="reading"] .ma-letter-scroll {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="reading"] .ma-letter-paper {
+    animation: ma-letter-paper-open 1200ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-login-frame {
+    background: var(--background);
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-login-frame .ma-letter-splash-background {
+    opacity: 0.12;
+    filter: grayscale(1) brightness(0.56);
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-login-frame::after {
+    background: color-mix(in srgb, var(--background) 70%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-envelope-pocket,
+  #make-again-founder-letter-wireframe[data-mode="structure"] .ma-letter-envelope-flap {
+    border-style: dashed;
+    background: color-mix(in srgb, var(--background) 88%, var(--foreground) 12%);
+    box-shadow: none;
+  }
+
+  @keyframes ma-letter-login-background-drift {
+    from { transform: translate3d(-1.5%, -1%, 0) scale(1.05); }
+    to { transform: translate3d(1.5%, 1%, 0) scale(1.1); }
+  }
+
+  @keyframes ma-letter-brand-write {
+    0% { opacity: 0; filter: blur(9px); transform: translateY(8px); }
+    62% { opacity: 0.7; filter: blur(2px); transform: translateY(1px); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+  }
+
+  @keyframes ma-letter-brand-dissolve {
+    0%, 20% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) rotate(0); }
+    100% { opacity: 0; filter: blur(10px); transform: translate3d(var(--ma-drift-x, 6px), var(--ma-drift-y, -10px), 0) rotate(2deg); }
+  }
+
+  @keyframes ma-letter-login-exit {
+    0%, 25% { opacity: 1; filter: blur(0); transform: scale(1); }
+    68% { opacity: 0.52; filter: blur(2px); transform: scale(1.025); }
+    100% { opacity: 0; filter: blur(7px); transform: scale(1.05); visibility: hidden; }
+  }
+
+  @keyframes ma-letter-envelope-enter {
+    0% { opacity: 0; filter: blur(8px); transform: translateY(42%) scale(0.86); }
+    65% { opacity: 0.9; filter: blur(1px); transform: translateY(3%) scale(1.015); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  }
+
+  @keyframes ma-letter-envelope-flap-open {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(-164deg); }
+  }
+
+  @keyframes ma-letter-envelope-letter-rise {
+    0% { transform: translateY(8%); }
+    100% { transform: translateY(-40%) scale(1.06); }
+  }
+
+  @keyframes ma-letter-envelope-detail-fade {
+    to { opacity: 0; transform: scale(0.86); }
+  }
+
+  @keyframes ma-letter-paper-open {
+    0% { opacity: 0; filter: blur(4px); transform: translateY(24%) scale(0.94); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #make-again-founder-letter-wireframe .ma-letter-login-frame,
+    #make-again-founder-letter-wireframe .ma-letter-splash-background,
+    #make-again-founder-letter-wireframe .ma-letter-brand-char,
+    #make-again-founder-letter-wireframe .ma-letter-envelope,
+    #make-again-founder-letter-wireframe .ma-letter-envelope-flap,
+    #make-again-founder-letter-wireframe .ma-letter-envelope-letter,
+    #make-again-founder-letter-wireframe .ma-letter-paper {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    #make-again-founder-letter-wireframe .ma-letter-login-content {
+      padding-inline: 9%;
+    }
+
+    #make-again-founder-letter-wireframe .ma-letter-auth-card {
+      padding-inline: 16px;
+    }
+  }
+
+  /* 003 · Voice conversation surface */
+  #make-again-founder-letter-wireframe {
+    --ma-voice-night: #070b20;
+    --ma-voice-night-deep: #040716;
+    --ma-voice-cream: #f4e9da;
+    --ma-voice-cream-soft: rgba(244, 233, 218, 0.76);
+    --ma-voice-muted: rgba(218, 205, 214, 0.62);
+    --ma-voice-violet: #9a6dff;
+    --ma-voice-blue: #5a9dff;
+    --ma-voice-ember: #eb936e;
+    --ma-voice-glass: rgba(22, 20, 52, 0.68);
+    --ma-voice-line: rgba(226, 199, 222, 0.38);
+    --ma-voice-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ma-voice-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    overflow: hidden;
+    padding: clamp(28px, 8%, 44px) clamp(19px, 6.5%, 28px) clamp(22px, 6%, 32px);
+    color: var(--ma-voice-cream);
+    background:
+      radial-gradient(circle at 100% 22%, color-mix(in srgb, var(--ma-voice-ember) 50%, transparent), transparent 36%),
+      radial-gradient(circle at 0% 78%, color-mix(in srgb, var(--ma-voice-violet) 36%, transparent), transparent 40%),
+      linear-gradient(160deg, var(--ma-voice-night-deep) 0%, var(--ma-voice-night) 54%, #11102b 100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(115deg, transparent 14%, rgba(126, 119, 190, 0.08) 42%, transparent 65%),
+      radial-gradient(circle at 76% 50%, rgba(255, 185, 123, 0.12), transparent 24%);
+    content: "";
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-heading {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: clamp(19px, 6.5%, 28px);
+    left: clamp(19px, 6.5%, 28px);
+    width: auto;
+    pointer-events: none;
+    text-align: center;
+    transform: translateY(-50%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-kicker {
+    margin: 0 0 15px;
+    color: color-mix(in srgb, var(--ma-voice-cream-soft) 75%, var(--ma-voice-ember) 25%);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-heading h2 {
+    max-width: 17em;
+    margin: 0 auto;
+    color: var(--ma-voice-cream);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: clamp(19px, 5.5vw, 24px);
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0.075em;
+    text-shadow: 0 2px 24px rgba(2, 4, 18, 0.62);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: min(100%, 194px);
+    margin: 16px auto 0;
+    color: color-mix(in srgb, var(--ma-voice-ember) 76%, var(--ma-voice-cream) 24%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-divider span {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ma-voice-line));
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-divider span:last-child {
+    background: linear-gradient(90deg, var(--ma-voice-line), transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-divider i {
+    font-size: 13px;
+    font-style: normal;
+    text-shadow: 0 0 14px color-mix(in srgb, var(--ma-voice-ember) 70%, transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-stage {
+    position: relative;
+    display: grid;
+    min-height: 0;
+    flex: 1;
+    place-items: center;
+    padding: clamp(30px, 9%, 64px) 4px 18px;
+    isolation: isolate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-stage::before,
+  #make-again-founder-letter-wireframe .ma-voice-stage::after {
+    position: absolute;
+    inset: 16% 8% 11%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 58%, rgba(90, 132, 255, 0.1), transparent 66%);
+    content: "";
+    filter: blur(24px);
+    opacity: 0.72;
+    pointer-events: none;
+    transform: scale(0.92, 0.7);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-stage::after {
+    inset: 22% 18% 19%;
+    background: linear-gradient(100deg, transparent, rgba(236, 163, 189, 0.08), transparent 68%);
+    filter: blur(15px);
+    opacity: 0.45;
+    transform: rotate(-8deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 330px);
+    margin: auto;
+    padding: 17px 11px 15px;
+    color: var(--ma-voice-cream);
+    text-align: center;
+    opacity: 0;
+    filter: blur(13px) contrast(0.62) saturate(0.5);
+    transform: translateY(34px) scale(0.95) skewX(-1.4deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer::before,
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer::after {
+    position: absolute;
+    right: -8%;
+    left: -8%;
+    pointer-events: none;
+    content: "";
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer::before {
+    top: 8%;
+    height: 100%;
+    background:
+      linear-gradient(112deg, transparent 12%, rgba(226, 235, 255, 0.16) 35%, transparent 47%),
+      linear-gradient(72deg, transparent 58%, rgba(255, 190, 145, 0.14) 70%, transparent 82%);
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(28px) skewX(-8deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer::after {
+    right: -18%;
+    bottom: -34%;
+    left: -18%;
+    height: 74%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 0%, rgba(105, 172, 255, 0.2), transparent 70%);
+    filter: blur(15px);
+    opacity: 0;
+    transform: translateY(20px) scaleY(0.48);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-eyebrow {
+    display: block;
+    margin-bottom: 13px;
+    color: color-mix(in srgb, var(--ma-voice-ember) 75%, var(--ma-voice-cream) 25%);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer p {
+    margin: 0;
+    color: var(--ma-voice-cream);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.055em;
+    text-shadow: 0 2px 22px rgba(7, 10, 35, 0.62);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-sentence {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(7px) contrast(0.7);
+    transform: translateY(10px);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-sentence {
+    animation: ma-voice-answer-sentence-arrive 720ms cubic-bezier(0.2, 0.76, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-sentence:nth-child(1) {
+    animation-delay: 260ms;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-sentence:nth-child(2) {
+    animation-delay: 620ms;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-answer-layer small {
+    display: block;
+    margin-top: 15px;
+    color: var(--ma-voice-muted);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer {
+    animation: ma-voice-answer-arrive 1480ms cubic-bezier(0.2, 0.76, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer::before {
+    animation: ma-voice-answer-refraction 1480ms cubic-bezier(0.2, 0.76, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer::after {
+    animation: ma-voice-answer-waterline 1480ms cubic-bezier(0.2, 0.76, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-composer {
+    position: relative;
+    display: flex;
+    height: 148px;
+    min-height: 148px;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(219, 194, 231, 0.4);
+    border-radius: 34px;
+    background:
+      linear-gradient(110deg, rgba(14, 20, 54, 0.78), rgba(55, 35, 68, 0.58)),
+      rgba(11, 14, 37, 0.68);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 239, 237, 0.12),
+      inset 0 0 28px rgba(161, 108, 216, 0.07),
+      0 20px 44px rgba(1, 2, 12, 0.34);
+    backdrop-filter: blur(18px);
+    isolation: isolate;
+    transform: translate3d(0, 0, 0);
+    will-change: background, box-shadow;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: 116px;
+    height: 116px;
+    flex: none;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: var(--ma-voice-cream);
+    background: transparent;
+    cursor: pointer;
+    isolation: isolate;
+    z-index: 3;
+    touch-action: none;
+    transform: translate3d(-50%, -50%, 0);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    transition: transform 260ms var(--ma-voice-ease-in-out);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb:focus-visible,
+  #make-again-founder-letter-wireframe .ma-voice-close:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-halo {
+    position: absolute;
+    inset: 7%;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--ma-voice-violet) 32%, transparent), transparent 68%);
+    filter: blur(11px);
+    opacity: 0.75;
+    transform: scale(1.04);
+    animation: ma-voice-orb-halo 8.8s ease-in-out infinite;
+    pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity, transform;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-rings,
+  #make-again-founder-letter-wireframe .ma-voice-orb-core,
+  #make-again-founder-letter-wireframe .ma-voice-orb-sheen {
+    position: absolute;
+    inset: 0;
+    display: block;
+    border-radius: 50%;
+    pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, opacity;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-rings i {
+    position: absolute;
+    inset: 13%;
+    border: 1px solid rgba(152, 196, 255, 0.34);
+    border-radius: 50%;
+    opacity: 0.55;
+    transform: rotate(-18deg) scaleY(0.82);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-rings i:nth-child(2) {
+    inset: 8%;
+    border-color: rgba(215, 162, 255, 0.26);
+    transform: rotate(54deg) scaleY(0.76);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-rings i:nth-child(3) {
+    inset: 16%;
+    border-color: rgba(255, 187, 131, 0.35);
+    transform: rotate(106deg) scaleY(0.88);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core {
+    inset: 11%;
+    overflow: hidden;
+    border: 1px solid rgba(227, 227, 255, 0.3);
+    border-radius: 47% 53% 55% 45% / 48% 44% 56% 52%;
+    background:
+      radial-gradient(circle at 29% 22%, rgba(255, 239, 242, 0.84) 0 4%, transparent 15%),
+      conic-gradient(from 198deg, #6cb9ff, #3856d6 23%, #ae70ff 49%, var(--ma-voice-ember) 67%, #4a68e8 85%, #66b7ff);
+    box-shadow:
+      inset 10px -12px 21px rgba(12, 20, 82, 0.62),
+      inset -8px 8px 17px rgba(255, 172, 137, 0.56),
+      0 0 20px rgba(113, 115, 255, 0.64),
+      0 0 45px rgba(193, 101, 235, 0.34);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, border-radius;
+    animation: ma-voice-orb-morph 12s ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core::before,
+  #make-again-founder-letter-wireframe .ma-voice-orb-core::after {
+    position: absolute;
+    inset: -12%;
+    border-radius: 46% 54% 42% 58% / 54% 42% 58% 46%;
+    background: linear-gradient(117deg, transparent 23%, rgba(255, 255, 255, 0.25) 44%, transparent 59%);
+    content: "";
+    filter: blur(8px);
+    mix-blend-mode: screen;
+    opacity: 0.62;
+    transform: translate3d(-16%, 13%, 0) rotate(-18deg) scale(0.72);
+    animation: ma-voice-orb-sheen-flow 10.5s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core::after {
+    background: radial-gradient(ellipse at 38% 30%, rgba(255, 248, 239, 0.42), transparent 52%);
+    filter: blur(5px);
+    opacity: 0.72;
+    transform: translate3d(15%, -12%, 0) scale(0.66);
+    animation-duration: 9.5s;
+    animation-direction: alternate-reverse;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core i {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    filter: blur(7px);
+    mix-blend-mode: screen;
+    opacity: 0.86;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core i:nth-child(1) {
+    right: -7%;
+    bottom: -20%;
+    width: 86%;
+    height: 62%;
+    background: radial-gradient(ellipse at 45% 35%, rgba(82, 183, 255, 0.98), transparent 66%);
+    animation: ma-voice-orb-flow-one 10s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core i:nth-child(2) {
+    top: -18%;
+    left: 13%;
+    width: 69%;
+    height: 73%;
+    background: radial-gradient(ellipse at 48% 55%, rgba(176, 100, 255, 0.9), transparent 69%);
+    animation: ma-voice-orb-flow-two 11.5s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core i:nth-child(3) {
+    right: -10%;
+    top: 27%;
+    width: 48%;
+    height: 53%;
+    background: radial-gradient(ellipse at 36% 42%, rgba(255, 173, 130, 0.98), transparent 68%);
+    animation: ma-voice-orb-flow-three 9s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-core b {
+    position: absolute;
+    top: 14%;
+    left: 24%;
+    width: 22%;
+    height: 12%;
+    border-radius: 50%;
+    background: rgba(255, 250, 250, 0.78);
+    filter: blur(3px);
+    opacity: 0.58;
+    transform: rotate(-28deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb-sheen {
+    inset: 10%;
+    border: 1px solid rgba(255, 247, 243, 0.22);
+    border-radius: 48% 52% 56% 44% / 44% 52% 48% 56%;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48), 0 0 8px rgba(255, 217, 194, 0.22);
+    opacity: 0.55;
+    transform: rotate(-22deg) scale(0.9, 0.78);
+    animation: ma-voice-orb-sheen-ring 12s ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-close {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    color: rgba(250, 240, 237, 0.94);
+    background: transparent;
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", serif;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    touch-action: manipulation;
+    opacity: 1;
+    transform: translate3d(0, -50%, 0) scale(1);
+    z-index: 4;
+    transition:
+      opacity 140ms var(--ma-voice-ease-out),
+      transform 220ms var(--ma-voice-ease-out);
+    will-change: opacity, transform;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-text-composer {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-height: 58px;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 14px 5px 17px;
+    border: 1px solid rgba(219, 194, 231, 0.36);
+    border-radius: 22px;
+    background:
+      linear-gradient(108deg, rgba(19, 24, 60, 0.85), rgba(48, 32, 65, 0.72)),
+      rgba(7, 9, 28, 0.5);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 235, 240, 0.1),
+      0 9px 25px rgba(2, 3, 13, 0.2);
+    backdrop-filter: blur(17px);
+    clip-path: inset(0 50% 0 50% round 22px);
+    filter: blur(7px);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate3d(0, -50%, 0) scaleX(0.96);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity, filter, transform, clip-path;
+    transform-origin: right center;
+    transition:
+      opacity 180ms var(--ma-voice-ease-out),
+      filter 220ms var(--ma-voice-ease-out),
+      transform 260ms var(--ma-voice-ease-in-out),
+      clip-path 260ms var(--ma-voice-ease-in-out);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-text-composer input {
+    min-width: 0;
+    min-height: 44px;
+    flex: 1;
+    padding: 0 58px 0 0;
+    border: 0;
+    outline: 0;
+    color: var(--ma-voice-cream);
+    background: transparent;
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-text-composer input::placeholder {
+    color: rgba(229, 219, 232, 0.56);
+    opacity: 1;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-mode-hint {
+    flex: none;
+    margin: 12px 0 0;
+    color: rgba(239, 224, 229, 0.58);
+    font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-composer {
+    min-height: 148px;
+    border-color: transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: blur(18px);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-close {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(7px, -50%, 0) scale(0.84);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-transition="to-voice"] .ma-voice-close {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(7px, -50%, 0) scale(0.84);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-text-composer {
+    clip-path: inset(0 0 0 0 round 22px);
+    filter: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(0, -50%, 0) scaleX(1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-orb {
+    z-index: 2;
+    transform: translate3d(calc(-50% + 112px), -50%, 0) scale(0.48);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-text-composer {
+    padding-right: 13px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-halo {
+    animation: ma-voice-orb-recording-halo 1450ms ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-rings i {
+    animation: ma-voice-orb-ring-recording 1450ms ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-core {
+    animation: ma-voice-orb-recording 1450ms ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="sending"] .ma-voice-orb-core {
+    animation: ma-voice-orb-sending 1250ms cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="sending"] .ma-voice-orb-halo {
+    animation: ma-voice-orb-sending-halo 1250ms ease-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="sending"] .ma-voice-orb-rings i {
+    animation: ma-voice-orb-ring-sending 1250ms ease-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="thinking"] .ma-voice-orb-core {
+    animation: ma-voice-orb-thinking 5.8s linear infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="thinking"] .ma-voice-orb-rings i {
+    animation: ma-voice-orb-ring-thinking 7s ease-in-out infinite;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="speaking"] .ma-voice-orb-core {
+    animation: ma-voice-orb-speaking 3.6s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="speaking"] .ma-voice-orb-halo {
+    animation: ma-voice-orb-speaking-halo 3.6s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="speaking"] .ma-voice-orb-rings i {
+    animation: ma-voice-orb-ring-speaking 3.6s ease-in-out infinite alternate;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-core i {
+    animation-duration: 8.5s;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-core i:nth-child(2) {
+    animation-duration: 9.8s;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-orb[data-orb-state="recording"] .ma-voice-orb-core i:nth-child(3) {
+    animation-duration: 7.8s;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] .ma-voice-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice"] .ma-voice-screen {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] .ma-voice-screen {
+    animation: ma-voice-screen-enter 1180ms cubic-bezier(0.22, 0.75, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] .ma-letter-scroll {
+    pointer-events: none;
+    animation: ma-voice-paper-exit 1040ms cubic-bezier(0.22, 0.72, 0.24, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice"],
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] {
+    background: var(--ma-voice-night-deep);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice"] .ma-letter-envelope-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice"] .ma-letter-scroll,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] .ma-letter-login-frame,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="voice-transition"] .ma-letter-envelope-stage {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes ma-voice-screen-enter {
+    0% { opacity: 0; filter: blur(10px); transform: translateY(8%) scale(0.96); }
+    58% { opacity: 0.82; filter: blur(1px); transform: translateY(-1%) scale(1.008); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  }
+
+  @keyframes ma-voice-paper-exit {
+    0% { opacity: 1; filter: blur(0); transform: scale(1); }
+    58% { opacity: 0.54; filter: blur(2px); transform: scale(1.025) translateY(-2%); }
+    100% { opacity: 0; filter: blur(8px); transform: scale(1.065) translateY(-6%); }
+  }
+
+  @keyframes ma-voice-orb-morph {
+    0%, 100% {
+      border-radius: 49% 51% 53% 47% / 49% 47% 53% 51%;
+      transform: rotate(-2deg) scale(0.98, 0.99);
+    }
+    28% {
+      border-radius: 53% 47% 49% 51% / 46% 54% 46% 54%;
+      transform: rotate(1deg) scale(1.015, 0.985);
+    }
+    58% {
+      border-radius: 47% 53% 51% 49% / 53% 46% 54% 47%;
+      transform: rotate(3deg) scale(0.99, 1.025);
+    }
+    82% {
+      border-radius: 52% 48% 47% 53% / 48% 52% 48% 52%;
+      transform: rotate(-1deg) scale(1.018, 0.992);
+    }
+  }
+
+  @keyframes ma-voice-orb-halo {
+    0%, 100% { opacity: 0.5; transform: scale(0.97); }
+    50% { opacity: 0.72; transform: scale(1.06); }
+  }
+
+  @keyframes ma-voice-orb-flow-one {
+    from { transform: translate3d(-7%, 6%, 0) rotate(-5deg) scale(0.96); }
+    to { transform: translate3d(7%, -4%, 0) rotate(5deg) scale(1.06); }
+  }
+
+  @keyframes ma-voice-orb-flow-two {
+    from { transform: translate3d(6%, 7%, 0) rotate(6deg) scale(0.95); }
+    to { transform: translate3d(-6%, -5%, 0) rotate(-5deg) scale(1.06); }
+  }
+
+  @keyframes ma-voice-orb-flow-three {
+    from { transform: translate3d(-6%, -5%, 0) scale(0.94); }
+    to { transform: translate3d(6%, 7%, 0) scale(1.07); }
+  }
+
+  @keyframes ma-voice-orb-sheen-flow {
+    from { transform: translate3d(-10%, 9%, 0) rotate(-10deg) scale(0.84); }
+    to { transform: translate3d(11%, -8%, 0) rotate(12deg) scale(1.08); }
+  }
+
+  @keyframes ma-voice-orb-sheen-ring {
+    0%, 100% { opacity: 0.32; transform: rotate(-12deg) scale(0.92, 0.84); }
+    38% { opacity: 0.62; transform: rotate(10deg) scale(1.04, 0.94); }
+    72% { opacity: 0.44; transform: rotate(24deg) scale(0.98, 1.02); }
+  }
+
+  @keyframes ma-voice-orb-thinking {
+    0% { transform: rotate(0deg) scale(0.985); }
+    50% { transform: rotate(180deg) scale(1.015); }
+    100% { transform: rotate(360deg) scale(0.985); }
+  }
+
+  @keyframes ma-voice-orb-ring-thinking {
+    0%, 100% { opacity: 0.28; transform: rotate(0) scaleY(0.9); }
+    50% { opacity: 0.62; transform: rotate(180deg) scaleY(0.98); }
+  }
+
+  @keyframes ma-voice-orb-speaking {
+    from { transform: scale(0.98) translateY(1.5%); }
+    to { transform: scale(1.025) translateY(-1.5%); }
+  }
+
+  @keyframes ma-voice-orb-speaking-halo {
+    from { opacity: 0.52; transform: scale(0.98); }
+    to { opacity: 0.78; transform: scale(1.1); }
+  }
+
+  @keyframes ma-voice-orb-ring-speaking {
+    from { opacity: 0.3; transform: rotate(-8deg) scaleY(0.86); }
+    to { opacity: 0.64; transform: rotate(11deg) scaleY(1); }
+  }
+
+  @keyframes ma-voice-orb-recording {
+    0%, 100% {
+      border-radius: 47% 53% 56% 44% / 51% 44% 56% 49%;
+      transform: scale(0.975, 0.95) rotate(-2deg);
+    }
+    32% {
+      border-radius: 55% 45% 48% 52% / 45% 56% 44% 55%;
+      transform: scale(1.02, 0.985) rotate(3deg);
+    }
+    64% {
+      border-radius: 45% 55% 53% 47% / 55% 46% 54% 45%;
+      transform: scale(0.985, 1.025) rotate(-1deg);
+    }
+  }
+
+  @keyframes ma-voice-orb-recording-halo {
+    0%, 100% { opacity: 0.5; transform: scale(0.97); }
+    48% { opacity: 0.78; transform: scale(1.1); }
+  }
+
+  @keyframes ma-voice-orb-ring-recording {
+    0% { opacity: 0.26; transform: rotate(-8deg) scale(0.9, 0.84); }
+    45% { opacity: 0.72; transform: rotate(10deg) scale(1.08, 0.98); }
+    100% { opacity: 0.34; transform: rotate(19deg) scale(0.98, 0.9); }
+  }
+
+  @keyframes ma-voice-orb-sending {
+    0% { border-radius: 48% 52% 54% 46% / 50% 45% 55% 50%; transform: scale(1.005) translateY(0); }
+    52% { border-radius: 56% 44% 45% 55% / 44% 58% 42% 56%; transform: scale(0.94, 0.9) translateY(3%); }
+    100% { border-radius: 48% 52% 54% 46% / 50% 45% 55% 50%; transform: scale(1.005) translateY(0); }
+  }
+
+  @keyframes ma-voice-orb-sending-halo {
+    0% { opacity: 0.56; transform: scale(1); }
+    58% { opacity: 0.28; transform: scale(1.18); }
+    100% { opacity: 0.56; transform: scale(1); }
+  }
+
+  @keyframes ma-voice-orb-ring-sending {
+    0% { opacity: 0.38; transform: rotate(0) scale(0.9, 0.84); }
+    68% { opacity: 0.76; transform: rotate(21deg) scale(1.14, 1.02); }
+    100% { opacity: 0.26; transform: rotate(30deg) scale(0.94, 0.86); }
+  }
+
+  @keyframes ma-voice-answer-arrive {
+    0% {
+      opacity: 0;
+      filter: blur(13px) contrast(0.62) saturate(0.5);
+      transform: translateY(34px) scale(0.95) skewX(-1.4deg);
+    }
+    38% {
+      opacity: 0.42;
+      filter: blur(7px) contrast(0.74) saturate(0.64);
+      transform: translateY(17px) scale(0.985) skewX(0.8deg);
+    }
+    70% {
+      opacity: 0.84;
+      filter: blur(2px) contrast(0.93) saturate(0.86);
+      transform: translateY(-2px) scale(1.006) skewX(-0.2deg);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0) contrast(1) saturate(1);
+      transform: translateY(0) scale(1) skewX(0);
+    }
+  }
+
+  @keyframes ma-voice-answer-sentence-arrive {
+    0% {
+      opacity: 0;
+      filter: blur(7px) contrast(0.7);
+      transform: translateY(10px);
+    }
+    48% {
+      opacity: 0.72;
+      filter: blur(2px) contrast(0.9);
+      transform: translateY(3px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0) contrast(1);
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes ma-voice-answer-refraction {
+    0% { opacity: 0; transform: translateY(28px) skewX(-8deg); }
+    42% { opacity: 0.7; transform: translateY(11px) skewX(4deg); }
+    74% { opacity: 0.26; transform: translateY(-2px) skewX(-1deg); }
+    100% { opacity: 0; transform: translateY(-7px) skewX(0); }
+  }
+
+  @keyframes ma-voice-answer-waterline {
+    0% { opacity: 0; transform: translateY(20px) scaleY(0.48); }
+    35% { opacity: 0.72; transform: translateY(7px) scaleY(0.78); }
+    76% { opacity: 0.32; transform: translateY(-1px) scaleY(0.94); }
+    100% { opacity: 0.06; transform: translateY(-8px) scaleY(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #make-again-founder-letter-wireframe .ma-voice-screen,
+    #make-again-founder-letter-wireframe .ma-voice-orb,
+    #make-again-founder-letter-wireframe .ma-voice-text-composer,
+    #make-again-founder-letter-wireframe .ma-voice-orb-core,
+    #make-again-founder-letter-wireframe .ma-voice-orb-halo,
+    #make-again-founder-letter-wireframe .ma-voice-orb-rings i,
+    #make-again-founder-letter-wireframe .ma-letter-scroll,
+    #make-again-founder-letter-wireframe .ma-voice-orb-sheen,
+    #make-again-founder-letter-wireframe .ma-voice-orb-core::before,
+    #make-again-founder-letter-wireframe .ma-voice-orb-core::after,
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer,
+    #make-again-founder-letter-wireframe .ma-voice-answer-sentence,
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer::before,
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-orb-core {
+      transform: none;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer {
+      opacity: 1;
+      filter: none;
+      transform: none;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-sentence {
+      opacity: 1;
+      filter: none;
+      transform: none;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer::before,
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer::after {
+      opacity: 0;
+      transform: none;
+    }
+  }
+
+  @media (max-width: 360px) {
+    #make-again-founder-letter-wireframe .ma-voice-screen {
+      padding-inline: 17px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer p {
+      font-size: 17px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-composer {
+      height: 132px;
+      min-height: 132px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-orb {
+      width: 102px;
+      height: 102px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer {
+      padding-inline: 4px;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer small {
+      display: none;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="speaking"] .ma-voice-answer-layer p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-orb {
+      transform: translate3d(calc(-50% + 92px), -50%, 0) scale(0.51);
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-screen[data-input-mode="text"] .ma-voice-composer {
+      min-height: 132px;
+    }
+  }
+
+  /* 004 · report card → memory printer → horizontal timeline board */
+  #make-again-founder-letter-wireframe {
+    --ma-report-paper: #eee1c7;
+    --ma-report-paper-deep: #d7c39f;
+    --ma-report-ink: #252119;
+    --ma-report-red: #9d4f42;
+    --ma-board-cork: #a66e3f;
+    --ma-board-cork-dark: #6c4127;
+    --ma-board-wood: #372015;
+  }
+
+  #make-again-founder-letter-wireframe .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card {
+    position: absolute;
+    right: 2px;
+    bottom: 4px;
+    left: 2px;
+    z-index: 4;
+    display: grid;
+    min-height: 164px;
+    overflow: hidden;
+    padding: 21px 22px 18px;
+    border: 1px solid rgba(238, 225, 199, 0.34);
+    border-radius: 4px 20px 5px 15px;
+    color: var(--ma-report-ink);
+    background:
+      linear-gradient(102deg, transparent 0 70%, rgba(92, 61, 34, 0.08) 70% 70.5%, transparent 71%),
+      linear-gradient(165deg, #f1e5cf 0%, #e3d1b3 100%);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), inset 0 0 28px rgba(119, 78, 44, 0.12);
+    font: inherit;
+    text-align: left;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(24px) rotate(0.8deg) scale(0.96);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card:not([hidden]) {
+    animation: ma-report-card-arrive 760ms cubic-bezier(0.22, 0.78, 0.2, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card::before,
+  #make-again-founder-letter-wireframe .ma-report-chat-card::after {
+    position: absolute;
+    content: "";
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card::before {
+    top: 0;
+    right: 19px;
+    width: 34px;
+    height: 12px;
+    background: rgba(117, 80, 49, 0.23);
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 12% 82%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card::after {
+    right: -22px;
+    bottom: -26px;
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(75, 54, 37, 0.2);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 7px transparent, inset 0 0 0 8px rgba(75, 54, 37, 0.09);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.34;
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(66, 42, 25, 0.18) 0 0.6px, transparent 0.9px),
+      radial-gradient(circle at 71% 63%, rgba(255, 255, 255, 0.55) 0 0.7px, transparent 1px);
+    background-size: 13px 11px, 17px 15px;
+    mix-blend-mode: multiply;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-kicker,
+  #make-again-founder-letter-wireframe .ma-report-chat-card-meta,
+  #make-again-founder-letter-wireframe .ma-report-chat-card-action {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+    letter-spacing: 0.08em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-kicker {
+    color: rgba(48, 41, 31, 0.64);
+    font-size: 10px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card strong {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 8px 0 11px;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.04em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-meta {
+    color: var(--ma-report-red);
+    font-size: 8px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-action {
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+    color: rgba(43, 37, 28, 0.72);
+    font-size: 10px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-chat-card-action i {
+    display: inline-grid;
+    width: 23px;
+    height: 23px;
+    margin-left: 5px;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-style: normal;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message,
+  #make-again-founder-letter-wireframe .ma-voice-history {
+    position: absolute;
+    right: 4px;
+    left: 4px;
+    z-index: 4;
+    color: var(--ma-voice-cream);
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 720ms cubic-bezier(0.2, 0.75, 0.2, 1), opacity 520ms ease, filter 520ms ease;
+    touch-action: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message:not([hidden]) {
+    animation: ma-report-message-arrive 900ms cubic-bezier(0.22, 0.78, 0.2, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message-kicker {
+    display: block;
+    margin-bottom: 13px;
+    color: rgba(235, 190, 168, 0.66);
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.75;
+    letter-spacing: 0.065em;
+    text-shadow: 0 4px 28px rgba(0, 0, 0, 0.66);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    margin-top: 19px;
+    padding: 7px 3px 6px 9px;
+    border: 0;
+    border-bottom: 1px solid rgba(236, 203, 186, 0.5);
+    color: rgba(244, 233, 218, 0.82);
+    background: transparent;
+    font: inherit;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message-open i {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    border: 1px solid rgba(236, 203, 186, 0.42);
+    border-radius: 50%;
+    font-style: normal;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message small {
+    display: block;
+    margin-top: 17px;
+    color: rgba(218, 205, 214, 0.38);
+    font-size: 8px;
+    letter-spacing: 0.09em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-history {
+    top: 8px;
+    padding: 16px 18px 18px;
+    border-top: 1px solid rgba(226, 199, 222, 0.14);
+    border-bottom: 1px solid rgba(226, 199, 222, 0.14);
+    opacity: 0;
+    filter: blur(7px);
+    pointer-events: none;
+    transform: translateY(-28px);
+    transition: opacity 620ms ease, filter 620ms ease, transform 720ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-history span,
+  #make-again-founder-letter-wireframe .ma-voice-history small {
+    color: rgba(218, 205, 214, 0.38);
+    font-size: 7px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-history p {
+    margin: 10px 0 8px;
+    color: rgba(244, 233, 218, 0.62);
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-history-open="true"] .ma-report-message {
+    opacity: 0.72;
+    filter: blur(0.25px);
+    transform: translateY(40px) scale(0.9);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-history-open="true"] .ma-voice-history {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-current-message="report"] .ma-voice-answer-layer:not([hidden]) {
+    animation: ma-voice-answer-to-history 520ms cubic-bezier(0.3, 0, 0.6, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    visibility: hidden;
+    overflow: hidden;
+    color: var(--ma-report-paper);
+    background:
+      radial-gradient(circle at 50% 50%, rgba(121, 75, 48, 0.16), transparent 48%),
+      linear-gradient(180deg, #090a14 0%, #080813 100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="board"] .ma-report-screen,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-screen {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="home"] .ma-report-screen {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-voice-screen {
+    visibility: visible;
+    opacity: 1;
+    animation: ma-report-voice-exit 620ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-reveal {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 1;
+    height: 37%;
+    overflow: hidden;
+    border-bottom: 7px solid var(--ma-board-wood);
+    background: var(--ma-board-cork);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.34);
+    transform: translateY(-104%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-cork,
+  #make-again-founder-letter-wireframe .ma-timeline-board {
+    background-color: var(--ma-board-cork);
+    background-image:
+      radial-gradient(circle at 10% 18%, rgba(60, 34, 19, 0.24) 0 1px, transparent 1.4px),
+      radial-gradient(circle at 73% 61%, rgba(255, 222, 169, 0.18) 0 0.8px, transparent 1.2px),
+      linear-gradient(110deg, rgba(255, 255, 255, 0.035), transparent 35%, rgba(45, 24, 13, 0.06));
+    background-size: 16px 17px, 13px 11px, 100% 100%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-cork {
+    position: absolute;
+    inset: 10px 9px 0;
+    border: 1px solid rgba(49, 28, 16, 0.66);
+    box-shadow: inset 0 0 42px rgba(57, 30, 13, 0.34);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-wood-top {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 2;
+    height: 12px;
+    background: linear-gradient(180deg, #5a3521, #2f1a12);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-faint-date {
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    color: rgba(55, 31, 18, 0.48);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-reading-stage {
+    position: absolute;
+    inset: 18% 19px 10%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-reading-hint {
+    margin: 0 0 9px;
+    color: rgba(241, 226, 204, 0.64);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-close {
+    position: absolute;
+    top: -8px;
+    right: 1px;
+    z-index: 8;
+    display: none;
+    min-width: 52px;
+    min-height: 36px;
+    border: 1px solid rgba(244, 233, 218, 0.34);
+    border-radius: 99px;
+    color: rgba(244, 233, 218, 0.8);
+    background: rgba(7, 8, 19, 0.58);
+    backdrop-filter: blur(12px);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper {
+    position: relative;
+    width: min(100%, 268px);
+    height: 72%;
+    min-height: 360px;
+    overflow: hidden;
+    color: var(--ma-report-ink);
+    background:
+      linear-gradient(95deg, transparent 0 11%, rgba(116, 81, 48, 0.055) 11.4%, transparent 12.2%),
+      linear-gradient(170deg, #f3e8d2 0%, var(--ma-report-paper) 63%, #e3d1b1 100%);
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.43), inset 0 0 36px rgba(109, 69, 37, 0.1);
+    transform-origin: 50% 100%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper::before {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image:
+      radial-gradient(circle at 22% 18%, rgba(74, 50, 29, 0.13) 0 0.6px, transparent 0.9px),
+      radial-gradient(circle at 79% 71%, rgba(255, 255, 255, 0.58) 0 0.7px, transparent 1px);
+    background-size: 14px 13px, 19px 16px;
+    content: "";
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.35;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper-inner {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow-y: auto;
+    padding: 30px 25px 34px;
+    scrollbar-width: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper-inner::-webkit-scrollbar { display: none; }
+
+  #make-again-founder-letter-wireframe .ma-report-paper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(50, 42, 31, 0.2);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 6.5px;
+    letter-spacing: 0.08em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-serial { color: var(--ma-report-red); }
+  #make-again-founder-letter-wireframe .ma-report-date { color: rgba(39, 33, 25, 0.52); }
+
+  #make-again-founder-letter-wireframe .ma-report-title-mark {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    margin: 20px 0 13px;
+    place-items: center;
+    border: 1px solid rgba(48, 40, 29, 0.65);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    transform: rotate(-5deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-overline {
+    margin: 0 0 6px;
+    color: var(--ma-report-red);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper h2 {
+    margin: 0;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0.035em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-keywords {
+    display: flex;
+    gap: 7px;
+    margin: 16px 0 19px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-keywords span {
+    padding: 4px 7px 3px;
+    border: 1px solid rgba(157, 79, 66, 0.58);
+    color: var(--ma-report-red);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 8px;
+    line-height: 1;
+    transform: rotate(-1deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-keywords span:nth-child(2) { transform: rotate(1.8deg); }
+
+  #make-again-founder-letter-wireframe .ma-report-body p {
+    margin: 0 0 13px;
+    color: rgba(37, 33, 25, 0.78);
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 10px;
+    line-height: 1.85;
+    text-align: justify;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper blockquote {
+    margin: 18px 0;
+    padding: 11px 0 11px 13px;
+    border-left: 2px solid var(--ma-report-red);
+    color: rgba(43, 36, 27, 0.88);
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper footer {
+    display: grid;
+    gap: 3px;
+    padding-top: 13px;
+    border-top: 1px dashed rgba(55, 44, 32, 0.27);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper footer span {
+    color: rgba(43, 36, 27, 0.48);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-paper footer strong {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-pin-action {
+    width: 100%;
+    min-height: 42px;
+    margin-top: 24px;
+    border: 1px solid rgba(107, 64, 50, 0.42);
+    color: rgba(73, 45, 36, 0.86);
+    background: rgba(255, 248, 230, 0.22);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-perforation {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    height: 6px;
+    background: radial-gradient(circle at 5px 0, transparent 0 3px, var(--ma-report-paper) 3.5px) 0 0 / 10px 6px repeat-x;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-perforation-top { top: 0; transform: rotate(180deg); }
+  #make-again-founder-letter-wireframe .ma-report-perforation-bottom { bottom: 0; }
+
+  #make-again-founder-letter-wireframe .ma-report-swipe-zone {
+    position: relative;
+    z-index: 8;
+    display: grid;
+    width: 100%;
+    margin-top: 10px;
+    place-items: center;
+    color: rgba(243, 228, 207, 0.75);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    text-align: center;
+    cursor: ns-resize;
+    touch-action: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-swipe-zone strong { font-size: 10px; font-weight: 400; letter-spacing: 0.12em; }
+  #make-again-founder-letter-wireframe .ma-report-swipe-zone small { margin-top: 2px; color: rgba(243, 228, 207, 0.38); font-size: 8px; }
+  #make-again-founder-letter-wireframe .ma-report-swipe-arrow { font-size: 18px; animation: ma-report-swipe-hint 1600ms ease-in-out infinite; }
+
+  #make-again-founder-letter-wireframe .ma-report-printer {
+    position: absolute;
+    right: -3%;
+    bottom: -4%;
+    left: -3%;
+    z-index: 5;
+    height: 23%;
+    min-height: 132px;
+    color: rgba(231, 218, 198, 0.72);
+    transform: translateY(112%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-body {
+    position: absolute;
+    inset: 22px 0 0;
+    padding: 42px 28px 0;
+    border: 1px solid rgba(220, 200, 173, 0.16);
+    border-radius: 24px 24px 0 0;
+    background:
+      linear-gradient(110deg, rgba(255, 255, 255, 0.055), transparent 36%),
+      linear-gradient(180deg, #25232a, #111117 70%);
+    box-shadow: 0 -18px 42px rgba(0, 0, 0, 0.42), inset 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-slot {
+    position: absolute;
+    top: 7px;
+    right: 13%;
+    left: 13%;
+    z-index: 2;
+    height: 28px;
+    padding: 7px;
+    border-radius: 12px;
+    background: #08080b;
+    box-shadow: inset 0 3px 8px #000, 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-slot span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #342d2b, #b48661 48%, #342d2b);
+    opacity: 0.58;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-brand,
+  #make-again-founder-letter-wireframe .ma-report-printer-caption {
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 7px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-caption { margin-top: 5px; color: rgba(231, 218, 198, 0.34); }
+
+  #make-again-founder-letter-wireframe .ma-report-printer-light {
+    position: absolute;
+    top: 48px;
+    right: 29px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #cb775e;
+    box-shadow: 0 0 8px rgba(203, 119, 94, 0.9);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-board-reveal {
+    animation: ma-report-board-peek 920ms cubic-bezier(0.18, 0.82, 0.2, 1) 120ms both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-report-printer {
+    animation: ma-report-printer-enter 860ms cubic-bezier(0.18, 0.8, 0.2, 1) 80ms both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-report-reading-stage {
+    animation: ma-report-stage-enter 820ms ease 680ms both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-intro"] .ma-report-paper {
+    animation: ma-report-paper-ready 560ms ease 650ms both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-board-reveal,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-board-reveal,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-board-reveal,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-board-reveal {
+    transform: translateY(0);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-report-reading-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-reading-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-reading-stage,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-reading-stage {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-report-printer,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-printer,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-printer { transform: translateY(0); }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-report-paper {
+    opacity: 1;
+    clip-path: inset(0 0 82%);
+    pointer-events: none;
+    transform: translateY(395px) scaleY(0.35);
+    transform-origin: 50% 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-paper {
+    animation: ma-report-paper-pull 920ms cubic-bezier(0.18, 0.82, 0.2, 1) both;
+    transform-origin: 50% 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pull"] .ma-report-paper-inner,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-paper-inner {
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pulling"] .ma-report-swipe-zone,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-swipe-zone {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-board-reveal {
+    opacity: 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-paper {
+    z-index: 10;
+    transform-origin: 0 0;
+    animation: ma-report-paper-pin 980ms cubic-bezier(0.22, 0.78, 0.18, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-reading-hint,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-swipe-zone {
+    animation: ma-report-control-fade 260ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-printer {
+    animation: ma-report-printer-exit 700ms cubic-bezier(0.4, 0, 1, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-timeline-board {
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: none;
+    animation: ma-board-arrive 620ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-board-note {
+    opacity: 0 !important;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-timeline-board {
+    visibility: visible;
+    opacity: 0.34;
+    filter: blur(5px) brightness(0.58);
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-reading-stage {
+    inset: 7% 15px 7%;
+    z-index: 12;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-paper {
+    width: min(100%, 286px);
+    height: 90%;
+    min-height: 0;
+    animation: ma-report-reopen 620ms cubic-bezier(0.2, 0.78, 0.2, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-reading-hint,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-swipe-zone,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-pin-action,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-printer,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-board-reveal {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-close {
+    display: block;
+  }
+
+  #make-again-founder-letter-wireframe .ma-timeline-board {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    padding: 32px 0 24px;
+    color: #2f1d13;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-timeline-board::before,
+  #make-again-founder-letter-wireframe .ma-timeline-board::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    height: 15px;
+    background: linear-gradient(180deg, #5a3521, #2f1a12);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.12), 0 3px 9px rgba(0, 0, 0, 0.26);
+    content: "";
+    pointer-events: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-timeline-board::before { top: 0; }
+  #make-again-founder-letter-wireframe .ma-timeline-board::after { bottom: 0; transform: rotate(180deg); }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="board"] .ma-timeline-board {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    animation: ma-board-arrive 520ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: flex-start;
+    justify-content: start;
+    gap: 10px;
+    padding: 12px 78px 15px 14px;
+    border-bottom: 1px solid rgba(60, 35, 19, 0.22);
+    background: linear-gradient(180deg, rgba(220, 169, 111, 0.25), transparent);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-header > div { min-width: 0; }
+
+  #make-again-founder-letter-wireframe .ma-board-header span {
+    color: rgba(50, 29, 17, 0.56);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 6px;
+    letter-spacing: 0.12em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-header h2 {
+    margin: 4px 0 0;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", "Songti SC", serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-home {
+    min-width: 72px;
+    min-height: 34px;
+    padding: 7px 10px;
+    border: 1px solid rgba(53, 31, 18, 0.42);
+    border-radius: 99px;
+    color: #3d2618;
+    background: rgba(229, 192, 145, 0.42);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-scroll {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 30px 22px 20px;
+    outline: none;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    touch-action: pan-x;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-scroll::-webkit-scrollbar { display: none; }
+
+  #make-again-founder-letter-wireframe .ma-board-track {
+    position: relative;
+    width: 780px;
+    height: 100%;
+    min-height: 430px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-track::before {
+    position: absolute;
+    top: 56%;
+    right: 30px;
+    left: 248px;
+    border-top: 1px dashed rgba(52, 31, 18, 0.28);
+    content: "";
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    width: 206px;
+    min-height: 277px;
+    padding: 35px 16px 17px;
+    border: 0;
+    color: var(--ma-report-ink);
+    background:
+      linear-gradient(99deg, transparent 0 72%, rgba(96, 63, 35, 0.075) 72.5%, transparent 73.3%),
+      linear-gradient(164deg, #f1e4c9 0%, #dcc69e 100%);
+    box-shadow: 8px 14px 22px rgba(64, 35, 17, 0.28), inset 0 0 30px rgba(105, 70, 38, 0.1);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    scroll-snap-align: start;
+    transform: rotate(-2.2deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note::after {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-pin {
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 36% 28%, #ffc7ae 0 12%, #b34b40 34%, #6b2525 76%);
+    box-shadow: 0 5px 5px rgba(42, 20, 13, 0.4), inset -2px -2px 4px rgba(52, 12, 12, 0.4);
+    transform: translateX(-50%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-pin i {
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    width: 1px;
+    height: 9px;
+    background: rgba(50, 33, 23, 0.65);
+    transform: rotate(13deg);
+    transform-origin: top;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-paper { display: block; }
+
+  #make-again-founder-letter-wireframe .ma-board-note-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(50, 42, 31, 0.2);
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 4.8px;
+    letter-spacing: 0.05em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-head b { color: var(--ma-report-red); font-weight: 600; }
+  #make-again-founder-letter-wireframe .ma-board-note-head em { color: rgba(39, 33, 25, 0.48); font-style: normal; }
+
+  #make-again-founder-letter-wireframe .ma-board-note-mark {
+    display: grid;
+    width: 25px;
+    height: 25px;
+    margin: 10px 0 7px;
+    place-items: center;
+    border: 1px solid rgba(48, 40, 29, 0.58);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    font-style: normal;
+    transform: rotate(-5deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-overline {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--ma-report-red);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 5.5px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-title {
+    display: block;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-keywords {
+    display: flex;
+    gap: 4px;
+    margin: 8px 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-keywords i {
+    padding: 2px 4px;
+    border: 1px solid rgba(157, 79, 66, 0.5);
+    color: var(--ma-report-red);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 5px;
+    font-style: normal;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-copy,
+  #make-again-founder-letter-wireframe .ma-board-note-quote,
+  #make-again-founder-letter-wireframe .ma-board-note-foot { display: block; font-family: "KangXiZiDianTi", "STKaiti", serif; }
+
+  #make-again-founder-letter-wireframe .ma-board-note-copy {
+    color: rgba(37, 33, 25, 0.72);
+    font-size: 6px;
+    line-height: 1.55;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-quote {
+    margin: 8px 0;
+    padding-left: 7px;
+    border-left: 1px solid var(--ma-report-red);
+    color: rgba(43, 36, 27, 0.82);
+    font-size: 6px;
+    line-height: 1.45;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-foot {
+    padding-top: 6px;
+    border-top: 1px dashed rgba(55, 44, 32, 0.27);
+    color: rgba(43, 36, 27, 0.48);
+    font-size: 5px;
+    line-height: 1.5;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note-foot b { color: rgba(37, 33, 25, 0.82); font-size: 6px; font-weight: 500; }
+
+  #make-again-founder-letter-wireframe .ma-board-future {
+    position: absolute;
+    top: 48%;
+    left: 286px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(53, 31, 18, 0.4);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-future i {
+    width: 5px;
+    height: 5px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-guide {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: rgba(53, 31, 18, 0.52);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  /* 004 simplified flow: envelope → direct report → confirm or revise → paged timeline */
+  #make-again-founder-letter-wireframe .ma-report-message-open {
+    display: inline-grid;
+    min-width: 150px;
+    min-height: 112px;
+    margin-top: 16px;
+    padding: 6px;
+    place-items: center;
+    border: 0;
+    background: transparent;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-image {
+    position: relative;
+    display: block;
+    width: 132px;
+    height: 76px;
+    overflow: hidden;
+    border: 1px solid rgba(236, 216, 187, 0.74);
+    border-radius: 3px;
+    background: linear-gradient(155deg, #eadcc1, #cdb690);
+    box-shadow: 0 15px 34px rgba(0, 0, 0, 0.42), inset 0 0 22px rgba(100, 68, 38, 0.12);
+    transform: rotate(-2deg);
+    transition: transform 360ms ease, box-shadow 360ms ease;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-image::before,
+  #make-again-founder-letter-wireframe .ma-report-envelope-image::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 57%;
+    content: "";
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-image::before {
+    background: linear-gradient(155deg, #dfcba8, #c4a982);
+    clip-path: polygon(0 100%, 50% 18%, 100% 100%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-image::after {
+    background: rgba(116, 78, 44, 0.08);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-flap {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 2;
+    height: 51px;
+    background: linear-gradient(165deg, #f1e4cc, #d3bb95);
+    clip-path: polygon(0 0, 100% 0, 50% 92%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-seal {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    z-index: 4;
+    display: grid;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    border-radius: 50%;
+    color: rgba(246, 219, 189, 0.9);
+    background: radial-gradient(circle at 35% 28%, #d9937c, #8c3e39 64%, #5e2528);
+    box-shadow: 0 4px 8px rgba(64, 29, 23, 0.4);
+    font-family: Georgia, serif;
+    font-size: 9px;
+    font-style: normal;
+    transform: translateX(-50%);
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-envelope-caption {
+    margin-top: 9px;
+    color: rgba(244, 233, 218, 0.68);
+    font-size: 8px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-message-open:hover .ma-report-envelope-image,
+  #make-again-founder-letter-wireframe .ma-report-message-open:focus-visible .ma-report-envelope-image {
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.5), 0 0 24px rgba(220, 168, 143, 0.15);
+    transform: translateY(-3px) rotate(-1deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-report-revision="true"] .ma-voice-answer-layer {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-report-revision="true"] .ma-voice-answer-sentence {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-reading-stage {
+    inset: 5% 15px 4%;
+    opacity: 1;
+    pointer-events: auto;
+    animation: ma-report-direct-open 520ms cubic-bezier(0.2, 0.78, 0.2, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reading"] .ma-report-paper {
+    width: min(100%, 286px);
+    height: 91%;
+    min-height: 0;
+    clip-path: inset(0);
+    opacity: 1;
+    transform: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-actions {
+    display: grid;
+    gap: 9px;
+    margin-top: 24px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-actions button {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 9px 11px;
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-revise-action {
+    border: 1px solid rgba(74, 57, 40, 0.28);
+    color: rgba(55, 46, 34, 0.68);
+    background: transparent;
+  }
+
+  #make-again-founder-letter-wireframe .ma-report-pin-action {
+    border-color: rgba(107, 64, 50, 0.55);
+    color: rgba(73, 45, 36, 0.92);
+    background: rgba(157, 79, 66, 0.08);
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-paper {
+    animation: ma-report-confirm-out 560ms cubic-bezier(0.32, 0, 0.7, 1) both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-report-reading-stage {
+    inset: 5% 15px 4%;
+    opacity: 1;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-pinning"] .ma-timeline-board {
+    z-index: 8;
+    animation: ma-board-arrive 560ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-revise-action,
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="report-reopen"] .ma-report-pin-action {
+    display: none;
+  }
+
+  #make-again-founder-letter-wireframe .ma-timeline-board {
+    background-color: var(--ma-board-cork);
+    background-image:
+      radial-gradient(circle at 10% 18%, rgba(60, 34, 19, 0.24) 0 1px, transparent 1.4px),
+      radial-gradient(circle at 73% 61%, rgba(255, 222, 169, 0.18) 0 0.8px, transparent 1.2px),
+      linear-gradient(110deg, rgba(255, 255, 255, 0.035), transparent 35%, rgba(45, 24, 13, 0.06));
+    background-size: 16px 17px, 13px 11px, 100% 100%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-scroll {
+    padding: 0;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-track {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-track::before { display: none; }
+
+  #make-again-founder-letter-wireframe .ma-board-page {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 17px 18px 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-time {
+    display: grid;
+    width: 100%;
+    margin-bottom: 13px;
+    text-align: center;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-time time {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-time span {
+    margin-top: 4px;
+    color: rgba(55, 31, 18, 0.52);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-note {
+    box-sizing: border-box;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, 280px);
+    min-height: 438px;
+    padding: 40px 24px 22px;
+    overflow: hidden;
+    transform: rotate(-1deg);
+  }
+
+  #make-again-founder-letter-wireframe .ma-board-report-scale { display: block; }
+  #make-again-founder-letter-wireframe .ma-board-note-head { font-size: 6.2px; }
+  #make-again-founder-letter-wireframe .ma-board-note-mark { width: 34px; height: 34px; margin: 17px 0 11px; font-size: 14px; }
+  #make-again-founder-letter-wireframe .ma-board-note-overline { margin-bottom: 5px; font-size: 7px; }
+  #make-again-founder-letter-wireframe .ma-board-note-title { font-size: 19px; line-height: 1.35; }
+  #make-again-founder-letter-wireframe .ma-board-note-keywords { gap: 6px; margin: 13px 0 15px; }
+  #make-again-founder-letter-wireframe .ma-board-note-keywords i { padding: 3px 6px; font-size: 7px; }
+  #make-again-founder-letter-wireframe .ma-board-note-copy { margin-bottom: 9px; font-size: 8px; line-height: 1.7; }
+  #make-again-founder-letter-wireframe .ma-board-note-quote { margin: 13px 0; padding: 8px 0 8px 10px; font-size: 8.5px; line-height: 1.55; }
+  #make-again-founder-letter-wireframe .ma-board-note-foot { padding-top: 9px; font-size: 6.5px; }
+  #make-again-founder-letter-wireframe .ma-board-note-foot b { font-size: 8.5px; }
+
+  #make-again-founder-letter-wireframe .ma-main-placeholder {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+    display: grid;
+    visibility: hidden;
+    place-content: center;
+    padding: 28px;
+    color: var(--ma-voice-cream);
+    background:
+      radial-gradient(circle at 50% 42%, rgba(139, 94, 194, 0.22), transparent 28%),
+      linear-gradient(160deg, var(--ma-voice-night-deep), var(--ma-voice-night));
+    text-align: center;
+    opacity: 0;
+  }
+
+  #make-again-founder-letter-wireframe .ma-letter-phone[data-transition-state="home"] .ma-main-placeholder {
+    visibility: visible;
+    opacity: 1;
+    animation: ma-board-arrive 520ms ease both;
+  }
+
+  #make-again-founder-letter-wireframe .ma-main-placeholder-mark {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 24px;
+    place-items: center;
+    border: 1px solid rgba(244, 233, 218, 0.46);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 22px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-main-placeholder p,
+  #make-again-founder-letter-wireframe .ma-main-placeholder small {
+    margin: 0;
+    color: rgba(244, 233, 218, 0.55);
+    font-family: "KangXiZiDianTi", "STKaiti", serif;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  #make-again-founder-letter-wireframe .ma-main-placeholder h2 {
+    margin: 10px 0 18px;
+    font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+
+  @keyframes ma-report-card-arrive {
+    0% { opacity: 0; filter: blur(8px); transform: translateY(28px) rotate(1.5deg) scale(0.95); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(0) rotate(0.8deg) scale(1); }
+  }
+
+  @keyframes ma-report-message-arrive {
+    0% { opacity: 0; filter: blur(12px); transform: translateY(calc(-50% + 28px)) scale(0.96); }
+    62% { opacity: 0.78; filter: blur(3px); transform: translateY(calc(-50% + 5px)) scale(0.99); }
+    100% { opacity: 1; filter: blur(0); transform: translateY(-50%) scale(1); }
+  }
+
+  @keyframes ma-voice-answer-to-history {
+    to { opacity: 0; filter: blur(7px); transform: translateY(-56px) scale(0.94); }
+  }
+
+  @keyframes ma-report-voice-exit {
+    to { opacity: 0; filter: blur(8px); transform: scale(1.035); }
+  }
+
+  @keyframes ma-report-direct-open {
+    from { opacity: 0; filter: blur(8px); transform: translateY(22px) scale(0.94); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  }
+
+  @keyframes ma-report-confirm-out {
+    from { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+    to { opacity: 0; filter: blur(4px); transform: translateY(-18px) scale(0.94); }
+  }
+
+  @keyframes ma-report-board-peek {
+    from { transform: translateY(-104%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes ma-report-printer-enter {
+    from { transform: translateY(112%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes ma-report-stage-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes ma-report-paper-ready {
+    from { opacity: 0; clip-path: inset(0 0 94%); transform: translateY(414px) scaleY(0.2); transform-origin: 50% 0; }
+    to { opacity: 1; clip-path: inset(0 0 82%); transform: translateY(395px) scaleY(0.35); transform-origin: 50% 0; }
+  }
+
+  @keyframes ma-report-paper-pull {
+    0% { opacity: 1; clip-path: inset(0 0 82%); filter: blur(0.8px); transform: translateY(395px) scaleY(0.35); }
+    58% { opacity: 1; clip-path: inset(0 0 24%); filter: blur(0.3px); transform: translateY(130px) scaleY(0.82); }
+    100% { opacity: 1; clip-path: inset(0); filter: none; transform: translateY(0) scaleY(1); }
+  }
+
+  @keyframes ma-report-swipe-hint {
+    0%, 100% { opacity: 0.42; transform: translateY(4px); }
+    50% { opacity: 0.92; transform: translateY(-3px); }
+  }
+
+  @keyframes ma-report-board-fill {
+    from { height: 37%; }
+    to { height: 100%; }
+  }
+
+  @keyframes ma-report-paper-pin {
+    0% { opacity: 1; filter: none; transform: translate3d(0, 0, 0) rotate(0) scale(1); }
+    70% { opacity: 1; filter: none; transform: translate3d(-12px, -12px, 0) rotate(-2.2deg) scale(0.77); }
+    86% { opacity: 1; transform: translate3d(-12px, -5px, 0) rotate(-1.1deg) scale(0.77); }
+    100% { opacity: 1; transform: translate3d(-12px, -9px, 0) rotate(-2.2deg) scale(0.77); }
+  }
+
+  @keyframes ma-report-reopen {
+    from { opacity: 0; filter: blur(6px); transform: translateY(28px) scale(0.86) rotate(-2deg); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0) scale(1) rotate(0); }
+  }
+
+  @keyframes ma-report-control-fade { to { opacity: 0; transform: translateY(7px); } }
+  @keyframes ma-report-printer-exit { to { transform: translateY(112%); } }
+  @keyframes ma-board-arrive { from { opacity: 0; } to { opacity: 1; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    #make-again-founder-letter-wireframe .ma-report-chat-card,
+    #make-again-founder-letter-wireframe .ma-report-message,
+    #make-again-founder-letter-wireframe .ma-voice-history,
+    #make-again-founder-letter-wireframe .ma-report-screen,
+    #make-again-founder-letter-wireframe .ma-board-reveal,
+    #make-again-founder-letter-wireframe .ma-report-reading-stage,
+    #make-again-founder-letter-wireframe .ma-report-paper,
+    #make-again-founder-letter-wireframe .ma-report-printer,
+    #make-again-founder-letter-wireframe .ma-timeline-board,
+    #make-again-founder-letter-wireframe .ma-report-swipe-arrow {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-orb,
+    #make-again-founder-letter-wireframe .ma-voice-text-composer,
+    #make-again-founder-letter-wireframe .ma-voice-close {
+      transition: none !important;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-orb-halo,
+    #make-again-founder-letter-wireframe .ma-voice-orb-rings,
+    #make-again-founder-letter-wireframe .ma-voice-orb-core,
+    #make-again-founder-letter-wireframe .ma-voice-orb-sheen,
+    #make-again-founder-letter-wireframe .ma-voice-orb-core i {
+      animation: none !important;
+    }
+
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer,
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer::before,
+    #make-again-founder-letter-wireframe .ma-voice-answer-layer::after,
+    #make-again-founder-letter-wireframe .ma-voice-answer-sentence {
+      animation: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+:root {
+  color-scheme: dark;
+  --background: #050914;
+  --foreground: #f7eee4;
+  --muted-foreground: rgba(247, 238, 228, 0.7);
+  --border: rgba(220, 196, 233, 0.28);
+  --purple: #9c82ce;
+  --orange: #e88e61;
+  --ring: #f0b08d;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-base: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #050914;
+}
+
+body {
+  min-height: 100vh;
+  padding: 18px 12px 28px;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.ma-standalone-shell {
+  width: min(100%, 736px);
+  margin: 0 auto;
+}
+
+.ma-standalone-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.ma-standalone-nav a,
+.ma-standalone-nav button {
+  min-height: 40px;
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--foreground);
+  background: rgba(14, 17, 38, 0.76);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ma-standalone-nav a:focus-visible,
+.ma-standalone-nav button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.ma-standalone-nav-title {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.ma-standalone-nav-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ma-standalone-flow-note {
+  width: min(100%, 520px);
+  margin: 20px auto 0;
+  color: rgba(247, 238, 228, 0.6);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.ma-standalone-next {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin: 14px auto 0;
+  padding: 8px 16px;
+  border: 1px solid rgba(232, 142, 97, 0.5);
+  border-radius: 999px;
+  color: #f7eee4;
+  background: rgba(232, 142, 97, 0.13);
+  text-decoration: none;
+}
+
+.ma-standalone-next:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}

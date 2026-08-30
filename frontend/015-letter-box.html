@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 写一封信</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css?v=6.1" />
+  <link rel="stylesheet" href="assets/015-letter-box-v2.css?v=2.0" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">015 · 匿名写信</span>
+      <span class="ma-standalone-nav-actions"><a href="index.html">总入口</a><a href="005-home.html?from=letter-box">返回主页</a></span>
+    </nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-utility-page="letter-box">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">015 · 现在写 / 保存草稿 / 匿名寄出</span></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone">
+          <section class="ma-utility-screen">
+            <header class="ma-utility-header">
+              <button type="button" class="ma-utility-back" data-letter-home aria-label="稍后再写并返回主页">←</button>
+              <h1>写一封信</h1>
+              <span class="ma-utility-capsule-safe" aria-hidden="true"></span>
+            </header>
+            <div class="ma-utility-content ma-letter-compose-content">
+              <form class="ma-letter-compose" data-letter-compose aria-labelledby="ma-letter-compose-title">
+                <small>写给一个仍在路上的人</small>
+                <h2 id="ma-letter-compose-title">只写你真正<br />走过的那一部分</h2>
+                <p>不需要留下姓名或联系方式。信件通过安全检查后，会匿名送给需要它的人。</p>
+                <label for="ma-letter-compose-text">你的信</label>
+                <textarea id="ma-letter-compose-text" data-letter-text maxlength="600" placeholder="后来，我发现……" required></textarea>
+                <div class="ma-letter-compose-meta">
+                  <span data-letter-draft-status aria-live="polite">草稿会自动保存</span>
+                  <span data-letter-count>0 / 600</span>
+                </div>
+                <div class="ma-letter-compose-actions">
+                  <button type="submit" class="ma-letter-compose-primary">匿名寄出</button>
+                  <button type="button" class="ma-letter-compose-secondary" data-letter-home>稍后再写</button>
+                </div>
+              </form>
+              <section class="ma-letter-compose-success" data-letter-success hidden aria-live="polite">
+                <span aria-hidden="true">✓</span>
+                <small>已经匿名寄出</small>
+                <h2>谢谢你把走过的路<br />留给另一个人</h2>
+                <p>这次邀请已经完成，现在回到主页。</p>
+              </section>
+            </div>
+            <div class="ma-letter-confirm-layer" data-letter-confirm aria-hidden="true">
+              <button type="button" class="ma-letter-confirm-backdrop" data-letter-confirm-cancel aria-label="返回继续检查"></button>
+              <section class="ma-letter-confirm-sheet" role="dialog" aria-modal="true" aria-labelledby="ma-letter-confirm-title" tabindex="-1">
+                <small>寄出前确认</small>
+                <h2 id="ma-letter-confirm-title">寄出后不能修改</h2>
+                <p>这封信不会展示你的姓名或联系方式。确认后，它会进入安全检查流程。</p>
+                <div>
+                  <button type="button" data-letter-confirm-cancel>再看看</button>
+                  <button type="button" data-letter-confirm-send>确认寄出</button>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">015 · 未寄出会保留在主页顶部 · 寄出后回主页</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/015-letter-box-v2.js?v=2.2" defer></script>
+</body>
+</html>

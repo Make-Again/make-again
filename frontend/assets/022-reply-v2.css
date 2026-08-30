@@ -1,0 +1,17 @@
+#make-again-founder-letter-wireframe .ma-reply-header { grid-template-columns:48px minmax(0,1fr) 84px; }
+#make-again-founder-letter-wireframe .ma-reply-body { gap:12px;overflow:hidden;padding-top:4px; }
+#make-again-founder-letter-wireframe .ma-reply-letter { display:grid;gap:12px;min-height:0;flex:1;padding:24px 20px 20px;overflow-y:auto;border:1px solid rgba(101,65,43,.14);border-radius:5px 12px 8px 7px;color:#4b3626;background:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(120,90,60,.07) 31px),linear-gradient(155deg,#fbf1df,#ead7b9);box-shadow:0 22px 46px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.48);scrollbar-width:none;opacity:0;clip-path:inset(0 0 72% 0 round 6px);transform:translateY(-10px) scale(.97,.91);transform-origin:50% 0;transition:opacity 220ms cubic-bezier(.23,1,.32,1),clip-path 260ms cubic-bezier(.77,0,.175,1),transform 260ms cubic-bezier(.77,0,.175,1); }
+#make-again-founder-letter-wireframe .ma-reply-letter::-webkit-scrollbar { display:none; }
+#make-again-founder-letter-wireframe .ma-letter-phone[data-reply-state="reading"] .ma-reply-letter { opacity:1;clip-path:inset(0 round 0);transform:translateY(0) scale(1); }
+#make-again-founder-letter-wireframe .ma-letter-phone[data-reply-state="pinning"] .ma-reply-letter { opacity:0;clip-path:inset(0 0 46% 0 round 6px);transform:translateY(42px) scale(.76) rotate(-1deg);transition:opacity 200ms ease,clip-path 240ms cubic-bezier(.77,0,.175,1),transform 240ms cubic-bezier(.77,0,.175,1); }
+#make-again-founder-letter-wireframe .ma-reply-letter>header { display:flex;justify-content:space-between;gap:12px;padding-bottom:9px;border-bottom:1px solid rgba(101,65,43,.14);color:rgba(101,65,43,.56);font-size:7px;letter-spacing:.14em; }
+#make-again-founder-letter-wireframe .ma-reply-letter>small { color:rgba(101,65,43,.58);font-size:8px;letter-spacing:.11em; }
+#make-again-founder-letter-wireframe .ma-reply-letter h2 { margin:0;font:400 20px/1.55 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.025em; }
+#make-again-founder-letter-wireframe .ma-reply-copy { display:grid;gap:11px; }
+#make-again-founder-letter-wireframe .ma-reply-copy p { margin:0;font:10px/1.85 "KangXiZiDianTi","STKaiti",serif; }
+#make-again-founder-letter-wireframe .ma-reply-letter>footer { margin-top:auto;padding-top:10px;border-top:1px solid rgba(101,65,43,.12);color:rgba(101,65,43,.56);font:8px "KangXiZiDianTi","STKaiti",serif;text-align:right; }
+#make-again-founder-letter-wireframe .ma-reply-pin { width:100%;flex:none;opacity:0;transform:translateY(8px);transition:opacity 180ms ease,transform 220ms cubic-bezier(.23,1,.32,1),background-color 160ms ease; }
+#make-again-founder-letter-wireframe .ma-letter-phone[data-reply-state="reading"] .ma-reply-pin { opacity:1;transform:translateY(0);transition-delay:80ms; }
+#make-again-founder-letter-wireframe .ma-letter-phone[data-reply-state="pinning"] .ma-reply-pin { opacity:0;transform:translateY(8px);transition-delay:0s;pointer-events:none; }
+#make-again-founder-letter-wireframe .ma-reply-actions{display:grid;gap:8px;flex:none}#make-again-founder-letter-wireframe .ma-reply-actions .ma-reply-pin{margin:0}#make-again-founder-letter-wireframe .ma-reply-later{min-height:44px;margin:0;border:0;background:transparent;color:rgba(244,233,218,.72)}
+@media (prefers-reduced-motion:reduce){#make-again-founder-letter-wireframe .ma-reply-letter,#make-again-founder-letter-wireframe .ma-reply-pin{clip-path:none!important;transform:none!important;transition:opacity 140ms ease!important}}

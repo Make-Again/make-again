@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Make Again · 模拟来电</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/ending-v1.css?v=1.5" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav"><span class="ma-standalone-nav-title">019 · 分手路径 / 模拟来电</span><span class="ma-standalone-nav-actions"><a href="index.html">总入口</a><a href="020-memorial-message.html?path=pet">查看宠物分支</a></span></nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-ending-page="call">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">019 · 分手路径 / 来电</span><div class="ma-letter-review-actions"><button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button></div></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-ending-phone">
+          <section class="ma-ending-screen ma-call-screen">
+            <div class="ma-call-island" aria-hidden="true"></div>
+            <header class="ma-ending-header"><span aria-hidden="true"></span><div></div><span class="ma-ending-safe"></span></header>
+            <div class="ma-call-body" data-call-body>
+              <small data-call-state aria-live="polite">来电中</small>
+              <h1 data-call-contact>这次告别</h1>
+              <p class="ma-call-ai-label">AI 模拟 · 不是真实来电</p>
+              <div class="ma-call-avatar" data-call-avatar aria-hidden="true">某</div>
+              <p class="ma-call-note" data-call-note>有些告别，需要你亲自决定如何收尾。</p>
+              <div class="ma-call-controls" role="group" aria-label="来电操作">
+                <div class="ma-call-action">
+                  <button type="button" class="ma-call-answer" data-answer aria-label="接听来电">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.2 4.7 9.4 7.9 7.7 9.6c1.3 2.6 3.5 4.8 6.1 6.1l1.7-1.7 3.2 3.2-1.4 1.4c-.8.8-2 .9-3 .4C8.9 17.1 5.4 13.6 3.5 8.2c-.4-1-.2-2.2.6-3Z"/><path d="M16.7 3.4v4.8m0 0 2-2m-2 2-2-2"/></svg>
+                  </button>
+                  <span>接听</span>
+                </div>
+                <div class="ma-call-action">
+                  <button type="button" class="ma-call-hangup" data-hangup aria-label="挂断来电">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.2 4.7 9.4 7.9 7.7 9.6c1.3 2.6 3.5 4.8 6.1 6.1l1.7-1.7 3.2 3.2-1.4 1.4c-.8.8-2 .9-3 .4C8.9 17.1 5.4 13.6 3.5 8.2c-.4-1-.2-2.2.6-3Z"/></svg>
+                  </button>
+                  <span>挂断</span>
+                </div>
+              </div>
+              <p class="ma-call-label" data-call-label>接听或挂断</p>
+            </div>
+            <div class="ma-farewell-panel ma-breakup-ritual" data-breakup-ritual data-ritual-state="idle" hidden>
+              <p class="ma-ending-kicker">MAKE AGAIN · LAST TIDY</p>
+              <h2>让它们从眼前，<br />慢慢散去</h2>
+              <p class="ma-farewell-copy">这只是一次视觉上的告别。所有文字、照片和物品仍会完整进入只读档案。</p>
+              <div class="ma-dissolve-scene" aria-hidden="true">
+                <span class="ma-dissolve-memory ma-dissolve-letter"><i></i></span>
+                <span class="ma-dissolve-memory ma-dissolve-photo"><i></i></span>
+                <span class="ma-dissolve-memory ma-dissolve-object"><i></i></span>
+                <span class="ma-dissolve-particle ma-particle-1"></span><span class="ma-dissolve-particle ma-particle-2"></span><span class="ma-dissolve-particle ma-particle-3"></span><span class="ma-dissolve-particle ma-particle-4"></span><span class="ma-dissolve-particle ma-particle-5"></span><span class="ma-dissolve-particle ma-particle-6"></span>
+              </div>
+              <p class="ma-ritual-status" data-breakup-status aria-live="polite">准备好时，再让画面散去</p>
+              <div class="ma-farewell-actions">
+                <button type="button" class="ma-ending-primary" data-breakup-dissolve>让它们散去</button>
+                <button type="button" class="ma-ending-secondary" data-farewell-skip>跳过，直接收好</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <p class="ma-letter-review-status">019 · 分手路径不生成“对方写来的短信”</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/ending-v1.js?v=1.6" defer></script>
+</body>
+</html>

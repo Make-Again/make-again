@@ -1,0 +1,581 @@
+/* Standalone page seams. Product styles remain in make-again-shared.css. */
+.ma-standalone-shell #make-again-founder-letter-wireframe {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+/* Shared mobile return target: the visible arrow stays small while the tap area remains accessible. */
+#make-again-founder-letter-wireframe :is(.ma-voice-home-return,.ma-board-home,.ma-utility-back,[data-history-back],.ma-ending-header>button,[data-archive-back]) {
+  min-width:44px!important;
+  width:44px;
+  min-height:44px!important;
+  height:44px;
+  padding:0;
+  display:grid;
+  place-items:center;
+}
+
+.ma-standalone-shell .ma-letter-preview-stage {
+  width: 100%;
+}
+
+.ma-standalone-shell .ma-letter-phone {
+  width: min(100%, 338px);
+}
+
+/*
+ * Adjacent-page seam protocol.
+ *
+ * `make-again-shared.js` records the handoff as data attributes on the page
+ * root. The outgoing page gets one short, local exit while the next page
+ * reads `?from=` and starts its matching entry. Direct review links do not
+ * carry the attributes, so they remain fast.
+ */
+#make-again-founder-letter-wireframe[data-ma-page-entry="auth"] .ma-letter-envelope {
+  animation: ma-page-envelope-arrive 1180ms var(--ma-voice-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="auth"] .ma-letter-envelope-hint {
+  animation: ma-page-envelope-hint-arrive 620ms var(--ma-voice-ease-out) 460ms both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="letter"] .ma-voice-screen {
+  animation: ma-voice-screen-enter 1180ms var(--ma-voice-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="report"] .ma-voice-screen {
+  animation: ma-voice-screen-enter 720ms var(--ma-voice-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="home"] .ma-voice-screen {
+  animation: ma-voice-screen-enter 420ms var(--ma-voice-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="voice"] .ma-report-inbox:not([hidden]) {
+  animation: ma-page-report-arrive 900ms var(--ma-voice-ease-out) 90ms both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-entry="home"] .ma-report-inbox:not([hidden]),
+#make-again-founder-letter-wireframe[data-ma-page-entry="home"] .ma-timeline-board[aria-hidden="false"] {
+  animation: ma-page-report-arrive 420ms var(--ma-voice-ease-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="letter"] .ma-letter-scroll {
+  pointer-events: none;
+  animation: ma-voice-paper-exit 1040ms var(--ma-voice-ease-in-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="voice"] .ma-voice-screen {
+  pointer-events: none;
+  animation: ma-page-voice-exit 560ms var(--ma-voice-ease-in-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="report"] .ma-report-screen {
+  pointer-events: none;
+  animation: ma-page-report-exit 560ms var(--ma-voice-ease-in-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="board-home"] .ma-timeline-board {
+  pointer-events: none;
+  animation: ma-page-board-home-exit 280ms var(--ma-voice-ease-in-out) both;
+}
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="voice-home"] .ma-voice-screen {
+  pointer-events: none;
+  animation: ma-page-voice-home-exit 280ms var(--ma-voice-ease-in-out) both;
+}
+
+.ma-voice-home-return {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 12;
+  min-height: 36px;
+  padding: 7px 10px;
+  border: 1px solid rgba(226, 199, 222, 0.3);
+  border-radius: 999px;
+  color: rgba(244, 233, 218, 0.84);
+  background: rgba(13, 17, 46, 0.5);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: transform 140ms var(--ma-voice-ease-out), background-color 180ms ease;
+}
+
+.ma-voice-home-return[hidden] { display: none; }
+.ma-voice-home-return:active { transform: scale(0.97); }
+.ma-voice-home-return:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+
+#make-again-founder-letter-wireframe[data-ma-page-exit="voice"] .ma-voice-answer-layer:not([hidden]) {
+  opacity: 1;
+  animation: ma-voice-answer-to-history 520ms var(--ma-voice-ease-out) both;
+}
+
+@keyframes ma-page-envelope-arrive {
+  0% { opacity: 0; transform: translateY(34%) scale(0.9); }
+  64% { opacity: 0.88; transform: translateY(3%) scale(1.012); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes ma-page-envelope-hint-arrive {
+  0% { opacity: 0; transform: translateY(7px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ma-page-report-arrive {
+  0% { opacity: 0; transform: translateY(24px) scale(0.97); }
+  65% { opacity: 0.8; transform: translateY(4px) scale(0.992); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Forward/reverse seams keep the outgoing surface legible until navigation. */
+@keyframes ma-page-voice-exit {
+  0% { opacity: 1; filter: blur(0); transform: scale(1); }
+  100% { opacity: 0; filter: blur(8px); transform: scale(1.035); }
+}
+
+@keyframes ma-page-report-exit {
+  0% { opacity: 1; filter: blur(0); transform: scale(1); }
+  100% { opacity: 0; filter: blur(8px); transform: scale(1.025); }
+}
+
+@keyframes ma-page-board-home-exit {
+  0% { opacity: 1; filter: blur(0); transform: scale(1); }
+  100% { opacity: 0; filter: blur(7px); transform: scale(0.975); }
+}
+
+@keyframes ma-page-voice-home-exit {
+  0% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  100% { opacity: 0; filter: blur(7px); transform: translateY(5%) scale(0.96); }
+}
+
+.ma-page-handoff {
+  display: flex;
+  justify-content: center;
+  min-height: 42px;
+  margin: 14px 0 0;
+}
+
+.ma-page-handoff[hidden] {
+  display: none;
+}
+
+.ma-report-inbox {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  color: var(--ma-voice-cream);
+  background:
+    radial-gradient(circle at 100% 22%, color-mix(in srgb, var(--ma-voice-ember) 50%, transparent), transparent 36%),
+    radial-gradient(circle at 0% 78%, color-mix(in srgb, var(--ma-voice-violet) 36%, transparent), transparent 40%),
+    linear-gradient(160deg, var(--ma-voice-night-deep) 0%, var(--ma-voice-night) 54%, #11102b 100%);
+  text-align: center;
+}
+
+.ma-report-inbox[hidden] {
+  display: none;
+}
+
+.ma-report-inbox-card {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 280px);
+}
+
+.ma-report-inbox-kicker {
+  margin-bottom: 13px;
+  color: rgba(235, 190, 168, 0.66);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.ma-report-inbox-card p {
+  margin: 0;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 19px;
+  line-height: 1.75;
+  letter-spacing: 0.065em;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.66);
+}
+
+.ma-report-inbox-open {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 7px 12px 7px 9px;
+  border: 0;
+  border-bottom: 1px solid rgba(236, 203, 186, 0.5);
+  color: rgba(244, 233, 218, 0.86);
+  background: transparent;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.ma-report-inbox-open:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+}
+
+.ma-report-inbox-envelope {
+  position: relative;
+  display: inline-grid;
+  width: 31px;
+  height: 23px;
+  place-items: center;
+  border: 1px solid rgba(236, 203, 186, 0.54);
+  border-radius: 4px;
+  background: linear-gradient(145deg, rgba(231, 174, 140, 0.32), rgba(84, 52, 78, 0.42));
+  box-shadow: 0 0 16px rgba(235, 147, 110, 0.2);
+}
+
+.ma-report-inbox-card small {
+  display: block;
+  margin-top: 18px;
+  color: rgba(218, 205, 214, 0.38);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+
+.ma-report-inbox:not([hidden]) {
+  animation: ma-standalone-report-inbox-arrive 900ms cubic-bezier(0.22, 0.78, 0.2, 1) both;
+}
+
+@keyframes ma-standalone-report-inbox-arrive {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(28px) scale(0.96);
+  }
+
+  62% {
+    opacity: 0.78;
+    filter: blur(3px);
+    transform: translateY(5px) scale(0.99);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ma-standalone-index {
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+.ma-index-header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.ma-index-header p {
+  margin: 0;
+  color: rgba(247, 238, 228, 0.58);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.ma-index-header h1 {
+  margin: 0;
+  font-family: "KangXiZiDianTi", "STKaiti", "Kaiti SC", serif;
+  font-size: clamp(27px, 7vw, 44px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.ma-index-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.ma-index-toolbar button {
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid rgba(232, 142, 97, 0.42);
+  border-radius: 999px;
+  color: var(--foreground);
+  background: rgba(232, 142, 97, 0.11);
+  cursor: pointer;
+}
+
+.ma-index-toolbar button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.ma-index-stage {
+  min-height: 720px;
+  padding: 14px;
+  border: 1px solid rgba(220, 196, 233, 0.18);
+  border-radius: 26px;
+  background: rgba(8, 10, 27, 0.74);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+}
+
+.ma-index-stage iframe {
+  display: block;
+  width: 100%;
+  height: 820px;
+  border: 0;
+  border-radius: 18px;
+  background: #050914;
+}
+
+.ma-index-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ma-index-links a {
+  display: grid;
+  min-height: 64px;
+  align-content: center;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid rgba(220, 196, 233, 0.2);
+  border-radius: 16px;
+  color: var(--foreground);
+  background: rgba(14, 17, 38, 0.66);
+  text-align: center;
+  text-decoration: none;
+}
+
+.ma-index-links a.is-active {
+  border-color: rgba(232, 142, 97, 0.56);
+  background: rgba(232, 142, 97, 0.14);
+}
+
+.ma-index-links a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.ma-index-links span {
+  color: rgba(247, 238, 228, 0.58);
+  font-size: 11px;
+}
+
+.ma-index-links strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  body { padding-inline: 8px; }
+  .ma-index-stage { padding: 8px; }
+  .ma-index-stage iframe { height: 820px; }
+  .ma-index-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ma-report-inbox:not([hidden]) { animation: none; }
+
+  #make-again-founder-letter-wireframe[data-ma-page-entry] .ma-letter-envelope,
+  #make-again-founder-letter-wireframe[data-ma-page-entry] .ma-letter-envelope-hint,
+  #make-again-founder-letter-wireframe[data-ma-page-entry] .ma-voice-screen,
+  #make-again-founder-letter-wireframe[data-ma-page-entry="voice"] .ma-report-inbox:not([hidden]),
+  #make-again-founder-letter-wireframe[data-ma-page-entry="report"] .ma-voice-screen,
+  #make-again-founder-letter-wireframe[data-ma-page-entry="home"] .ma-report-inbox:not([hidden]),
+  #make-again-founder-letter-wireframe[data-ma-page-entry="home"] .ma-timeline-board[aria-hidden="false"],
+  #make-again-founder-letter-wireframe[data-ma-page-exit] .ma-letter-scroll,
+  #make-again-founder-letter-wireframe[data-ma-page-exit] .ma-voice-answer-layer:not([hidden]),
+  #make-again-founder-letter-wireframe[data-ma-page-exit="voice"] .ma-voice-screen,
+  #make-again-founder-letter-wireframe[data-ma-page-exit="report"] .ma-report-screen,
+  #make-again-founder-letter-wireframe[data-ma-page-exit="board-home"] .ma-timeline-board,
+  #make-again-founder-letter-wireframe[data-ma-page-exit="voice-home"] .ma-voice-screen {
+    animation: none !important;
+  }
+}
+
+/* Second pass · the standalone review shell becomes a real viewport on phones. */
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  body {
+    min-height: 100dvh;
+    padding: 0;
+  }
+
+  .ma-standalone-shell {
+    width: 100%;
+  }
+
+  .ma-standalone-nav,
+  .ma-standalone-shell #make-again-founder-letter-wireframe .ma-letter-review-tools,
+  .ma-standalone-shell #make-again-founder-letter-wireframe .ma-letter-review-status,
+  .ma-page-handoff,
+  .ma-standalone-flow-note {
+    display: none;
+  }
+
+  .ma-standalone-shell .ma-letter-preview-stage {
+    min-height: 100dvh;
+  }
+
+  .ma-standalone-shell .ma-letter-phone {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 100dvh;
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* 003 v5: a magic-mirror surface that holds only the current AI sentence. */
+#make-again-founder-letter-wireframe .ma-voice-screen {
+  padding: 20px 18px 18px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-heading {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  display: flex;
+  min-height: 39px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 74px;
+  transform: none;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-kicker {
+  margin: 0;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-stage {
+  display: grid;
+  min-height: 0;
+  place-items: center;
+  padding: 24px 10px 20px;
+  overflow: hidden;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 282px);
+  padding: 42px 22px 36px;
+  border-radius: 48% 52% 49% 51% / 46% 44% 56% 54%;
+  color: rgba(244, 233, 218, 0.94);
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(44, 49, 98, 0.48), rgba(15, 18, 50, 0.18) 58%, transparent 72%),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.035), transparent 42%, rgba(235, 147, 110, 0.04));
+  box-shadow: inset 0 0 42px rgba(127, 110, 209, 0.07), 0 0 44px rgba(86, 95, 190, 0.06);
+  text-align: center;
+  opacity: 1;
+  transform: none;
+  will-change: opacity, filter, transform;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror::before {
+  position: absolute;
+  inset: 10% 5%;
+  z-index: -1;
+  border: 1px solid rgba(226, 199, 222, 0.08);
+  border-radius: inherit;
+  content: "";
+  filter: blur(0.2px);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror > span {
+  display: block;
+  margin-bottom: 16px;
+  color: rgba(218, 198, 255, 0.66);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror > p {
+  margin: 0;
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 20px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+  transition: opacity 180ms var(--ma-voice-ease-out), filter 200ms ease, transform 220ms var(--ma-voice-ease-in-out);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror > small {
+  display: block;
+  margin-top: 17px;
+  color: rgba(228, 213, 221, 0.4);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror[data-mirror-state="listening"] > p { opacity: 0.58; filter: blur(1px); transform: scale(0.985); }
+#make-again-founder-letter-wireframe .ma-voice-mirror[data-mirror-state="thinking"] > p { opacity: 0.08; filter: blur(5px); transform: translateY(-4px) scale(0.97); }
+
+#make-again-founder-letter-wireframe .ma-voice-composer {
+  height: 132px;
+  min-height: 132px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mode-hint {
+  margin-top: 9px;
+  font-size: 9px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-voice-mirror,
+  #make-again-founder-letter-wireframe .ma-voice-mirror > p { transform: none !important; transition-duration: 160ms !important; }
+}
+
+/* 004 v5: keep the original soft corkboard; only strengthen note readability. */
+#make-again-founder-letter-wireframe .ma-timeline-board {
+  background-color: var(--ma-board-cork);
+  background-image:
+    radial-gradient(circle at 10% 18%, rgba(60, 34, 19, 0.24) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 73% 61%, rgba(255, 222, 169, 0.18) 0 0.8px, transparent 1.2px),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.035), transparent 35%, rgba(45, 24, 13, 0.06));
+  background-size: 16px 17px, 13px 11px, 100% 100%;
+}
+
+#make-again-founder-letter-wireframe .ma-board-note:active { transform: rotate(-1deg) scale(0.98); }
+
+#make-again-founder-letter-wireframe .ma-board-note-read {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  padding: 4px 7px;
+  border: 1px solid rgba(91, 56, 38, 0.2);
+  border-radius: 999px;
+  color: rgba(65, 43, 29, 0.62);
+  background: rgba(255, 250, 229, 0.28);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 6px;
+  letter-spacing: 0.08em;
+}

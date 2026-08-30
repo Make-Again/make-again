@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 005 主页</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/005-home-v6.css?v=6.7" />
+  <link rel="stylesheet" href="assets/005-home-v7.css?v=7.3" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航">
+      <span class="ma-standalone-nav-title">005 · 主页</span>
+      <span class="ma-standalone-nav-actions"><a href="index.html" target="_top">总入口</a><a href="003-voice.html">查看 003</a><a href="004-report-board.html?view=board">查看 004</a></span>
+    </nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" role="region" aria-label="Make Again 主页">
+      <div class="ma-letter-review-tools">
+        <span class="ma-letter-review-title">005 · 主页 / 特殊事件 / Voice</span>
+        <div class="ma-letter-review-actions">
+          <button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button>
+        </div>
+      </div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-home-v6-phone" data-home-voice-state="idle" aria-label="Make Again 主页手机界面">
+          <main class="ma-home-v6-screen">
+            <header class="ma-home-v6-topbar">
+              <div class="ma-home-top-actions">
+                <button type="button" class="ma-home-v6-menu" data-menu-button aria-label="打开页面菜单" aria-expanded="false">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h11M4 17h14"/></svg>
+                </button>
+                <button type="button" class="ma-home-pending" data-pending-shelf hidden aria-label="打开稍后再读">
+                  <span class="ma-pending-stack" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="sr-only" data-pending-title>有一件事被收在这里</span>
+                  <b data-pending-count>1</b>
+                </button>
+              </div>
+              <span class="ma-home-v6-safe" aria-hidden="true"></span>
+            </header>
+
+            <section class="ma-home-mood" aria-label="这一周的情绪轨迹">
+              <header><span>这一周的情绪轨迹</span></header>
+              <div class="ma-home-mood-week" data-mood-week></div>
+            </section>
+
+            <section class="ma-home-widget-v6" data-smart-widget tabindex="0" aria-label="智能小组件，可左右滑动">
+              <div class="ma-home-widget-track" data-widget-track>
+                <article class="ma-home-widget-card-v6">
+                  <header><span data-widget-kicker>3 条新内容</span><small data-widget-index>1 / 3</small></header>
+                  <p class="ma-home-widget-label" data-widget-label>情绪回声</p>
+                  <h2 data-widget-copy>这一周，你写下了两次平静。</h2>
+                  <footer><button type="button" data-widget-done>收下</button></footer>
+                </article>
+              </div>
+              <div class="ma-home-widget-dots" data-widget-dots aria-hidden="true"></div>
+            </section>
+
+            <section class="ma-home-talk-v6" aria-label="今天想聊点什么">
+              <header><h2>今天想聊点什么</h2></header>
+              <button type="button" class="ma-home-ai-suggestion" data-ai-suggestion>
+                <small>Wakey 想问你</small>
+                <strong>最近，有没有一件事<br />总在心里绕回来？</strong>
+              </button>
+              <div class="ma-home-voice-zone">
+                <button type="button" class="ma-home-v6-orb" data-home-voice aria-label="长按录音，上滑取消，松开发送">
+                  <span class="ma-home-v6-orb-core"><i></i><i></i><i></i></span>
+                  <span class="ma-home-v6-waves" aria-hidden="true"><i></i><i></i><i></i></span>
+                </button>
+                <small data-home-voice-status aria-live="polite"></small>
+                <button type="button" class="ma-home-open-chat" data-open-chat>进入完整对话</button>
+              </div>
+            </section>
+
+          </main>
+
+          <div class="ma-home-v6-scrim" data-menu-scrim aria-hidden="true"></div>
+          <aside class="ma-home-v6-drawer" data-menu-drawer aria-hidden="true">
+            <header><span class="ma-home-v6-avatar">旅</span><div><small>晚上好</small><strong>失眠的旅人</strong></div><button type="button" data-menu-close aria-label="关闭菜单">×</button></header>
+            <button type="button" class="ma-home-v6-member" data-destination="membership"><span>新用户 · 7 天免费使用</span><small>查看会员陪伴计划</small><b>›</b></button>
+            <nav aria-label="页面切换">
+              <button type="button" data-destination="board"><i>✦</i><span>时间看板</span><b>›</b></button>
+              <button type="button" data-destination="history"><i>✦</i><span>聊天历史</span><b>›</b></button>
+              <button type="button" data-destination="settings"><i>✦</i><span>设置</span><b>›</b></button>
+              <button type="button" data-destination="help"><i>✦</i><span>帮助与反馈</span><b>›</b></button>
+              <button type="button" data-philosophy-open><i>✦</i><span>产品哲学</span><small>3 张便利贴</small></button>
+            </nav>
+            <div class="ma-home-v6-drawer-ending-group">
+              <button type="button" class="ma-home-v6-ending" data-destination="ending"><i>✦</i><span>结束这段陪伴</span><small>归档，不删除</small></button>
+            </div>
+          </aside>
+
+          <div class="ma-home-philosophy-v6" data-philosophy-layer aria-hidden="true">
+            <div class="ma-philosophy-stack" data-philosophy-stack>
+              <article class="is-active"><small>NOTE 01</small><h2>情绪不是故障</h2><p>不把你的难过当作需要立刻修理的问题。</p></article>
+              <article><small>NOTE 02</small><h2>控制权属于你</h2><p>AI 可以提出，但留下、拒绝和离开的决定都属于你。</p></article>
+              <article><small>NOTE 03</small><h2>我们的目的是送你走</h2><p>陪伴不是让你依赖，而是有一天不再需要这里。</p></article>
+            </div>
+            <footer><button type="button" data-philosophy-close>收好</button><button type="button" data-philosophy-next>下一张</button></footer>
+          </div>
+
+          <div class="ma-home-event-layer" data-event-layer aria-hidden="true">
+            <article class="ma-home-event" role="dialog" aria-modal="true" aria-labelledby="ma-event-title">
+              <small data-event-kicker>WAKEY · 特别提醒</small><h2 id="ma-event-title" data-event-title></h2><p data-event-copy></p>
+              <div><button type="button" data-event-later>稍后再读</button><button type="button" data-event-reject>不需要</button><button type="button" data-event-confirm>现在查看</button></div>
+            </article>
+          </div>
+          <div class="ma-home-mood-detail-layer" data-mood-detail-layer aria-hidden="true">
+            <article class="ma-home-mood-detail" role="dialog" aria-modal="true" aria-labelledby="ma-home-mood-detail-title">
+              <button type="button" data-mood-detail-close aria-label="关闭情绪详情">×</button>
+              <small>Wakey 感受到</small>
+              <h2 id="ma-home-mood-detail-title" data-mood-detail-title>平静</h2>
+              <p data-mood-detail-copy>这是 Wakey 根据当天对话形成的理解。</p>
+              <button type="button" data-mood-disagree>不是这样</button>
+            </article>
+          </div>
+          <div class="ma-home-toast-v6" data-home-toast hidden aria-live="polite"><span data-home-toast-copy></span><button type="button" data-home-toast-action hidden>撤回</button></div>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">005 · 情绪日历、智能组件、特殊事件和 Voice 均可交互</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/005-home-v7.js?v=7.6" defer></script>
+</body>
+</html>

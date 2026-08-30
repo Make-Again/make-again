@@ -1,0 +1,545 @@
+#make-again-founder-letter-wireframe [hidden] { display: none !important; }
+
+#make-again-founder-letter-wireframe .ma-voice-home-return {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: rgba(244, 233, 218, 0.9);
+  background: transparent;
+  font-size: 23px;
+  line-height: 1;
+}
+
+
+#make-again-founder-letter-wireframe .ma-voice-tts-toggle {
+  position: absolute;
+  top: calc(72px + env(safe-area-inset-top));
+  right: calc(18px + env(safe-area-inset-right));
+  z-index: 14;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(226, 199, 222, 0.16);
+  border-radius: 50%;
+  color: rgba(244, 233, 218, 0.86);
+  background: rgba(12, 16, 43, 0.28);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition:
+    transform 150ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-tts-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-tts-toggle:active { transform: scale(0.96); }
+#make-again-founder-letter-wireframe .ma-voice-tts-toggle:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-tts-muted="true"] [data-tts-wave] { display: none; }
+#make-again-founder-letter-wireframe .ma-voice-screen:not([data-tts-muted="true"]) [data-tts-slash] { display: none; }
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-tts-speaking="true"] .ma-voice-tts-toggle {
+  color: rgba(255, 217, 190, 0.96);
+  background: rgba(235, 147, 110, 0.15);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-tts-tip {
+  position: absolute;
+  top: calc(120px + env(safe-area-inset-top));
+  right: calc(18px + env(safe-area-inset-right));
+  z-index: 15;
+  max-width: 218px;
+  padding: 9px 12px;
+  border: 1px solid rgba(226, 199, 222, 0.2);
+  border-radius: 14px;
+  color: rgba(244, 233, 218, 0.9);
+  background: rgba(12, 16, 43, 0.9);
+  box-shadow: 0 14px 32px rgba(2, 4, 18, 0.3);
+  backdrop-filter: blur(18px);
+  font-size: 12px;
+  line-height: 1.45;
+  transform-origin: 80% 0;
+  animation: ma-003-tip-enter 200ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes ma-003-tip-enter {
+  from { opacity: 0; transform: translateY(-4px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Keep one quiet identity marker above a stable central conversation focus. */
+#make-again-founder-letter-wireframe .ma-voice-heading {
+  top: calc(28px + env(safe-area-inset-top));
+  transform: none;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-kicker {
+  margin: 0;
+  color: rgba(244, 233, 218, 0.58);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-stage {
+  padding-top: 66px;
+}
+
+/* The mirror is a behavior, not a visible container. Long replies scroll only when needed. */
+#make-again-founder-letter-wireframe .ma-voice-mirror {
+  width: min(100%, 304px);
+  max-height: min(42vh, 310px);
+  padding: 22px 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror::-webkit-scrollbar { display: none; }
+
+#make-again-founder-letter-wireframe .ma-voice-mirror::before { display: none; }
+#make-again-founder-letter-wireframe .ma-voice-mirror > p {
+  max-width: 286px;
+  margin-inline: auto;
+  font-size: clamp(20px, 6vw, 27px);
+  line-height: 1.72;
+  text-wrap: balance;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror > span {
+  color: rgba(229, 213, 226, 0.68);
+  font-size: 12px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mirror > small {
+  color: rgba(229, 219, 232, 0.68);
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 1;
+}
+
+/* High-frequency idle motion stays quiet; state changes carry the emphasis. */
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="idle"] .ma-voice-orb-core {
+  animation-duration: 16s;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="idle"] .ma-voice-orb-halo,
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="idle"] .ma-voice-orb-sheen {
+  animation-duration: 15s;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="idle"] .ma-voice-orb-core i {
+  animation-duration: 18s;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="thinking"] .ma-voice-orb-core {
+  animation: ma-003-thinking-breathe 2.8s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="thinking"] .ma-voice-orb-rings i {
+  opacity: 0.22;
+  animation: none;
+}
+
+@keyframes ma-003-thinking-breathe {
+  0%, 100% { transform: scale(0.98); filter: saturate(0.92); }
+  50% { transform: scale(0.94); filter: saturate(0.76); }
+}
+
+/* 点按式录音:禁用长按系统图片菜单(保存/选择 Voice 球图片),避免打断点按录音 */
+#make-again-founder-letter-wireframe .ma-voice-orb,
+#make-again-founder-letter-wireframe .ma-voice-orb * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="recording"] .ma-voice-mode-hint {
+  color: rgba(255, 220, 193, 0.86);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-close svg {
+  width: 23px;
+  height: 23px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-close:active {
+  transform: translate3d(0, -50%, 0) scale(0.94);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-text-composer input {
+  padding-right: 106px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-text-send {
+  position: absolute;
+  top: 50%;
+  right: 86px;
+  z-index: 3;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(235, 147, 110, 0.42);
+  border-radius: 50%;
+  color: rgba(252, 239, 229, 0.96);
+  background: rgba(235, 147, 110, 0.2);
+  font-size: 20px;
+  opacity: 1;
+  cursor: pointer;
+  transform: translateY(-50%) scale(1);
+  transition:
+    opacity 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-text-send:disabled {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.9);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-text-send:not(:disabled):active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-text-send:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-mode-hint {
+  min-height: 18px;
+  color: rgba(239, 224, 229, 0.68);
+  font-size: 12px;
+}
+
+/* Recording waves: state feedback only, never decorative during idle. */
+#make-again-founder-letter-wireframe .ma-voice-orb-rings i {
+  opacity: 0;
+  transform: scale(0.82);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="recording"] .ma-voice-orb-rings i {
+  animation: ma-record-wave 1.5s linear infinite;
+}
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="recording"] .ma-voice-orb-rings i:nth-child(2) { animation-delay: 500ms; }
+#make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="recording"] .ma-voice-orb-rings i:nth-child(3) { animation-delay: 1000ms; }
+
+@keyframes ma-record-wave {
+  0% { opacity: 0.58; transform: scale(0.82); }
+  72%, 100% { opacity: 0; transform: scale(1.62); }
+}
+
+#make-again-founder-letter-wireframe .ma-mirror-artifact {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  width: min(100%, 286px);
+  place-items: center;
+  padding: 20px 20px 22px;
+  color: rgba(244, 233, 218, 0.94);
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-artifact-symbol {
+  position: relative;
+  display: grid;
+  width: 88px;
+  height: 74px;
+  place-items: center;
+  margin-bottom: 15px;
+  border: 1px solid rgba(226, 199, 222, 0.24);
+  border-radius: 26px;
+  color: rgba(244, 233, 218, 0.9);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.1), transparent 44%),
+    rgba(21, 22, 58, 0.5);
+  box-shadow: 0 16px 38px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+#make-again-founder-letter-wireframe .ma-mirror-artifact[data-artifact-type="letter"] .ma-artifact-symbol {
+  border-color: rgba(235, 147, 110, 0.28);
+  box-shadow: 0 16px 38px rgba(0,0,0,.24), 0 0 28px rgba(235,147,110,.12), inset 0 1px 0 rgba(255,255,255,.1);
+}
+#make-again-founder-letter-wireframe .ma-mirror-artifact[data-artifact-type="object"] .ma-artifact-symbol {
+  border-color: rgba(170, 139, 255, 0.28);
+  box-shadow: 0 16px 38px rgba(0,0,0,.24), 0 0 28px rgba(151,118,255,.12), inset 0 1px 0 rgba(255,255,255,.1);
+}
+#make-again-founder-letter-wireframe .ma-mirror-artifact[data-artifact-type="photo"] .ma-artifact-symbol {
+  border-color: rgba(110, 171, 255, 0.3);
+  box-shadow: 0 16px 38px rgba(0,0,0,.24), 0 0 28px rgba(90,157,255,.12), inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+#make-again-founder-letter-wireframe .ma-artifact-symbol svg { width: 46px; height: 46px; }
+#make-again-founder-letter-wireframe .ma-mirror-artifact > span { color: rgba(223,207,232,.68); font-size: 12px; letter-spacing: .16em; }
+#make-again-founder-letter-wireframe .ma-mirror-artifact h2 { margin: 9px 0 7px; font-family: "KangXiZiDianTi", "STKaiti", serif; font-size: 18px; font-weight: 400; line-height: 1.55; }
+#make-again-founder-letter-wireframe .ma-mirror-artifact p { margin: 0 0 15px; color: rgba(230,216,223,.72); font-size: 12px; line-height: 1.7; }
+#make-again-founder-letter-wireframe .ma-artifact-actions {
+  display: grid;
+  width: min(100%, 220px);
+  gap: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-artifact-actions button {
+  min-height: 38px;
+  padding: 7px 18px;
+  border: 1px solid rgba(235,147,110,.34);
+  border-radius: 999px;
+  color: rgba(244,233,218,.92);
+  background: rgba(235,147,110,.11);
+  font-family: "KangXiZiDianTi", "STKaiti", serif;
+  font-size: 12px;
+  letter-spacing: .12em;
+  transition: transform 140ms cubic-bezier(.23,1,.32,1), background-color 180ms ease;
+}
+#make-again-founder-letter-wireframe .ma-artifact-actions button[data-artifact-decline] {
+  border-color: transparent;
+  color: rgba(229, 216, 224, 0.68);
+  background: transparent;
+}
+#make-again-founder-letter-wireframe .ma-artifact-actions button:active { transform: scale(.97); }
+
+#make-again-founder-letter-wireframe .ma-voice-screen[data-artifact-active="true"] .ma-voice-composer,
+#make-again-founder-letter-wireframe .ma-voice-screen[data-artifact-active="true"] .ma-voice-mode-hint {
+  opacity: 0.42;
+  pointer-events: none;
+  transform: scale(0.985);
+  transition: opacity 180ms ease, transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#make-again-founder-letter-wireframe .ma-voice-composer,
+#make-again-founder-letter-wireframe .ma-voice-mode-hint {
+  transition: opacity 180ms ease, transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#make-again-founder-letter-wireframe .ma-artifact-float {
+  position: absolute;
+  inset: 64px 8px 150px;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  cursor: grab;
+  will-change: transform, opacity;
+}
+#make-again-founder-letter-wireframe .ma-artifact-float.is-dragging { cursor: grabbing; }
+#make-again-founder-letter-wireframe .ma-artifact-float-object {
+  display: grid;
+  width: 154px;
+  min-height: 154px;
+  place-items: center;
+  padding: 16px;
+  color: #4d3526;
+  background: linear-gradient(150deg,#fbf1df,#ead7bb);
+  box-shadow: 0 22px 54px rgba(0,0,0,.42);
+  transform: rotate(-2deg);
+}
+#make-again-founder-letter-wireframe .ma-artifact-float[data-kind="object"] .ma-artifact-float-object { border-radius: 48% 52% 44% 56%; background: radial-gradient(circle at 40% 28%,#f8d0b2,#a66b4f 62%,#4a2c26); color:#fff4e7; }
+#make-again-founder-letter-wireframe .ma-artifact-float[data-kind="photo"] .ma-artifact-float-object { min-height: 178px; padding: 10px 10px 34px; border-radius: 3px; }
+#make-again-founder-letter-wireframe .ma-artifact-float-object img { width: 100%; height: 120px; object-fit: cover; }
+#make-again-founder-letter-wireframe .ma-artifact-float > p { position:absolute; bottom:2px; margin:0; color:rgba(244,233,218,.68); font-size:12px; letter-spacing:.1em; }
+
+/* 抠图进行中:隐藏原图,展示加载态 */
+#make-again-founder-letter-wireframe .ma-artifact-float[data-state="matting"] .ma-artifact-float-object { display:none; }
+#make-again-founder-letter-wireframe .ma-artifact-float[data-state="matting"] { cursor:progress; }
+#make-again-founder-letter-wireframe .ma-artifact-float[data-state="matting"] > p { color:rgba(244,233,218,.52); }
+#make-again-founder-letter-wireframe .ma-artifact-float-loading {
+  display:grid;
+  gap:14px;
+  place-items:center;
+  color:rgba(244,233,218,.82);
+  font-size:12px;
+  letter-spacing:.08em;
+}
+#make-again-founder-letter-wireframe .ma-artifact-float-loading[hidden] { display:none; }
+#make-again-founder-letter-wireframe .ma-float-spinner {
+  width:34px;
+  height:34px;
+  border:2px solid rgba(226,199,222,.24);
+  border-top-color:rgba(235,147,110,.9);
+  border-radius:50%;
+  animation:ma-float-spin 900ms linear infinite;
+}
+@keyframes ma-float-spin { to { transform:rotate(360deg); } }
+
+/* 抠图结果:直接渲染透明成品图,去掉装饰框,自适应居中 */
+#make-again-founder-letter-wireframe .ma-artifact-float[data-state="cutout"] .ma-artifact-float-object {
+  width:min(72vw,230px);
+  min-height:0;
+  padding:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  transform:none;
+}
+#make-again-founder-letter-wireframe .ma-artifact-float[data-state="cutout"] .ma-artifact-float-object img {
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:230px;
+  object-fit:contain;
+}
+
+#make-again-founder-letter-wireframe .ma-collect-portal {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  z-index: 7;
+  width: 74px;
+  height: 22px;
+  opacity: 0;
+  transform: translateX(-50%) scale(.7);
+  transition: opacity 180ms cubic-bezier(.23,1,.32,1), transform 220ms cubic-bezier(.23,1,.32,1);
+  pointer-events:none;
+}
+#make-again-founder-letter-wireframe .ma-collect-portal i { display:block; width:100%; height:100%; border-radius:50%; background:#010207; box-shadow:0 0 0 1px rgba(142,116,233,.2),0 0 28px rgba(103,72,212,.46); }
+#make-again-founder-letter-wireframe .ma-collect-portal.is-visible { opacity:1; transform:translateX(-50%) scale(1); }
+
+#make-again-founder-letter-wireframe .ma-collect-toast {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  left: 18px;
+  z-index: 12;
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid rgba(226,199,222,.2);
+  border-radius: 15px;
+  color:rgba(244,233,218,.86);
+  background:rgba(14,18,48,.88);
+  backdrop-filter:blur(18px);
+  font-size:12px;
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity 200ms cubic-bezier(.23,1,.32,1),transform 200ms cubic-bezier(.23,1,.32,1);
+}
+#make-again-founder-letter-wireframe .ma-collect-toast button { border:0; color:#eb936e; background:transparent; font:inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-voice-screen[data-orb-state="recording"] .ma-voice-orb-rings i { animation:none; opacity:.32; transform:scale(1.25); }
+  #make-again-founder-letter-wireframe .ma-artifact-float,
+  #make-again-founder-letter-wireframe .ma-collect-portal { transform:none !important; transition:opacity 160ms ease !important; }
+  #make-again-founder-letter-wireframe .ma-voice-text-send { transition: none; }
+  #make-again-founder-letter-wireframe .ma-voice-tts-tip { animation: none; }
+}
+
+/* Second pass · leave the WeChat capsule corner and home return inside the safe area. */
+#make-again-founder-letter-wireframe .ma-voice-screen {
+  padding: calc(20px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left));
+}
+
+#make-again-founder-letter-wireframe .ma-voice-home-return {
+  width: 34px;
+  height: 34px;
+  top: calc(25px + env(safe-area-inset-top));
+  left: calc(18px + env(safe-area-inset-left));
+  border: 0;
+  background: transparent;
+  font-size: 0;
+}
+
+#make-again-founder-letter-wireframe .ma-voice-home-return::before {
+  width: 8px;
+  height: 8px;
+  border-bottom: 1.7px solid currentColor;
+  border-left: 1.7px solid currentColor;
+  content: "";
+  transform: translateX(2px) rotate(45deg);
+}
+
+@media (max-width: 360px) {
+  #make-again-founder-letter-wireframe .ma-voice-screen {
+    padding-inline: calc(17px + env(safe-area-inset-right)) calc(17px + env(safe-area-inset-left));
+  }
+}
+
+/* ---- 关系类型兜底选择(「Ta 是谁」AI 推断失败时) ---- */
+#make-again-founder-letter-wireframe .ma-relationship-picker {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(3, 6, 15, 0.62);
+  backdrop-filter: blur(4px);
+}
+
+#make-again-founder-letter-wireframe .ma-relationship-picker-card {
+  display: flex;
+  width: min(100%, 272px);
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 18px 18px;
+  border: 1px solid rgba(246, 221, 198, 0.4);
+  border-radius: 20px;
+  color: var(--ma-ink);
+  background: rgba(17, 18, 31, 0.96);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.42),
+    0 0 30px rgba(156, 130, 206, 0.14);
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-relationship-picker-card h2 {
+  margin: 0;
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+#make-again-founder-letter-wireframe .ma-relationship-picker-card p {
+  margin: 0 0 6px;
+  color: rgba(247, 238, 228, 0.72);
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#make-again-founder-letter-wireframe .ma-relationship-picker-card button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid rgba(247, 238, 228, 0.32);
+  border-radius: 999px;
+  color: var(--ma-ink);
+  background: rgba(247, 238, 228, 0.06);
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-relationship-picker-card button:hover,
+#make-again-founder-letter-wireframe .ma-relationship-picker-card button:focus-visible {
+  border-color: rgba(236, 168, 123, 0.72);
+  background: rgba(236, 168, 123, 0.16);
+  transform: translateY(-1px);
+}

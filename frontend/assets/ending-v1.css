@@ -1,0 +1,1013 @@
+:root {
+  --ma-end-cream:#f4e9da;
+  --ma-end-muted:rgba(226,212,221,.62);
+  --ma-end-line:rgba(226,199,222,.2);
+  --ma-end-red:#c65f5a;
+  --ma-end-ease-out:cubic-bezier(.23,1,.32,1);
+  --ma-end-ease-in-out:cubic-bezier(.77,0,.175,1);
+}
+
+#make-again-founder-letter-wireframe [hidden]{display:none!important}
+#make-again-founder-letter-wireframe .ma-ending-phone{position:relative;overflow:hidden}
+#make-again-founder-letter-wireframe .ma-ending-screen{
+  position:absolute;inset:0;display:flex;min-height:0;flex-direction:column;color:var(--ma-end-cream);
+  background:radial-gradient(circle at 100% 7%,rgba(235,147,110,.16),transparent 34%),radial-gradient(circle at 0 76%,rgba(118,83,213,.2),transparent 42%),linear-gradient(158deg,#050817,#10132d 58%,#191128);
+}
+#make-again-founder-letter-wireframe .ma-ending-header{display:grid;min-height:58px;grid-template-columns:48px minmax(0,1fr) 84px;align-items:center;padding:8px 12px;flex:none}
+#make-again-founder-letter-wireframe .ma-ending-header button{display:grid;width:38px;height:38px;place-items:center;padding:0;border:0;border-radius:50%;color:var(--ma-end-cream);background:transparent;font:23px/1 system-ui;cursor:pointer;transition:transform 140ms var(--ma-end-ease-out),background-color 180ms ease}
+#make-again-founder-letter-wireframe .ma-ending-header button:active{transform:scale(.94)}
+#make-again-founder-letter-wireframe .ma-ending-header div{text-align:center}
+#make-again-founder-letter-wireframe .ma-ending-header h1{margin:0;font:400 13px/1.3 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.12em}
+#make-again-founder-letter-wireframe .ma-ending-header small{color:var(--ma-end-muted);font-size:6px;letter-spacing:.1em}
+#make-again-founder-letter-wireframe .ma-ending-safe{width:84px;height:32px}
+#make-again-founder-letter-wireframe .ma-ending-body{display:flex;min-height:0;flex:1;flex-direction:column;padding:10px 18px 20px}
+#make-again-founder-letter-wireframe .ma-ending-kicker{margin:0 0 8px;color:rgba(235,147,110,.76);font-size:7px;letter-spacing:.18em}
+#make-again-founder-letter-wireframe .ma-ending-title{margin:0;font:400 25px/1.45 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.03em;text-wrap:balance}
+#make-again-founder-letter-wireframe .ma-ending-copy{margin:12px 0;color:var(--ma-end-muted);font:9px/1.85 "KangXiZiDianTi","STKaiti",serif}
+#make-again-founder-letter-wireframe .ma-ending-actions{display:grid;gap:8px;margin-top:auto}
+#make-again-founder-letter-wireframe .ma-ending-primary,#make-again-founder-letter-wireframe .ma-ending-secondary{
+  min-height:44px;padding:0 17px;border-radius:999px;font:9px "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em;cursor:pointer;transition:transform 140ms var(--ma-end-ease-out),background-color 180ms ease,opacity 180ms ease;
+}
+#make-again-founder-letter-wireframe .ma-ending-primary{border:1px solid rgba(235,147,110,.36);color:var(--ma-end-cream);background:rgba(235,147,110,.13)}
+#make-again-founder-letter-wireframe .ma-ending-secondary{border:1px solid var(--ma-end-line);color:var(--ma-end-muted);background:rgba(18,23,56,.52)}
+#make-again-founder-letter-wireframe .ma-ending-primary:active,#make-again-founder-letter-wireframe .ma-ending-secondary:active{transform:scale(.97)}
+#make-again-founder-letter-wireframe .ma-ending-tertiary{margin-top:6px;border:0;background:transparent;color:var(--ma-end-muted);font:8px/1.7 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.08em;cursor:pointer;padding:8px 4px;opacity:.78;transition:opacity 160ms ease}
+#make-again-founder-letter-wireframe .ma-ending-tertiary:hover{opacity:1}
+
+/* 016 · deliberate confirmation */
+#make-again-founder-letter-wireframe .ma-end-seal{position:relative;display:grid;width:156px;height:156px;place-items:center;margin:28px auto 22px;border:1px solid rgba(226,199,222,.17);border-radius:50%;background:radial-gradient(circle,rgba(127,91,219,.17),transparent 66%)}
+#make-again-founder-letter-wireframe .ma-end-seal::before,#make-again-founder-letter-wireframe .ma-end-seal::after{content:"";position:absolute;border:1px solid rgba(226,199,222,.13);border-radius:50%}
+#make-again-founder-letter-wireframe .ma-end-seal::before{inset:13px}.ma-end-seal::after{inset:29px}
+#make-again-founder-letter-wireframe .ma-end-seal span{font:40px/1 "STXingkai","STKaiti",serif;opacity:.86}
+#make-again-founder-letter-wireframe .ma-end-assurance{display:grid;gap:4px;margin:2px 0 18px;padding:12px 13px;border:1px solid var(--ma-end-line);border-radius:16px;background:rgba(19,24,58,.55)}
+#make-again-founder-letter-wireframe .ma-end-assurance strong{font:9px "KangXiZiDianTi","STKaiti",serif}.ma-end-assurance span{color:var(--ma-end-muted);font:7px/1.65 system-ui}
+#make-again-founder-letter-wireframe .ma-end-confirm-layer{position:absolute;inset:0;z-index:20;display:grid;place-items:end center;padding:18px;background:rgba(3,5,18,.58);backdrop-filter:blur(5px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity 220ms var(--ma-end-ease-out),visibility 220ms}
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[aria-hidden="false"]{opacity:1;visibility:visible}
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[aria-hidden="false"]{pointer-events:auto}
+#make-again-founder-letter-wireframe .ma-end-confirm-sheet{width:100%;padding:22px 17px 16px;border:1px solid var(--ma-end-line);border-radius:25px;background:linear-gradient(145deg,rgba(25,28,65,.96),rgba(44,29,59,.96));box-shadow:0 26px 60px rgba(0,0,0,.48);transform:translateY(110%);transition:transform 260ms cubic-bezier(.32,.72,0,1)}
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[aria-hidden="false"] .ma-end-confirm-sheet{transform:translateY(0)}
+#make-again-founder-letter-wireframe .ma-end-confirm-sheet h2{margin:0 0 7px;font:400 19px "KangXiZiDianTi","STKaiti",serif}.ma-end-confirm-sheet p{margin:0 0 14px;color:var(--ma-end-muted);font:8px/1.7 system-ui}
+#make-again-founder-letter-wireframe .ma-hold-confirm{position:relative;display:grid;width:100%;min-height:47px;place-items:center;overflow:hidden;border:1px solid rgba(198,95,90,.44);border-radius:999px;color:#fff1eb;background:rgba(198,95,90,.12);font:9px "KangXiZiDianTi","STKaiti",serif;cursor:pointer;touch-action:none;user-select:none;transition:transform 160ms var(--ma-end-ease-out)}
+#make-again-founder-letter-wireframe .ma-hold-confirm::before{content:"";position:absolute;inset:0;background:rgba(198,95,90,.54);clip-path:inset(0 100% 0 0);transition:clip-path 200ms var(--ma-end-ease-out)}
+#make-again-founder-letter-wireframe .ma-hold-confirm[data-holding="true"]::before{clip-path:inset(0 0 0 0);transition:clip-path 2s linear}
+#make-again-founder-letter-wireframe .ma-hold-confirm[data-holding="true"]{transform:scale(.97)}
+#make-again-founder-letter-wireframe .ma-hold-confirm span{position:relative;z-index:1}
+#make-again-founder-letter-wireframe .ma-hold-status{min-height:16px;margin:8px 0 0!important;color:rgba(244,233,218,.76)!important;font:9px/1.55 system-ui!important;text-align:center}
+#make-again-founder-letter-wireframe .ma-end-accessible-confirm,#make-again-founder-letter-wireframe .ma-end-confirm-cancel{display:block;margin:3px auto 0;padding:8px 14px;border:0;color:rgba(244,233,218,.7);background:transparent;font:9px system-ui;cursor:pointer}
+#make-again-founder-letter-wireframe .ma-end-accessible-confirm[aria-pressed="true"]{color:#f2b19b;text-decoration:underline;text-underline-offset:3px}
+#make-again-founder-letter-wireframe .ma-end-confirm-cancel{margin-top:0;color:var(--ma-end-muted)}
+
+/* 019 · iPhone-like call */
+#make-again-founder-letter-wireframe .ma-call-screen{background:radial-gradient(circle at 50% 25%,rgba(98,78,116,.45),transparent 46%),linear-gradient(180deg,#2b2933,#08080a 78%)}
+#make-again-founder-letter-wireframe .ma-call-island{position:absolute;top:13px;left:50%;width:94px;height:27px;border-radius:999px;background:#000;transform:translateX(-50%)}
+#make-again-founder-letter-wireframe .ma-call-body{display:flex;flex:1;flex-direction:column;align-items:center;padding:68px 24px 32px;text-align:center}
+#make-again-founder-letter-wireframe .ma-call-body small{color:rgba(255,255,255,.62);font:10px system-ui}.ma-call-body h1{margin:9px 0 4px;color:#fff;font:400 30px/1.2 system-ui;letter-spacing:-.02em}.ma-call-body>p{margin:0;color:rgba(255,255,255,.62);font:10px system-ui}
+#make-again-founder-letter-wireframe .ma-call-avatar{display:grid;width:108px;height:108px;place-items:center;margin:38px 0;border-radius:50%;color:#fff;background:linear-gradient(145deg,#766b7d,#313039);font:38px system-ui;box-shadow:0 0 0 0 rgba(255,255,255,.12);animation:ma-call-ring 2.4s linear infinite}
+#make-again-founder-letter-wireframe .ma-call-note{max-width:250px;color:rgba(255,255,255,.52);font:9px/1.75 "KangXiZiDianTi","STKaiti",serif}
+#make-again-founder-letter-wireframe .ma-call-hangup{display:grid;width:70px;height:70px;place-items:center;margin-top:auto;border:0;border-radius:50%;color:white;background:#e24d4b;cursor:pointer;transition:transform 140ms var(--ma-end-ease-out),opacity 180ms ease}
+#make-again-founder-letter-wireframe .ma-call-hangup:active{transform:scale(.94)}.ma-call-hangup svg{width:31px;height:31px;transform:rotate(135deg)}
+#make-again-founder-letter-wireframe .ma-call-label{margin-top:8px!important;color:rgba(255,255,255,.72)!important;font:9px system-ui!important}
+@keyframes ma-call-ring{50%{box-shadow:0 0 0 13px rgba(255,255,255,.03)}}
+
+/* 020 · memorial message */
+#make-again-founder-letter-wireframe .ma-message-screen{color:#111;background:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif}
+#make-again-founder-letter-wireframe .ma-message-screen .ma-ending-header{color:#111;background:rgba(248,248,250,.82);backdrop-filter:blur(18px)}
+#make-again-founder-letter-wireframe .ma-message-screen .ma-ending-header button{color:#1677ff}.ma-message-screen .ma-ending-header small{color:#777}
+#make-again-founder-letter-wireframe .ma-message-profile{display:grid;place-items:center;gap:5px;padding:13px 0;border-bottom:1px solid rgba(0,0,0,.07)}
+#make-again-founder-letter-wireframe .ma-message-profile span{display:grid;width:46px;height:46px;place-items:center;border-radius:50%;color:white;background:linear-gradient(145deg,#8b83a2,#443f50);font-size:18px}.ma-message-profile strong{font-size:10px}.ma-message-profile small{color:#8c8c91;font-size:7px}
+#make-again-founder-letter-wireframe .ma-message-thread{display:flex;min-height:0;flex:1;flex-direction:column;padding:15px 13px 18px;overflow:auto}
+#make-again-founder-letter-wireframe .ma-message-time{margin:8px 0 18px;color:#929298;font-size:7px;text-align:center}
+#make-again-founder-letter-wireframe .ma-message-disclosure{margin:0 10px 16px;padding:10px 12px;border-radius:12px;color:#655f69;background:#ebe9ee;font:8px/1.6 system-ui}
+#make-again-founder-letter-wireframe .ma-message-bubble{align-self:flex-start;max-width:82%;padding:10px 13px;border-radius:18px 18px 18px 5px;color:#111;background:#e5e5ea;font:12px/1.55 -apple-system,BlinkMacSystemFont,system-ui;opacity:0;transform:translateY(7px);transition:opacity 240ms var(--ma-end-ease-out),transform 240ms var(--ma-end-ease-out)}
+#make-again-founder-letter-wireframe .ma-message-bubble.is-visible{opacity:1;transform:translateY(0)}
+#make-again-founder-letter-wireframe .ma-message-continue{margin-top:auto;min-height:42px;border:0;border-radius:999px;color:#fff;background:#1677ff;font:10px system-ui;cursor:pointer;transition:transform 140ms var(--ma-end-ease-out)}.ma-message-continue:active{transform:scale(.97)}
+
+/* 021 · keepsake shop */
+#make-again-founder-letter-wireframe .ma-shop-intro{margin-bottom:14px}.ma-shop-intro h2{margin:0 0 6px;font:400 20px/1.5 "KangXiZiDianTi","STKaiti",serif}.ma-shop-intro p{margin:0;color:var(--ma-end-muted);font:8px/1.7 system-ui}
+#make-again-founder-letter-wireframe .ma-shop-grid{display:grid;min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;overflow:auto;padding-bottom:12px}
+#make-again-founder-letter-wireframe .ma-shop-card{display:grid;align-content:start;gap:7px;min-height:176px;padding:10px;border:1px solid var(--ma-end-line);border-radius:18px;color:var(--ma-end-cream);background:rgba(20,24,59,.57);text-align:left;cursor:pointer;transition:transform 140ms var(--ma-end-ease-out),background-color 180ms ease}.ma-shop-card:active{transform:scale(.97)}
+#make-again-founder-letter-wireframe .ma-shop-art{display:grid;height:100px;place-items:center;border-radius:13px;background:linear-gradient(145deg,rgba(234,213,181,.88),rgba(136,95,91,.78));box-shadow:inset 0 1px rgba(255,255,255,.24);font:26px "STXingkai","STKaiti",serif}.ma-shop-card:nth-child(2) .ma-shop-art{background:linear-gradient(145deg,rgba(132,113,176,.86),rgba(57,59,91,.9))}.ma-shop-card:nth-child(3) .ma-shop-art{background:linear-gradient(145deg,rgba(152,195,211,.75),rgba(127,93,146,.82))}.ma-shop-card strong{font:9px "KangXiZiDianTi","STKaiti",serif}.ma-shop-card small{color:var(--ma-end-muted);font:7px/1.5 system-ui}.ma-shop-card b{font:8px system-ui;font-weight:400}
+#make-again-founder-letter-wireframe .ma-shop-status{min-height:17px;margin:6px 0;color:rgba(235,147,110,.76);font:7px/1.5 system-ui;text-align:center}
+
+/* 022 · invitation */
+#make-again-founder-letter-wireframe .ma-invite-envelope{position:relative;width:250px;height:160px;margin:25px auto;background:linear-gradient(150deg,#f4e5cb,#d8bd98);box-shadow:0 25px 50px rgba(0,0,0,.34)}
+#make-again-founder-letter-wireframe .ma-invite-envelope::before{content:"";position:absolute;inset:0;background:linear-gradient(33deg,transparent 49%,rgba(117,78,52,.12) 50%,transparent 51%),linear-gradient(-33deg,transparent 49%,rgba(117,78,52,.12) 50%,transparent 51%)}
+#make-again-founder-letter-wireframe .ma-invite-envelope span{position:absolute;top:50%;left:50%;display:grid;width:43px;height:43px;place-items:center;border-radius:50%;color:#ecd9c0;background:#713f38;font:16px "STXingkai","STKaiti",serif;transform:translate(-50%,-50%)}
+#make-again-founder-letter-wireframe .ma-invite-form{display:grid;gap:9px}.ma-invite-form textarea{min-height:138px;padding:13px;border:1px solid rgba(101,65,43,.15);border-radius:12px;outline:0;color:#4b3626;background:#f1dfc4;font:10px/1.8 "KangXiZiDianTi","STKaiti",serif;resize:none}.ma-invite-status{min-height:14px;color:var(--ma-end-muted);font:7px system-ui;text-align:center}
+
+/* 018 + 023 · archive bag */
+#make-again-founder-letter-wireframe .ma-archive-body{align-items:center;text-align:center}
+#make-again-founder-letter-wireframe .ma-archive-bag{position:relative;width:245px;height:302px;margin:40px auto 20px;padding:0;border:0;color:#4a3424;background:transparent;cursor:pointer;filter:drop-shadow(0 28px 34px rgba(0,0,0,.4));transition:transform 180ms var(--ma-end-ease-out)}.ma-archive-bag:active{transform:scale(.97)}
+#make-again-founder-letter-wireframe .ma-archive-bag::before{content:"";position:absolute;inset:34px 8px 0;border-radius:4px 4px 13px 13px;background:linear-gradient(152deg,#d4b07a,#a97b48)}
+#make-again-founder-letter-wireframe .ma-archive-bag::after{content:"";position:absolute;top:0;left:26px;width:190px;height:76px;border-radius:6px;background:#e3c694;box-shadow:inset 0 -2px rgba(91,56,28,.12);transform:perspective(260px) rotateX(-10deg)}
+#make-again-founder-letter-wireframe .ma-archive-bag span{position:absolute;z-index:2;top:128px;left:50%;width:132px;padding:16px 8px;border:1px solid rgba(77,48,25,.24);background:rgba(245,226,188,.77);font:12px/1.6 "KangXiZiDianTi","STKaiti",serif;letter-spacing:.12em;transform:translateX(-50%) rotate(-1deg)}
+#make-again-founder-letter-wireframe .ma-archive-bag small{position:absolute;z-index:2;right:30px;bottom:28px;font:7px system-ui;opacity:.66}
+#make-again-founder-letter-wireframe .ma-archive-readonly{display:inline-flex;align-items:center;gap:5px;padding:5px 9px;border:1px solid var(--ma-end-line);border-radius:999px;color:var(--ma-end-muted);font:7px system-ui}
+#make-again-founder-letter-wireframe .ma-archive-list{display:grid;gap:10px;min-height:0;overflow:auto;padding-bottom:18px}
+#make-again-founder-letter-wireframe .ma-archive-item{display:grid;grid-template-columns:48px minmax(0,1fr);gap:11px;align-items:center;padding:12px;border:1px solid var(--ma-end-line);border-radius:17px;background:rgba(20,24,59,.54);text-align:left}
+#make-again-founder-letter-wireframe .ma-archive-item>span{display:grid;width:48px;height:48px;place-items:center;border-radius:13px;color:#4b3626;background:#e5cfaa;font:18px "STXingkai","STKaiti",serif}.ma-archive-item strong{display:block;font:10px/1.45 "KangXiZiDianTi","STKaiti",serif}.ma-archive-item small{color:var(--ma-end-muted);font:7px/1.5 system-ui}
+
+@media (hover:hover) and (pointer:fine){
+  #make-again-founder-letter-wireframe .ma-ending-primary:hover,#make-again-founder-letter-wireframe .ma-ending-secondary:hover{background-color:rgba(154,109,255,.12)}
+  #make-again-founder-letter-wireframe .ma-shop-card:hover{background-color:rgba(45,39,83,.68)}
+}
+@media (prefers-reduced-motion:reduce){
+  #make-again-founder-letter-wireframe *{animation-duration:.01ms!important;animation-iteration-count:1!important}
+  #make-again-founder-letter-wireframe .ma-end-confirm-sheet,#make-again-founder-letter-wireframe .ma-message-bubble{transform:none!important;transition:opacity 180ms ease!important}
+  #make-again-founder-letter-wireframe .ma-hold-confirm::before{transition:clip-path 2s linear!important}
+}
+@media (prefers-reduced-transparency:reduce){
+  #make-again-founder-letter-wireframe .ma-end-confirm-sheet,#make-again-founder-letter-wireframe .ma-shop-card,#make-again-founder-letter-wireframe .ma-archive-item{background:#171a38;backdrop-filter:none}
+}
+@media (prefers-contrast:more){
+  #make-again-founder-letter-wireframe .ma-ending-primary,#make-again-founder-letter-wireframe .ma-ending-secondary,#make-again-founder-letter-wireframe .ma-shop-card,#make-again-founder-letter-wireframe .ma-archive-item{border-color:rgba(255,255,255,.6)}
+}
+
+/* Second pass · safe area, readable controls, and the mobile state boundaries. */
+#make-again-founder-letter-wireframe .ma-ending-header {
+  min-height: 62px;
+  padding: calc(8px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) 8px calc(12px + env(safe-area-inset-left));
+}
+
+#make-again-founder-letter-wireframe .ma-ending-header button {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-ending-safe {
+  width: calc(84px + env(safe-area-inset-right));
+  height: calc(32px + env(safe-area-inset-top));
+}
+
+#make-again-founder-letter-wireframe .ma-ending-body {
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-ending-primary,
+#make-again-founder-letter-wireframe .ma-ending-secondary,
+#make-again-founder-letter-wireframe .ma-end-confirm-cancel,
+#make-again-founder-letter-wireframe .ma-message-continue {
+  min-height: 44px;
+}
+
+#make-again-founder-letter-wireframe .ma-ending-header small,
+#make-again-founder-letter-wireframe .ma-ending-kicker,
+#make-again-founder-letter-wireframe .ma-end-assurance span,
+#make-again-founder-letter-wireframe .ma-call-note,
+#make-again-founder-letter-wireframe .ma-call-label,
+#make-again-founder-letter-wireframe .ma-message-time,
+#make-again-founder-letter-wireframe .ma-message-disclosure,
+#make-again-founder-letter-wireframe .ma-shop-intro p,
+#make-again-founder-letter-wireframe .ma-shop-card small,
+#make-again-founder-letter-wireframe .ma-shop-status,
+#make-again-founder-letter-wireframe .ma-archive-item small,
+#make-again-founder-letter-wireframe .ma-archive-readonly {
+  font-size: 9px;
+}
+
+#make-again-founder-letter-wireframe .ma-end-confirm-layer {
+  overflow: hidden;
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-end-confirm-sheet {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-call-body {
+  padding-top: calc(68px + env(safe-area-inset-top));
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-call-controls {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 34px;
+  width: 100%;
+  margin-top: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-call-action {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, .74);
+  font: 10px system-ui;
+}
+
+#make-again-founder-letter-wireframe .ma-call-answer,
+#make-again-founder-letter-wireframe .ma-call-hangup {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-end-ease-out), opacity 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-call-answer {
+  background: #34c759;
+}
+
+#make-again-founder-letter-wireframe .ma-call-hangup {
+  background: #e24d4b;
+}
+
+#make-again-founder-letter-wireframe .ma-call-answer:active,
+#make-again-founder-letter-wireframe .ma-call-hangup:active {
+  transform: scale(.94);
+}
+
+#make-again-founder-letter-wireframe .ma-call-answer svg,
+#make-again-founder-letter-wireframe .ma-call-hangup svg {
+  width: 31px;
+  height: 31px;
+}
+
+#make-again-founder-letter-wireframe .ma-call-avatar {
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .12);
+  animation: ma-call-ring 2.4s ease-in-out infinite;
+}
+
+#make-again-founder-letter-wireframe .ma-call-avatar::after {
+  position: absolute;
+  inset: -10px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  content: "";
+  opacity: 0;
+  transform: scale(.86);
+  animation: ma-call-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes ma-call-ring {
+  0%, 100% { opacity: .88; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.035); }
+}
+
+@keyframes ma-call-pulse {
+  0%, 100% { opacity: 0; transform: scale(.86); }
+  50% { opacity: .72; transform: scale(1.04); }
+}
+
+#make-again-founder-letter-wireframe .ma-call-screen[data-call-state="connected"] .ma-call-avatar,
+#make-again-founder-letter-wireframe .ma-call-screen[data-call-state="connected"] .ma-call-avatar::after,
+#make-again-founder-letter-wireframe .ma-call-screen[data-call-state="ended"] .ma-call-avatar,
+#make-again-founder-letter-wireframe .ma-call-screen[data-call-state="ended"] .ma-call-avatar::after {
+  animation-play-state: paused;
+}
+
+#make-again-founder-letter-wireframe .ma-ios-back svg {
+  width: 23px;
+  height: 23px;
+}
+
+#make-again-founder-letter-wireframe .ma-message-thread {
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
+}
+
+#make-again-founder-letter-wireframe .ma-message-disclosure {
+  margin-inline: 2px;
+  padding: 9px 0 9px 11px;
+  border-left: 2px solid rgba(22, 119, 255, .35);
+  border-radius: 0;
+  background: transparent;
+  font-size: 9px;
+}
+
+#make-again-founder-letter-wireframe .ma-shop-grid {
+  align-items: stretch;
+}
+
+#make-again-founder-letter-wireframe .ma-shop-art {
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
+}
+
+#make-again-founder-letter-wireframe .ma-shop-art::before,
+#make-again-founder-letter-wireframe .ma-shop-art::after {
+  position: absolute;
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-shop-card:nth-child(1) .ma-shop-art::before {
+  width: 55px;
+  height: 70px;
+  border: 4px solid rgba(255, 248, 230, .86);
+  border-radius: 3px 8px 8px 3px;
+  background: repeating-linear-gradient(to bottom, transparent 0 10px, rgba(88, 54, 37, .2) 11px 12px);
+  box-shadow: -8px 0 0 rgba(105, 68, 48, .28), 12px 12px 18px rgba(43, 30, 37, .22);
+  transform: rotate(-6deg);
+}
+
+#make-again-founder-letter-wireframe .ma-shop-card:nth-child(2) .ma-shop-art::before {
+  width: 55px;
+  height: 72px;
+  border: 3px solid rgba(239, 229, 255, .7);
+  border-radius: 5px 10px 10px 5px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .28) 0 7px, transparent 7px), repeating-linear-gradient(to bottom, transparent 0 10px, rgba(239, 229, 255, .22) 11px 12px);
+  box-shadow: 11px 12px 18px rgba(25, 23, 52, .28);
+  transform: rotate(5deg);
+}
+
+#make-again-founder-letter-wireframe .ma-shop-card:nth-child(3) .ma-shop-art::before {
+  width: 42px;
+  height: 68px;
+  border: 3px solid rgba(237, 245, 255, .7);
+  border-radius: 9px 9px 15px 15px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .28), transparent 30% 72%, rgba(88, 74, 160, .16));
+  box-shadow: inset 8px 0 rgba(255, 255, 255, .11), 12px 14px 20px rgba(41, 31, 62, .24);
+}
+
+#make-again-founder-letter-wireframe .ma-shop-card:nth-child(3) .ma-shop-art::after {
+  width: 20px;
+  height: 10px;
+  border: 3px solid rgba(237, 245, 255, .7);
+  border-bottom: 0;
+  border-radius: 9px 9px 0 0;
+  transform: translateY(-37px);
+}
+
+#make-again-founder-letter-wireframe .ma-invite-body {
+  overflow-y: auto;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-body::-webkit-scrollbar {
+  display: none;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-panel {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-envelope {
+  width: min(100%, 250px);
+  max-width: 100%;
+  flex: none;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-letter-copy {
+  display: grid;
+  gap: 12px;
+  margin: 2px 0 8px;
+  padding: 15px 13px;
+  border-left: 2px solid rgba(113, 63, 56, .22);
+  color: #4b3626;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, rgba(120, 90, 60, .08) 28px), rgba(255, 255, 255, .18);
+}
+
+#make-again-founder-letter-wireframe .ma-invite-letter-copy p {
+  margin: 0;
+  font: 10px/1.9 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-form textarea {
+  width: 100%;
+  min-height: 138px;
+}
+
+#make-again-founder-letter-wireframe .ma-invite-form .ma-ending-primary,
+#make-again-founder-letter-wireframe .ma-invite-choice .ma-ending-actions {
+  margin-top: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-bag {
+  width: min(245px, 100%);
+  max-width: 100%;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-bag::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 236, 191, .22) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 74% 68%, rgba(91, 56, 28, .18) 0 1px, transparent 1.6px),
+    repeating-linear-gradient(102deg, rgba(255, 238, 198, .08) 0 2px, transparent 2px 8px),
+    linear-gradient(152deg, #d4b07a, #a97b48);
+  background-size: 17px 19px, 13px 15px, 100% 100%, 100% 100%;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-item {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 48px minmax(0, 1fr) 18px;
+  font: inherit;
+  cursor: pointer;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-item > b {
+  align-self: center;
+  color: var(--ma-end-muted);
+  font: 18px/1 system-ui;
+  font-weight: 400;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 17px 16px 15px;
+  border: 1px solid var(--ma-end-line);
+  border-radius: 17px;
+  color: var(--ma-end-cream);
+  background: rgba(20, 24, 59, .72);
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail[hidden] {
+  display: none !important;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail small {
+  color: rgba(235, 147, 110, .76);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail h2 {
+  margin: 0;
+  font: 400 17px/1.5 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail p,
+#make-again-founder-letter-wireframe .ma-archive-detail > span {
+  margin: 0;
+  color: var(--ma-end-muted);
+  font: 9px/1.75 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-detail-close {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ma-end-muted);
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  #make-again-founder-letter-wireframe .ma-shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #make-again-founder-letter-wireframe .ma-shop-card {
+    min-height: 188px;
+  }
+
+  #make-again-founder-letter-wireframe .ma-call-controls {
+    gap: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-call-avatar,
+  #make-again-founder-letter-wireframe .ma-call-avatar::after {
+    animation: none !important;
+  }
+
+  #make-again-founder-letter-wireframe .ma-archive-detail {
+    transition: none !important;
+  }
+}
+
+/* Shared compact return control for ending-path pages. */
+#make-again-founder-letter-wireframe .ma-ending-header button {
+  width:34px;
+  height:34px;
+  min-width:34px;
+  min-height:34px;
+  border:0;
+  background:transparent;
+}
+#make-again-founder-letter-wireframe .ma-ending-header button:not(.ma-ios-back) {
+  font-size:0;
+}
+#make-again-founder-letter-wireframe .ma-ending-header button:not(.ma-ios-back)::before {
+  width:8px;
+  height:8px;
+  border-bottom:1.7px solid currentColor;
+  border-left:1.7px solid currentColor;
+  content:"";
+  transform:translateX(2px) rotate(45deg);
+}
+#make-again-founder-letter-wireframe .ma-ios-back svg {
+  width:18px;
+  height:18px;
+}
+
+/* Farewell rituals · visual closure while the underlying archive remains intact. */
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[data-confirm-state="complete"] .ma-end-confirm-sheet {
+  transform: translateY(0) scale(.985);
+}
+
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[data-confirm-state="complete"] .ma-end-confirm-cancel,
+#make-again-founder-letter-wireframe .ma-end-confirm-layer[data-confirm-state="complete"] .ma-end-accessible-confirm {
+  pointer-events: none;
+  opacity: .34;
+}
+
+#make-again-founder-letter-wireframe .ma-call-ai-label {
+  margin-top: 9px !important;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, .76) !important;
+  background: rgba(0, 0, 0, .2);
+  font-size: 9px !important;
+}
+
+#make-again-founder-letter-wireframe .ma-farewell-panel {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 22px calc(24px + env(safe-area-inset-bottom));
+  color: var(--ma-end-cream);
+}
+
+#make-again-founder-letter-wireframe .ma-farewell-panel h2 {
+  margin: 0;
+  font: 400 24px/1.48 "KangXiZiDianTi", "STKaiti", serif;
+  letter-spacing: .03em;
+}
+
+#make-again-founder-letter-wireframe .ma-farewell-copy {
+  margin: 9px 0 0;
+  color: rgba(226, 212, 221, .72);
+  font: 10px/1.75 "KangXiZiDianTi", "STKaiti", serif;
+}
+
+#make-again-founder-letter-wireframe .ma-farewell-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-ritual-status {
+  min-height: 18px;
+  margin: 4px 0 9px;
+  color: rgba(244, 233, 218, .76);
+  font: 9px/1.55 system-ui;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-farewell-actions button:disabled {
+  cursor: default;
+  opacity: .58;
+}
+
+/* 019 · breakup memories dissolve from view, not from storage. */
+#make-again-founder-letter-wireframe .ma-breakup-ritual {
+  background: radial-gradient(circle at 50% 54%, rgba(116, 80, 156, .22), transparent 42%);
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-scene {
+  position: relative;
+  min-height: 236px;
+  flex: 1;
+  margin: 8px 0 0;
+  overflow: hidden;
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-memory {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(106, 76, 52, .18);
+  background: linear-gradient(155deg, #f7e8ce, #d8b98d);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, .28);
+  will-change: transform, opacity, filter;
+  transition: transform 940ms var(--ma-end-ease-in-out), opacity 720ms ease, filter 900ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-letter {
+  top: 36px;
+  left: calc(50% - 112px);
+  width: 106px;
+  height: 132px;
+  transform: rotate(-7deg);
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-letter::before {
+  position: absolute;
+  inset: 23px 14px;
+  background: repeating-linear-gradient(to bottom, rgba(94, 65, 42, .24) 0 1px, transparent 1px 13px);
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-photo {
+  z-index: 2;
+  top: 18px;
+  left: calc(50% - 50px);
+  width: 112px;
+  height: 142px;
+  border: 8px solid #eee0ca;
+  background: linear-gradient(145deg, #687d9a, #d39c7e 60%, #66566f);
+  transform: rotate(3deg);
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-object {
+  z-index: 3;
+  top: 88px;
+  left: calc(50% + 46px);
+  width: 78px;
+  height: 78px;
+  border-radius: 44% 56% 60% 40%;
+  background: linear-gradient(145deg, #755e9d, #b97067);
+  transform: rotate(8deg);
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-object::before {
+  position: absolute;
+  inset: 18px 22px;
+  border: 3px solid rgba(255, 245, 228, .72);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-dissolve-particle {
+  position: absolute;
+  z-index: 5;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(245, 224, 195, .82);
+  opacity: 0;
+  transition: transform 820ms var(--ma-end-ease-out), opacity 560ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-particle-1 { top: 46%; left: 34%; }
+#make-again-founder-letter-wireframe .ma-particle-2 { top: 52%; left: 44%; width: 4px; height: 4px; }
+#make-again-founder-letter-wireframe .ma-particle-3 { top: 39%; left: 55%; width: 5px; height: 5px; }
+#make-again-founder-letter-wireframe .ma-particle-4 { top: 58%; left: 63%; }
+#make-again-founder-letter-wireframe .ma-particle-5 { top: 44%; left: 72%; width: 3px; height: 3px; }
+#make-again-founder-letter-wireframe .ma-particle-6 { top: 62%; left: 51%; width: 4px; height: 4px; }
+
+#make-again-founder-letter-wireframe .ma-breakup-ritual:is([data-ritual-state="dissolving"], [data-ritual-state="complete"]) .ma-dissolve-letter {
+  filter: blur(4px);
+  opacity: 0;
+  transform: translate(-34px, -76px) rotate(-14deg) scale(.94);
+}
+
+#make-again-founder-letter-wireframe .ma-breakup-ritual:is([data-ritual-state="dissolving"], [data-ritual-state="complete"]) .ma-dissolve-photo {
+  filter: blur(4px);
+  opacity: 0;
+  transform: translate(7px, -92px) rotate(7deg) scale(.94);
+  transition-delay: 80ms;
+}
+
+#make-again-founder-letter-wireframe .ma-breakup-ritual:is([data-ritual-state="dissolving"], [data-ritual-state="complete"]) .ma-dissolve-object {
+  filter: blur(4px);
+  opacity: 0;
+  transform: translate(42px, -68px) rotate(17deg) scale(.9);
+  transition-delay: 160ms;
+}
+
+#make-again-founder-letter-wireframe .ma-breakup-ritual:is([data-ritual-state="dissolving"], [data-ritual-state="complete"]) .ma-dissolve-particle {
+  opacity: 0;
+}
+
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-1 { opacity: .72; transform: translate(-48px, -82px); }
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-2 { opacity: .64; transform: translate(-21px, -104px); transition-delay: 60ms; }
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-3 { opacity: .72; transform: translate(13px, -91px); transition-delay: 110ms; }
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-4 { opacity: .58; transform: translate(41px, -76px); transition-delay: 170ms; }
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-5 { opacity: .66; transform: translate(58px, -112px); transition-delay: 220ms; }
+#make-again-founder-letter-wireframe .ma-breakup-ritual[data-ritual-state="dissolving"] .ma-particle-6 { opacity: .62; transform: translate(8px, -126px); transition-delay: 260ms; }
+
+/* 020 · memories fold into a bag and settle beneath the soil. */
+#make-again-founder-letter-wireframe .ma-message-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+#make-again-founder-letter-wireframe .ma-message-skip {
+  min-height: 42px;
+  border: 0;
+  color: #66646a;
+  background: transparent;
+  font: 10px system-ui;
+  cursor: pointer;
+}
+
+#make-again-founder-letter-wireframe .ma-message-screen[data-ritual-active="true"] {
+  color: var(--ma-end-cream);
+  background: radial-gradient(circle at 50% 34%, rgba(126, 112, 87, .25), transparent 39%), linear-gradient(180deg, #171b25, #242018 76%, #17130f);
+}
+
+#make-again-founder-letter-wireframe .ma-message-screen[data-ritual-active="true"] .ma-ending-header {
+  color: var(--ma-end-cream);
+  background: rgba(18, 20, 26, .72);
+  backdrop-filter: blur(14px);
+}
+
+#make-again-founder-letter-wireframe .ma-message-screen[data-ritual-active="true"] .ma-ending-header small {
+  color: rgba(244, 233, 218, .58);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual {
+  background: radial-gradient(circle at 50% 62%, rgba(126, 105, 74, .18), transparent 40%);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-scene {
+  position: relative;
+  min-height: 250px;
+  flex: 1;
+  margin-top: 2px;
+  overflow: hidden;
+}
+
+#make-again-founder-letter-wireframe .ma-burial-keepsakes span {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .24);
+  will-change: transform, opacity;
+  transition: transform 420ms var(--ma-end-ease-in-out), opacity 320ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-burial-letter {
+  top: 28px;
+  left: calc(50% - 102px);
+  width: 68px;
+  height: 86px;
+  background: repeating-linear-gradient(to bottom, transparent 0 10px, rgba(88, 59, 36, .18) 11px), #ead5b4;
+  transform: rotate(-8deg);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-photo {
+  top: 18px;
+  left: calc(50% - 35px);
+  width: 76px;
+  height: 94px;
+  border: 6px solid #e9dcc5;
+  background: linear-gradient(145deg, #697d8e, #c99b79 58%, #76687b);
+  transform: rotate(3deg);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-object {
+  top: 42px;
+  left: calc(50% + 52px);
+  width: 58px;
+  height: 58px;
+  border-radius: 42% 58% 62% 38%;
+  background: linear-gradient(145deg, #75659a, #b67769);
+  transform: rotate(7deg);
+}
+
+#make-again-founder-letter-wireframe .ma-memory-bag {
+  position: absolute;
+  z-index: 2;
+  top: 104px;
+  left: 50%;
+  width: 126px;
+  height: 116px;
+  border-radius: 10px 10px 34px 34px;
+  background: linear-gradient(145deg, #c7ad82, #8e704c);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .24), 0 18px 28px rgba(0, 0, 0, .28);
+  transform: translateX(-50%);
+  will-change: transform, opacity;
+  transition: transform 720ms var(--ma-end-ease-in-out) 720ms, opacity 260ms ease 1700ms;
+}
+
+#make-again-founder-letter-wireframe .ma-memory-bag::before {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  width: 110px;
+  height: 24px;
+  border-radius: 50%;
+  background: #d2bc94;
+  box-shadow: inset 0 -5px rgba(91, 67, 42, .14);
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-memory-bag span {
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  left: 13px;
+  width: 100px;
+  height: 2px;
+  background: #6e5135;
+  transform: scaleX(.22);
+  transition: transform 240ms var(--ma-end-ease-out) 540ms;
+}
+
+#make-again-founder-letter-wireframe .ma-memory-bag i {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(89, 62, 35, .3);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+#make-again-founder-letter-wireframe .ma-memory-soil {
+  position: absolute;
+  z-index: 4;
+  right: -24px;
+  bottom: -14px;
+  left: -24px;
+  height: 86px;
+  border-radius: 50% 50% 0 0;
+  background: radial-gradient(circle at 22% 36%, #74563d 0 2px, transparent 2.5px), radial-gradient(circle at 68% 54%, #8a6747 0 2px, transparent 2.5px), linear-gradient(180deg, #74563f, #493426);
+  transform: translateY(46px);
+  transition: transform 620ms var(--ma-end-ease-out) 1260ms;
+}
+
+#make-again-founder-letter-wireframe .ma-memory-marker {
+  position: absolute;
+  z-index: 5;
+  bottom: 49px;
+  left: 50%;
+  width: 72px;
+  height: 70px;
+  opacity: 0;
+  transform: translate(-50%, 10px) scale(.94);
+  transition: transform 520ms var(--ma-end-ease-out) 1740ms, opacity 380ms ease 1740ms;
+}
+
+#make-again-founder-letter-wireframe .ma-memory-marker i {
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  width: 2px;
+  height: 42px;
+  border-radius: 999px;
+  background: #7e9b6d;
+}
+
+#make-again-founder-letter-wireframe .ma-memory-marker i::before,
+#make-again-founder-letter-wireframe .ma-memory-marker i::after {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  border-radius: 100% 0 100% 0;
+  background: #789267;
+  content: "";
+}
+
+#make-again-founder-letter-wireframe .ma-memory-marker i::before { top: 11px; right: 1px; transform: rotate(18deg); }
+#make-again-founder-letter-wireframe .ma-memory-marker i::after { top: 23px; left: 1px; transform: scaleX(-1) rotate(18deg); }
+
+#make-again-founder-letter-wireframe[data-ending-path="relative"] .ma-memory-marker span {
+  position: absolute;
+  top: 2px;
+  left: 26px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e8d9ac 0 22%, transparent 24%), conic-gradient(from 0deg, #efe4c2 0 12%, transparent 12% 20%, #efe4c2 20% 32%, transparent 32% 40%, #efe4c2 40% 52%, transparent 52% 60%, #efe4c2 60% 72%, transparent 72% 80%, #efe4c2 80% 92%, transparent 92%);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-burial-letter {
+  opacity: 0;
+  transform: translate(68px, 92px) rotate(-2deg) scale(.35);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-burial-photo {
+  opacity: 0;
+  transform: translate(0, 102px) rotate(0) scale(.35);
+  transition-delay: 120ms;
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-burial-object {
+  opacity: 0;
+  transform: translate(-76px, 81px) rotate(0) scale(.35);
+  transition-delay: 240ms;
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-memory-bag span {
+  transform: scaleX(1);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-memory-bag {
+  opacity: 0;
+  transform: translate(-50%, 104px) scale(.9);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-memory-soil {
+  transform: translateY(0);
+}
+
+#make-again-founder-letter-wireframe .ma-burial-ritual:is([data-ritual-state="burying"], [data-ritual-state="complete"]) .ma-memory-marker {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+/* 018 · the archive landing reflects the ritual that led here. */
+#make-again-founder-letter-wireframe .ma-archive-keepsake {
+  min-height: 42px;
+  margin-top: 2px;
+  padding: 0 16px;
+  border: 1px solid var(--ma-end-line);
+  border-radius: 999px;
+  color: rgba(244, 233, 218, .78);
+  background: transparent;
+  font: 9px "KangXiZiDianTi", "STKaiti", serif;
+  cursor: pointer;
+  transition: transform 140ms var(--ma-end-ease-out), background-color 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-archive-keepsake:active { transform: scale(.97); }
+#make-again-founder-letter-wireframe .ma-archive-sprout,
+#make-again-founder-letter-wireframe .ma-archive-soil { display: none; }
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-bag {
+  height: 270px;
+  margin-top: 24px;
+  filter: drop-shadow(0 22px 30px rgba(0, 0, 0, .34));
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-bag::before,
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-bag::after {
+  opacity: .18;
+  transform: translateY(82px) scale(.74);
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-bag span {
+  top: 100px;
+  color: #f1dfc7;
+  background: rgba(65, 46, 34, .82);
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-bag small {
+  right: 50%;
+  bottom: 27px;
+  color: rgba(244, 233, 218, .64);
+  transform: translateX(50%);
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-soil {
+  position: absolute;
+  z-index: 4;
+  right: -8px;
+  bottom: 0;
+  left: -8px;
+  display: block;
+  height: 82px;
+  border-radius: 50% 50% 8px 8px;
+  background: radial-gradient(circle at 24% 36%, #74563d 0 2px, transparent 2.5px), radial-gradient(circle at 70% 55%, #8a6747 0 2px, transparent 2.5px), linear-gradient(180deg, #74563f, #493426);
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-sprout {
+  position: absolute;
+  z-index: 5;
+  bottom: 69px;
+  left: 50%;
+  display: block;
+  width: 2px;
+  height: 52px;
+  border-radius: 999px;
+  background: #7e9b6d;
+  transform: translateX(-50%);
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-sprout::before,
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-sprout::after {
+  position: absolute;
+  width: 22px;
+  height: 12px;
+  border-radius: 100% 0 100% 0;
+  background: #789267;
+  content: "";
+}
+
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-sprout::before { top: 12px; right: 1px; transform: rotate(18deg); }
+#make-again-founder-letter-wireframe:is([data-ending-path="pet"], [data-ending-path="relative"]) .ma-archive-sprout::after { top: 28px; left: 1px; transform: scaleX(-1) rotate(18deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-dissolve-memory,
+  #make-again-founder-letter-wireframe .ma-dissolve-particle,
+  #make-again-founder-letter-wireframe .ma-burial-keepsakes span,
+  #make-again-founder-letter-wireframe .ma-memory-bag,
+  #make-again-founder-letter-wireframe .ma-memory-bag span,
+  #make-again-founder-letter-wireframe .ma-memory-soil,
+  #make-again-founder-letter-wireframe .ma-memory-marker {
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

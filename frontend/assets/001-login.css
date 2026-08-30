@@ -1,0 +1,190 @@
+/* 001 only: centered brand lockup and the username + password form (replaces WeChat). */
+#make-again-founder-letter-wireframe .ma-letter-login-content {
+  position: relative;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-brand-lockup {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  width: max-content;
+  max-width: 88%;
+  transform: translate(-50%, -50%);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* 手机键盘弹出(输入聚焦)时收起品牌字样,避免与表单重叠;桌面(细指针)不触发 */
+@media (pointer: coarse) {
+  #make-again-founder-letter-wireframe .ma-letter-login-content:focus-within .ma-letter-brand-lockup {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.94);
+    pointer-events: none;
+  }
+}
+
+#make-again-founder-letter-wireframe .ma-letter-brand-name {
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+  animation: ma-001-brand-handwrite 2800ms cubic-bezier(0.42, 0, 0.18, 1) 180ms both;
+  transform-origin: left center;
+}
+
+#make-again-founder-letter-wireframe
+  .ma-letter-phone:is([data-transition-state="login"], [data-transition-state="auth"], [data-transition-state="returning"])
+  .ma-letter-brand-char {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  animation: none;
+}
+
+/* ---- username / password form ---- */
+#make-again-founder-letter-wireframe .ma-letter-login-form {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: min(100%, 292px);
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 16px 18px;
+  border: 1px solid rgba(246, 221, 198, 0.32);
+  border-radius: 20px;
+  color: var(--ma-ink);
+  background: rgba(17, 18, 31, 0.72);
+  box-shadow:
+    0 14px 34px rgba(2, 4, 12, 0.32),
+    0 0 26px rgba(156, 130, 206, 0.14);
+  text-align: left;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-tab {
+  flex: 1;
+  min-height: 34px;
+  border: 1px solid rgba(247, 238, 228, 0.24);
+  border-radius: 999px;
+  color: rgba(247, 238, 228, 0.78);
+  background: transparent;
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-tab.is-active {
+  border-color: rgba(236, 168, 123, 0.72);
+  color: #2b2026;
+  background: linear-gradient(110deg, #d7b29a, #eda278);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-label {
+  color: rgba(247, 238, 228, 0.62);
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-field input {
+  width: 100%;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border: 1px solid rgba(247, 238, 228, 0.3);
+  border-radius: 12px;
+  color: var(--ma-ink);
+  background: rgba(247, 238, 228, 0.06);
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-field input::placeholder {
+  color: rgba(247, 238, 228, 0.34);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-field input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 1px;
+  border-color: rgba(255, 221, 196, 0.7);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-error {
+  margin: 0;
+  color: #f0a08c;
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-submit {
+  min-height: 46px;
+  border: 1px solid rgba(236, 168, 123, 0.72);
+  border-radius: 999px;
+  color: #2b2026;
+  background: linear-gradient(110deg, #d7b29a, #eda278);
+  font-family: "KangXiZiDianTi", "Kangxi Dictionary", "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(236, 168, 123, 0.24);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-form-submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+@keyframes ma-001-brand-handwrite {
+  0% {
+    opacity: 0.35;
+    filter: blur(1.5px);
+    clip-path: inset(0 100% 0 0);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-letter-brand-name {
+    clip-path: inset(0 0 0 0);
+    animation: none;
+  }
+}
+
+/* 非首次登录(直接回首页/档案):跳过「打开来信」信封动画,只保留登录框消散 */
+#make-again-founder-letter-wireframe .ma-letter-phone[data-handoff="direct"][data-transition-state="transitioning"] .ma-letter-envelope-stage {
+  opacity: 0;
+  pointer-events: none;
+}

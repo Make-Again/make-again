@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Make Again · 只读档案袋</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/ending-v1.css?v=1.5" />
+  <link rel="stylesheet" href="assets/018-archive-hub-v2.css?v=2.1" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav"><span class="ma-standalone-nav-title">018 · 结束后的默认主页</span><span class="ma-standalone-nav-actions"><a href="index.html">总入口</a><a href="016-ending-confirm.html">重新演示结束流程</a></span></nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-ending-page="archive-bag">
+      <div class="ma-letter-review-tools"><span class="ma-letter-review-title">018 · 老用户登录后的档案首页</span><div class="ma-letter-review-actions"><button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button></div></div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-ending-phone">
+          <section class="ma-ending-screen ma-archive-hub-screen">
+            <header class="ma-ending-header ma-archive-hub-header">
+              <button type="button" class="ma-archive-settings" data-archive-settings aria-label="打开设置">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.1"/><path d="M19.2 13.6a7.9 7.9 0 0 0 .1-1.6 7.9 7.9 0 0 0-.1-1.6l2-1.5-2-3.4-2.4 1a8.2 8.2 0 0 0-2.7-1.6L13.8 2h-3.9l-.4 2.9a8.2 8.2 0 0 0-2.7 1.6l-2.4-1-2 3.4 2 1.5a7.9 7.9 0 0 0-.1 1.6 7.9 7.9 0 0 0 .1 1.6l-2 1.5 2 3.4 2.4-1a8.2 8.2 0 0 0 2.7 1.6l.4 2.9h3.9l.4-2.9a8.2 8.2 0 0 0 2.7-1.6l2.4 1 2-3.4-2.1-1.5Z"/></svg>
+              </button>
+              <div><h1>你的档案</h1><small data-archive-count>1 段陪伴 · 全部只读</small></div>
+              <div class="ma-archive-header-actions">
+                <button type="button" class="ma-archive-mail ma-archive-unread" data-archive-unread hidden aria-label="继续阅读未读回信"><i aria-hidden="true"></i><b>1</b></button>
+                <button type="button" class="ma-archive-mail" data-archive-mail hidden aria-label="打开稍后再写的信"><i aria-hidden="true"></i><b>1</b></button>
+              </div>
+            </header>
+            <div class="ma-archive-hub-body">
+              <p class="ma-ending-kicker">MAKE AGAIN · YOUR ARCHIVES</p>
+              <h2>走过的路，<br />都安静地留在这里</h2>
+              <div class="ma-archive-carousel" data-archive-carousel>
+                <div class="ma-archive-track" data-archive-track aria-label="只读档案和新的陪伴"></div>
+              </div>
+              <div class="ma-archive-pagination" data-archive-pagination aria-hidden="true"></div>
+              <p class="ma-archive-swipe-hint" data-archive-swipe-hint>向左滑，查看其他档案</p>
+            </div>
+            <div class="ma-archive-layer" data-archive-letter-layer aria-hidden="true">
+              <button type="button" class="ma-archive-layer-backdrop" data-archive-letter-close aria-label="关闭写信邀请"></button>
+              <article class="ma-archive-sheet ma-archive-letter-sheet" role="dialog" aria-modal="true" aria-labelledby="ma-archive-letter-title">
+                <span class="ma-archive-letter-mark" aria-hidden="true"><i></i></span>
+                <small>树洞信箱</small>
+                <h2 id="ma-archive-letter-title">愿意写一封信吗</h2>
+                <p>把你真正走过的那一部分，匿名留给一个仍在路上的人。</p>
+                <div class="ma-archive-sheet-actions">
+                  <button type="button" data-archive-letter-later>稍后写</button>
+                  <button type="button" data-archive-letter-reject>不想写</button>
+                  <button type="button" data-archive-letter-now>现在写</button>
+                </div>
+              </article>
+            </div>
+            <p class="ma-archive-toast" data-archive-toast aria-live="polite" hidden></p>
+          </section>
+        </div>
+      </div>
+      <p class="ma-letter-review-status">018 · 老用户登录落点 · 左滑查看档案 · 写信邀请在此出现</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/018-archive-hub-v2.js?v=2.2" defer></script>
+</body>
+</html>

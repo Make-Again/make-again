@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>Make Again · 当日完整对话</title>
+  <link rel="stylesheet" href="assets/make-again-shared.css" />
+  <link rel="stylesheet" href="assets/make-again-pages.css" />
+  <link rel="stylesheet" href="assets/utility-pages.css" />
+  <link rel="stylesheet" href="assets/utility-v6.css" />
+  <link rel="stylesheet" href="assets/009-chat-day.css?v=2.2" />
+</head>
+<body>
+  <main class="ma-standalone-shell">
+    <nav class="ma-standalone-nav" aria-label="Make Again 页面导航"><span class="ma-standalone-nav-title">009 · 当日完整对话</span><span class="ma-standalone-nav-actions"><a href="index.html">总入口</a></span></nav>
+    <div id="make-again-founder-letter-wireframe" data-mode="atmosphere" data-utility-page="chat-day" role="region" aria-label="Make Again 当日完整对话界面">
+      <div class="ma-letter-review-tools">
+        <span class="ma-letter-review-title">009 · 当日完整对话 / 消息管理</span>
+        <div class="ma-letter-review-actions">
+          <button type="button" class="ma-letter-mode-toggle" aria-pressed="true">切换至结构线框</button>
+        </div>
+      </div>
+      <div class="ma-letter-preview-stage">
+        <div class="ma-letter-phone ma-utility-phone ma-chat-day-phone" data-selecting="false">
+          <section class="ma-chat-day-screen">
+            <header class="ma-chat-day-header">
+              <button type="button" data-history-back aria-label="返回聊天历史">←</button>
+              <div><h1 data-day-title>今天</h1><small data-day-count>6 条对话</small></div>
+              <span aria-hidden="true"></span>
+            </header>
+            <div class="ma-chat-day-scroll">
+              <button type="button" class="ma-chat-inline-manage" data-message-manage>管理消息</button>
+              <div class="ma-chat-message-list" data-message-list aria-live="polite"></div>
+            </div>
+            <div class="ma-chat-selection-bar" data-selection-bar hidden>
+              <button type="button" data-selection-done>完成</button>
+              <span data-selection-count>请选择消息</span>
+              <button type="button" data-delete-open disabled>删除消息</button>
+            </div>
+          </section>
+
+          <div class="ma-chat-delete-layer" data-delete-layer aria-hidden="true">
+            <article role="dialog" aria-modal="true" aria-labelledby="ma-chat-delete-title">
+              <small>消息管理</small>
+              <h2 id="ma-chat-delete-title" data-delete-title>确认删除消息？</h2>
+              <p>删除后无法恢复，所选消息也会从 Wakey 后续记忆和总结依据中移除。已经收入时间看板的旧报告不会改变。</p>
+              <div><button type="button" data-delete-cancel>取消</button><button type="button" data-delete-confirm>确认删除</button></div>
+            </article>
+          </div>
+
+          <div class="ma-chat-toast" data-chat-toast hidden aria-live="polite"></div>
+        </div>
+      </div>
+      <p class="ma-letter-review-status" aria-live="polite">009 · 长按消息或点击管理，可选择并永久删除一条或多条消息</p>
+    </div>
+  </main>
+  <script src="assets/api.js" defer></script>
+  <script src="assets/make-again-state-v3.js?v=3.1" defer></script>
+  <script src="assets/make-again-shared.js" defer></script>
+  <script src="assets/009-chat-day.js?v=2.2" defer></script>
+</body>
+</html>

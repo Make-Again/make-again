@@ -1,0 +1,45 @@
+/* 002 only: AI-generated xuan-paper and gilt CTA plate with native text. */
+#make-again-founder-letter-wireframe .ma-letter-next {
+  position: relative;
+  width: min(100%, 220px);
+  min-height: 66px;
+  justify-content: center;
+  padding: 12px 48px;
+  border: 0;
+  border-radius: 999px;
+  color: #65451f;
+  background: url("002-enter-button-xuan-gold.png") center / 100% 100% no-repeat;
+  box-shadow: 0 10px 24px rgba(82, 52, 27, 0.18);
+  font-size: calc(var(--font-size-base) + 1px);
+  font-weight: 500;
+  text-shadow: 0 1px 0 rgba(255, 250, 229, 0.82);
+  transition:
+    transform 180ms ease,
+    filter 180ms ease,
+    box-shadow 180ms ease;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-next span[aria-hidden="true"] {
+  position: absolute;
+  right: 30px;
+  opacity: 0.72;
+}
+
+#make-again-founder-letter-wireframe .ma-letter-next:hover,
+#make-again-founder-letter-wireframe .ma-letter-next:focus-visible {
+  filter: brightness(1.035) saturate(1.04);
+  box-shadow: 0 12px 28px rgba(82, 52, 27, 0.24);
+  transform: translateY(-1px);
+}
+
+#make-again-founder-letter-wireframe .ma-letter-next:active {
+  filter: brightness(0.98);
+  box-shadow: 0 6px 16px rgba(82, 52, 27, 0.2);
+  transform: translateY(1px) scale(0.975);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #make-again-founder-letter-wireframe .ma-letter-next {
+    transition: none;
+  }
+}
